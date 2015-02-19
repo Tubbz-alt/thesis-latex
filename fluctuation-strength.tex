@@ -1,7 +1,9 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{tabu}
 
 \frenchspacing
+\tabulinesep = 4pt
 
 \begin{document}
 
@@ -15,7 +17,32 @@
 
 This book contains a chapter about the effect of sound of humans. First a small
 overview of the perceptual processes and the associated perceptual quantities is
-given \cite[p.~72]{Fastl2007Psychoacoustics}
+given \cite[p.~72]{Fastl2007Psychoacoustics}. \ref{tab:stimsens} illustrates
+all the perceptual measures, along with their dominant physical stimuli.
+
+\begin{table}
+    \centering
+    \begin{tabu}{ l l }
+        \tabucline[1pt]{-}
+        Dominant stimuli & Cognitive parameters \\\tabucline[1pt]{-}
+        Sound pressure level (dB) & Loudness (sone) \\\cline{2-2}
+        & Loudness level (phon) \\\hline
+        Frequency (Hz) & Critical band rate (Bark) \\\cline{2-2}
+        & Ratio pitch (mel) \\\hline
+        Degree of modulation (\%) & Roughness (asper)\\\cline{1-1}
+        Modulation frequency (Hz) & \\\hline
+        Frequency (Hz) & Sharpness (acum) \\\hline
+        Degree of modulation (\%) & Fluctuation strength (vacil) \\\cline{1-1}
+        Modulation frequency (Hz) & \\\hline
+        Spectral components (Pa) & Pitch strength \\\cline{2-2}
+        & Tonality (tu) \\\hline
+        Impulse duration (s) & Subjective duration of impetus (IU) \\\hline
+        Sound pressure level (dB) & Density (dasy) \\
+        Frequency (Hz) & \\\tabucline[1pt]{-}
+    \end{tabu}
+    \caption{Stimuli and sensations}
+    \label{tab:stimsens}
+\end{table}
 
 \subsection{Psychoacoustics: Facts and models}
 
