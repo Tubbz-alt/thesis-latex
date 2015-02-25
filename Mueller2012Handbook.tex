@@ -1,9 +1,11 @@
 \section{Handbook of Engineering Acoustics}
 
-This book contains a chapter about the effect of sound of humans. First a small
-overview of the perceptual processes and the associated perceptual quantities is
-given \cite[p.~72]{Mueller2012Handbook}. \ref{tab:stimsens} illustrates
-all the perceptual measures, along with their dominant physical stimuli.
+This book contains a chapter about the effects of sound on humans. First a small
+overview of the perceptual processes and their associated perceptual quantities
+is given. Table \ref{tab:stimsens} summarizes all the perceptual measures, along
+with their dominant physical stimuli. It is interesting to note that all these
+perceptual dimensions, except for density, were derived from the
+``Munich school'' work of Zwicker and Fastl \cite{Fastl2007Psychoacoustics}.
 
 \begin{table}
     \centering
@@ -25,6 +27,41 @@ all the perceptual measures, along with their dominant physical stimuli.
         Sound pressure level (dB) & Density (dasy) \\
         Frequency (Hz) & \\\tabucline[1pt]{-}
     \end{tabu}
-    \caption{Stimuli and sensations}
+    \caption{Stimuli and sensations \cite[pp. 72]{Mueller2012Handbook}}
     \label{tab:stimsens}
 \end{table}
+
+It is important to note that the human auditory system can generate these
+perceptual sensations independently of each other, although to understand the
+general ``pleasantness'' of a sound a bigger context needs to be taked into
+account. For instance the emotions of the listeners can have an important
+effect on the cognitive construal of a given sound.
+
+Fluctuation strength corresponds to the sensation that arises when a sound
+presents a slow amplitude envelope (a modulation signal with less than 20 Hz).
+Fluctuation strength is closely related to roughness, the difference between the
+two being the frequency of the amplitude envelope. As a reference, the unit of 1
+vacil is defined as a 1 kHz tone sound having a SPL of 60 dB, with an
+amplitude-modulated envelope of 4 Hz with a modulation index of 1. The maximum
+of this quantity seems to occur around 4 Hz regardless of the modulation
+technique used (amplitude or frequency modulation), as seen from Figure
+\ref{fig:flucstrenvmodfreq}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=5cm]
+        {Mueller2012Handbook-FluctuationStrengthVsModulationFrequency}
+    \caption{Fluctuation of strength vs. modulation frequency for
+        amplitude-modulated broad-band noise (a), an amplitude-moduled tone (b)
+        and a frequency-modulated tone (c) \cite[pp. 75]{Mueller2012Handbook}}
+    \label{fig:flucstrenvmodfreq}
+\end{figure}
+
+Fluctuation strength can have a significant effect on the pleasantness of a
+a sound, and a particularly clear example of this are alarms, which must have a
+sharp and distinctive sound.
+
+The effect of fluctuation strength can be seen as a temporary masking pattern on
+an original signal, in which the modulation depth is of utmost importance. This
+is also the case for roughness, which resembles fluctuation strength in this
+regards.
