@@ -7,29 +7,29 @@ presented.
 
 \subsection{Dependencies of Fluctuation Strength}
 
-It seems that a relation between fluction strength and speech production exists,
-as the normal production rate of syllables during normal conversation speed is
-about 4 syllables/second. This coincides with the frequency in which a maximum
-value of fluctuation strength occurs (4 Hz).
+It seems that a relation between fluctuation strength and speech production
+exists, as the normal production rate of syllables during normal conversation
+speed is about 4 syllables/second. This coincides with the frequency in which a
+maximum value of fluctuation strength occurs (4 Hz).
 
-Regarding sound pressure level (SPL) and fluctuation strength, figure
-\ref{fig:flucstrenvsndpreslvl} shows their relation for two diffent stimuli
-(tones and broad-band noise) and two different modulation techniques (amplitude
-modulation and frequency modulation). An increase in SPL entails an increase of
-fluctuation strength, this being stronger when using modulation of amplitude.
+Regarding sound pressure level (SPL) and fluctuation strength, Figure
+\ref{fig:flucstrenvsndpreslvl} shows their relation for two different stimuli
+(tones and broad-band noise) and two modulation techniques (amplitude modulation
+and frequency modulation). An increase in SPL entails an increase of fluctuation
+strength, this being stronger when using modulation of amplitude.
 
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
         {Fastl2007-FluctuationStrengthVsSoundPressureLevel}
-    \caption{Fluctuation strength vs. sound pressure level for
-        amplitude-modulated broad-band noise (a), an amplitude-moduled tone (b)
-        and a frequency-modulated tone (c); modulation frequency of 4 Hz
+    \caption{Fluctuation strength as a function of sound pressure level for
+        amplitude-modulated broad-band noise (a), an amplitude-modulated tone
+        (b) and a frequency-modulated tone (c); modulation frequency of 4 Hz
         \cite[pp. 249]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrenvsndpreslvl}
 \end{figure}
 
-Next the effect of modulation depth on fluctuation strength is analized, which
+Next the effect of modulation depth on fluctuation strength is analyzed, which
 can be observed on figure \ref{fig:flucstrenvsmoddep}. It can be observer than,
 between 3 dB and 30 dB the relation between fluctuation strength and modulation
 depth is somewhat linear. After reaching a maximum value at around 30 dB, which
@@ -40,26 +40,27 @@ constant with further increments of modulation depth.
     \centering
     \includegraphics[height=5cm]
         {Fastl2007-FluctuationStrengthVsModulationDepth}
-    \caption{Fluctuation strength vs. modulation depth for amplitude-modulated
-        broad-band noise of 60 dB SPL (a), and amplitude-modulated tone of 70 dB
-        SPL and 1 kHz frequency; both with a modulation frequency of 4 Hz
-        \cite[pp. 249]{Fastl2007Psychoacoustics}}
+    \caption{Fluctuation strength as a function of modulation depth for
+        amplitude-modulated broad-band noise of 60 dB SPL (a), and
+        amplitude-modulated tone of 70 dB SPL and 1 kHz frequency; both with a
+        modulation frequency of 4 Hz \cite[pp. 249]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrenvsmoddep}
 \end{figure}
 
 Figure \ref{fig:flucstrenvscfreq} shows the relation between the center
 frequency and fluctuation strength. Here a clear difference exists between the
-type of modulation used; for amplitude-modulated tones although there is some
-variability in the fluctuation strength it is small, whereas for
-frequency-modulated tones there is a clear relation between both variables.
-Before a center frequency of 1 kHz the fluctuation strength is almost constant,
-experiencing later a linear decrease until it fades away.
+type of modulation used. For amplitude-modulated tones there is a small
+variability in the fluctuation strength, implying this a very little dependence
+of the modulation frequency on fluctuation strength. For frequency-modulated
+tones a clear dependence between both variables exists. For modulation
+frequencies below 1 kHz the fluctuation strength is almost constant; above 1 kHz
+it experiences a linear decrease until it fades away.
 
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/Fastl2007-FluctuationStrengthVsCenterFrequency.jpg}
-    \caption{Fluctuation strength vs. center frequency for an
+        {img/Fastl2007-FluctuationStrengthVsCenterFrequency}
+    \caption{Fluctuation strength as a function of center frequency for an
         amplitude-modulated tone of 70 dB SPL, 4 Hz modulation frequency and 40
         dB modulation depth (a), and a frequency-modulated tone with 70 dB SPL,
         4 Hz modulation frequency and $\pm200$ Hz frequency deviation
@@ -69,14 +70,20 @@ experiencing later a linear decrease until it fades away.
 
 To understand why this change of fluctuation strength occurs in the case of the
 frequency-modulated tones, it is necessary to take into account the excitation
-patterns that the modulated sounds cause regarding auditory filters. For
-instance, for a 0.5 kHz tone the frequency would vary between 300 and 700 Hz,
-this corresponding to a 3.5 Bark interval. For a 8 kHz these values would be 7.8
-kHz and 8.2 kHz, leading to a 0.2 Bark interval. The proportion between these
-two is 17.5, which seems to be also the proportional between the relative
-fluctuation strength for these two frequencies. Thus, this leads to the idea
-that fluctuation strength can be explained in terms of the excitation patterns
-that present themselves across the auditory filters.
+patterns that the modulated sounds cause regarding auditory filters. The
+auditory filters are a series of overlapping bandpass filters that model the
+frequency selective response of the auditory system. The excitation pattern
+refers to the pattern that results as the outcome of all the precedent phases of
+in the hearing process, being them the outer ear transmission, middle ear
+transmission, and the auditory filters themselves.
+
+In the case of fluctuation strength, for a 0.5 kHz tone the frequency would vary
+between 300 and 700 Hz, this corresponding to a 3.5 Bark interval. For a 8 kHz
+these values would be 7.8 kHz and 8.2 kHz, leading to a 0.2 Bark interval. The
+proportion between these two is 17.5, which seems to be also the proportion
+between the relative fluctuation strength for these two frequencies. Thus, this
+leads to the idea that fluctuation strength can be explained in terms of the
+excitation patterns that present themselves across the auditory filters.
 
 Regarding fluctuation strength and frequency deviation, figure
 \ref{fig:flucstrenvsfreqdev} depicts the relation between these two variables.
@@ -87,30 +94,47 @@ increase of fluctuation strength with frequency.
     \centering
     \includegraphics[height=5cm]
         {Fastl2007-FluctuationStrengthVsFrequencyDeviation}
-    \caption{Fluctuation strength vs. frequency deviation for a tone with 70 dB
-        SPL, 1.5 kHz center frequency and a modulation frequency of 4 Hz
-        \cite[pp. 251]{Fastl2007Psychoacoustics}}
+    \caption{Fluctuation strength as a function of frequency deviation for a
+        tone with 70 dB SPL, 1.5 kHz center frequency and a modulation frequency
+        of 4 Hz \cite[pp. 251]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrenvsfreqdev}
 \end{figure}
 
-It is to note that, regarding modulation index, it seems that a significant
-fluctuation strength (10\% of the relative fluctuation strength, as defined by
-the authors) is achieved with a modulation index that would correspond to about
-10 times to JND for modulation frequency. This would relate both the thresholds
-of modulation frequency and fluctuation strength.
+Another variable that affects fluctuation strength is the modulation index $h$
+(also called modulation factor $m$). It is defined differently according to the
+type of modulation used:
+\begin{itemize}
+    \item For amplitude-modulated signals is the ratio between the modulating
+        signal amplitude $M$ and the carrier signal amplitude $A$,
+        \begin{equation}
+            h=\frac{M}{A}
+        \end{equation}
+    \item For frequency-modulated signals is the ratio between the maximum
+        frequency deviation in the carrier signal ($\Delta f$) and the maximum
+        frequency component of the modulating signal ($f_m$),
+        \begin{equation}
+            h=\frac{\Delta f}{f_m}
+        \end{equation}
+\end{itemize}
 
-Not only modulated sounds can cause fluctuation strength, but also unmodulated
-narrow-band noise. Figure \ref{fig:flucstrenvsbandwith} illustrates this, where
-it can be seen that also at a 4 Hz frequency the maximum value for fluctuation
-strength occurs. Regarding the SPL it behaves similarly as the other sound
-sources.
+Then, regarding modulation index, it seems that a significant fluctuation
+strength (10\% of the relative fluctuation strength, as defined by the authors)
+is achieved with a modulation index that would correspond to about 10 times to
+JND for modulation frequency. This would relate both the thresholds of
+modulation frequency and fluctuation strength.
+
+Not only modulated sounds can cause fluctuation strength, but also for non
+modulated narrow-band noise. Figure \ref{fig:flucstrenvsbandwith} illustrates
+this, where it can be seen that also at a 4 Hz frequency the maximum value for
+fluctuation strength occurs. Regarding the SPL it behaves similarly as the other
+sound sources.
 
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
         {Fastl2007-FluctuationStrengthvsBandwidth}
-    \caption{Fluctuation strength vs bandwidth for unmodulated narrow-band noise
-        with 70 dB SPL and a center frequency of 1 kHz
+    \caption{Fluctuation strength as a function of bandwidth for non modulated
+        narrow-band noise with 70 dB SPL and a center frequency of 1 kHz
         \cite[pp. 252]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrenvsbandwith}
 \end{figure}
@@ -125,7 +149,7 @@ fluctuation strength sums across critical bands.
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/Fastl2007-FluctuationStrengthSounds.jpg}
+        {img/Fastl2007-FluctuationStrengthSounds}
     \caption{Fluctuation strength of sounds 1--5 as described in Table
         \ref{tab:flucstrensnds} \cite[pp. 252]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrensnds}
@@ -152,7 +176,7 @@ fluctuation strength sums across critical bands.
 
 \subsection{Model of Fluctuation Strength}
 
-A model basic on the temporal variation of a masking pattern in shown on Figure
+A basic model on the temporal variation of a masking pattern in shown on Figure
 \ref{fig:flucstrenmodel}, where the temporal variation of the amplitude of the
 masker, also called temporal masking depth, is denoted by the magnitude
 $\Delta L$. The inverse of the time difference between peak corresponds to the
@@ -180,8 +204,8 @@ It is to note that there is dependency between the temporal masking depth
 $\Delta L$ and the modulation frequency depending on the type of stimuli. In the
 case of broad-band noise, temporal masking depth seems largely unaffected by 
 modulation frequency, whereas amplitude and frequency modulates tones these two
-variable are dependant on each other, this being strongest on the frequency
-modulated case. In order to address this, when modelling fluctuation strength
+variable are dependent on each other, this being strongest on the frequency
+modulated case. In order to address this, when modeling fluctuation strength
 for these tones not a single $\Delta L$ value is taken, but instead it is
 integrated across the critical-band rate scale.
 
@@ -190,7 +214,7 @@ pattern for several values of modulation frequency. It can be seen that, as the
 modulation frequency increases, the temporal masking depth decreases. This leads
 to the idea that, although fluctuation strength presents a bandpass response
 with respect to modulation frequency, the temporal masking suffers from a
-lowpass effect. It can be considered that the temporal masking depth decreases
+low pass effect. It can be considered that the temporal masking depth decreases
 linearly with modulation frequency.
 
 \begin{figure}
@@ -219,7 +243,3 @@ across the auditory filters.
         {(f_{mod}/4\text{ Hz})+(4\text{ Hz}/f_{mod})} \text{ vacil}
     \label{eq:flucstrenexamfm}
 \end{equation}
-
-
-
-
