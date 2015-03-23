@@ -5,4 +5,41 @@ The paper by \citet{Miura2013Fluctuation} proposes a modified model of
 fluctuation strength to analyze motorbike exhaust and marimba tremolo sounds.
 The model is based on a multiple regression composed of Zwicker's fluctuation
 strength model value, and several other factors depending on the sound
-analyzed.
+analyzed. The most important details of this study are presented below:
+
+\begin{itemize}
+    \item The method uses information about the fluctuating waveform to extract
+        parameters from it and use them to estimate the fluctuation strength.
+    \item They use Zwicker's amplitude-modulated tones fluctuation strenght
+        model as the reference point for comparisons.
+    \item When analizing the fluctuation strength on a mandolin, two types of
+        fluctuation where defined:
+        \begin{itemize}
+            \item 1st fluctuations: the fluctuation arising from the plucking of
+                the strings.
+            \item 2nd fluctuations: variation in the onset time and amplitude
+                due to inconsistencies in the performance of the instrument.
+        \end{itemize}
+    \item The correlation with the fluctuation strength reported scores was
+        higher for the proposed model than for Zwicker's model, for the mandolin
+        tremolo case.
+    \item Then they expand the analysis to marimba tremolo, which amplitude
+        envelope is also dependent on the stifness of the mallets used with the
+        marimba. To accomodate for this, they introduce what they call 3rd
+        fluctuations parameters, which consists of several features regarding
+        the amplitude envelope such as slope for rising and falling, acoustic
+        power, etc.
+    \item They use a magnitude estimation procedure to obtain the fluctuation
+        strength ratings for the sounds used.
+    \item They use synthesized marimba sound to manipulate easily the amplitude
+        envelope parameters when generating the sample sounds.
+    \item Again, by using the measures from the 1st, 2nd and 3rd fluctuation a
+        higher correlation coefficient is attained in comparison with the case
+        when only the base Zwicker value is used.
+    \item To assess whether using 3rd fluctuations make a difference regarding
+        the expected fluctuation strength value, motorcycle exhaust noises where
+        then analyzed. These have the particularity that, on a set of pulses,
+        each pulse shape differs from the others. 
+    \item They found that by including the information regarding the specified
+        features a better correlation coefficient could be obtained.
+\end{itemize}
