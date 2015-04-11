@@ -35,9 +35,9 @@ under questioning.
 ]{/Users/rodrigo/Documents/MATLAB/Thesis/Roughness.m}
 
 Line 5 of the code uses the expression
-\lstinline[style=MATLAB-style]!(230 / params.freqs(w))!, in which the variable
-\lstinline[style=MATLAB-style]!w! is used as index of the frequencies, instead
-of \lstinline[style=MATLAB-style]!whichL(w)!. Therefore it may be that the used
+\lstinline[style=MATLAB-editor]!(230 / params.freqs(w))!, in which the variable
+\lstinline[style=MATLAB-editor]!w! is used as index of the frequencies, instead
+of \lstinline[style=MATLAB-editor]!whichL(w)!. Therefore it may be that the used
 frequencies are not the correct ones, and errors might arise from this fact.
 
 \section{Results}
@@ -52,7 +52,7 @@ From the graphs it can be seen that there is a difference of about 0.25 asper in
 the values obtained. However, the uncorrected values are aligned with those
 present in \citeauthor{Daniel1997Psychoacoustical} (Figure \ref{fig:rorigfig}).
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{minipage}[b]{0.45\linewidth}
         \centering
@@ -71,7 +71,7 @@ present in \citeauthor{Daniel1997Psychoacoustical} (Figure \ref{fig:rorigfig}).
     \end{minipage}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[height=8cm]{Daniel1997-RoughnessAMTones}
     \caption{Roughness of amplitude-modulates tones
