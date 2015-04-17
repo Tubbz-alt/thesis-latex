@@ -12,6 +12,22 @@ model, based on the roughness model implemented by \citeauthor{Schrader2002}.
 This is similar to the work of \citeauthor{Sontacchi1998}, which will be also
 taken into account when making the necessary adjustments.
 
+\section{Implementation}
+
+The following are implementation details of the roughness model that probably
+will have to be adjusted for the fluctuation strength model.
+
+\begin{itemize}
+    \item Does the FFT resolution affects in any way the results of the model?
+    \item \matlabinline{Hweight} models the bandpass response of the modulation
+        frequency, do these weights have to be changed for the fluctuation
+        strength case?
+    \item \matlabinline{gzi} represents the effect of the carrier frequency on
+        the output, do these values have to be changed for the fluctuation
+        strength case?
+    \item Does the relation $f_s \propto m_d ^ 2$ still holds?
+\end{itemize}
+
 \bibliographystyle{plainnat}
 \bibliography{../References}
 
