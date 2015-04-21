@@ -45,6 +45,38 @@ will have to be adjusted for the fluctuation strength model.
 
 \subsection{Modulation Depth Dependency}
 
+In the model by \citet{Sontacchi1998} the exponent $2$ is used in the modulation
+depth relation; this based on the roughness models of
+\citet{aures1985berechnungsverfahren} and \citet{daniel1997psychoacoustical}.
+However, it is to note that the relation between modulation depth and
+fluctuation strength is not that straightforward as in roughness. This can be
+appreciated in Figure \ref{fig:flucstrenvsmoddep}, where it can be seen that for
+AM tones only between 4 and 20 dB the relation is somewhat linear. This
+contrasts with the case of roughness, depicted in Figure \ref{fig:roughdegmod}.
+As so, it is to consider whether the used relation is representative for the
+fluctuation strength case.
+
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[height=3.5cm]
+            {book/img/Fastl2007-FluctuationStrengthVsModulationDepth}
+        \caption{Fluctuation strength as a function of modulation depth
+            \cite[pp. 249]{Fastl2007Psychoacoustics}}
+        \label{fig:flucstrenvsmoddep}
+    \end{minipage}
+    \quad
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[height=3.5cm]
+            {book/img/Fastl2007-RoughnessDegreeModulation}
+        \caption{Roughness as a function of degree of modulation
+            \cite[pp. 258]{Fastl2007Psychoacoustics}}
+        \label{fig:roughdegmod}
+    \end{minipage}
+\end{figure}
+
 \bibliographystyle{plainnat}
 \bibliography{../References}
 
