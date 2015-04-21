@@ -34,12 +34,41 @@ will have to be adjusted for the fluctuation strength model.
     \item \matlabinline{gzi} represents the effect of the carrier frequency on
         the output, do these values have to be changed for the fluctuation
         strength case?
-    \item Does the relation $f_s \propto m_d ^ 2$ still holds?
+    \item Does the relation $f_s \propto m_d ^ 2$ still hold?
 \end{itemize}
 
 \subsection{FFT Resolution}
 
 \subsection{Modulation Frequency Dependency}
+
+This is the most crucial difference between roughness and fluctuation strength.
+Although both phenomena present a bandpass response in regard with modulation
+frequency, for roughness the maximum value is around 70 Hz (Figure
+\ref{fig:roughvmodfreq}), whereas for fluctuation strength is around 4 Hz
+(Figure \ref{fig:flucstrenvmodfreq}). As so, the \matlabinline{Hweight} values
+of \citeauthor{Schrader2002} will have to be changed in order to accommodate for
+this difference.
+
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[height=3.5cm]
+            {book/img/Fastl2007-RoughnessVsModulationFrequency}
+        \caption{Roughness as a function of modulation frequency
+            \cite[pp. 259]{Fastl2007Psychoacoustics}}
+        \label{fig:roughvmodfreq}
+    \end{minipage}
+    \quad
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[height=3.5cm]
+            {book/img/Mueller2012Handbook-FluctuationStrengthVsModulationFrequency}
+        \caption{Fluctuation strength as a function of modulation frequency
+            \cite[pp. 248]{Fastl2007Psychoacoustics}}
+        \label{fig:flucstrenvmodfreq}
+    \end{minipage}
+\end{figure}
 
 \subsection{Carrier Frequency Dependency}
 
@@ -50,7 +79,7 @@ carrier frequency effect on fluctuation strength.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]
+    \includegraphics[height=3.5cm]
         {book/img/Fastl2007-FluctuationStrengthVsCenterFrequency}
     \caption{Fluctuation strength as a function of center frequency
         \cite[pp. 250]{Fastl2007Psychoacoustics}}
