@@ -1,0 +1,35 @@
+% This file was created by matlab2tikz.
+% Minimal pgfplots version: 1.3
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.027778in,
+height=4.754167in,
+at={(1.011111in,0.641667in)},
+scale only axis,
+xmin=7,
+xmax=13,
+xtick={7,8,9,10,11,12,13},
+xticklabels={{125},{250},{500},{1000},{2000},{4000},{8000}},
+xlabel={$\text{f}_{\text{c}}\text{ [Hz]}$},
+ymin=0,
+ymax=2,
+ylabel={Fluctuation strength [vacil]}
+]
+\addplot [color=blue,dashed,mark=o,mark options={solid},forget plot]
+  table[row sep=crcr]{%
+6.96578428466209	0.446141649314583\\
+7.96578428466209	0.61307603756436\\
+8.96578428466209	0.863557726993693\\
+9.96578428466209	1.24195621014286\\
+10.9657842846621	0.767751567318678\\
+11.9657842846621	0.565251105254053\\
+12.9657842846621	0.307638663996835\\
+};
+\end{axis}
+\end{tikzpicture}%
