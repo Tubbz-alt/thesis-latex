@@ -12,24 +12,22 @@ width=6.027778in,
 height=4.754167in,
 at={(1.011111in,0.641667in)},
 scale only axis,
-xmin=7,
-xmax=13,
-xtick={7,8,9,10,11,12,13},
-xticklabels={{125},{250},{500},{1000},{2000},{4000},{8000}},
-xlabel={$\text{f}_{\text{c}}\text{ [Hz]}$},
-ymin=0,
-ymax=2,
+xmode=log,
+xmin=50,
+xmax=90,
+xminorticks=true,
+xlabel={SPL [dB]},
+ymin=0.6,
+ymax=1.6,
 ylabel={Fluctuation strength [vacil]}
 ]
 \addplot [color=blue,dashed,mark=o,mark options={solid},forget plot]
   table[row sep=crcr]{%
-6.96578428466209	0.863381206971997\\
-7.96578428466209	1.08941248366863\\
-8.96578428466209	1.16781438618948\\
-9.96578428466209	1.25938692318113\\
-10.9657842846621	1.17527371024245\\
-11.9657842846621	1.1314119741313\\
-12.9657842846621	0.994866657998372\\
+50	0.68255601667771\\
+60	0.971026780036039\\
+70	1.25939581505104\\
+80	1.37736054592478\\
+90	1.56695700792236\\
 };
 \end{axis}
 \end{tikzpicture}%
