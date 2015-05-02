@@ -96,6 +96,65 @@ fm  = 4; %[Hz]
     \label{fig:flucstrenvscfreq}
 \end{figure}
 
+\subsection{Sound Pressure Level}
+
+Figure \ref{fig:flucstrenvsndpreslvl} will be reproduced using the stimuli whose
+parameters are presented in Listing \ref{lst:amparamssplplot};
+
+\begin{lstlisting}[
+    style=MATLAB-editor,
+    caption={AM tones parameters sound pressure level plot},
+    label={lst:amparamssplplot}
+]
+FCs = 1e3; % [Hz]
+md  = 40; % [dB]
+SPL = [50 60 70 80 90]; % [dB]
+fs  = 44100; % [Hz]
+N   = 262144; % samples
+fm  = 4; %[Hz]
+\end{lstlisting}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]
+        {Fastl2007Psychoacoustics/img/FluctuationStrengthVsSoundPressureLevel}
+    \caption{Fluctuation strength of modulated sounds as a function of sound
+        pressure level. Stimulus parameters are the same as in Figure
+        \ref{fig:flucstrenvmodfreq}, but the modulation frequency is 4Hz
+        \cite[pp. 249]{Fastl2007Psychoacoustics}}
+    \label{fig:flucstrenvsndpreslvl}
+\end{figure}
+
+\subsection{Modulation Depth}
+
+Figure \ref{fig:flucstrenvsmoddep} will be reproduced using the stimuli whose
+parameters are presented in Listing \ref{lst:amparamssmdplot}.
+
+\begin{lstlisting}[
+    style=MATLAB-editor,
+    caption={AM tones parameters modulation depth plot},
+    label={lst:amparamssmdplot}
+]
+FCs = 1e3; % [Hz]
+md  = [1 2 4 6 8 12 16 20 40]; % [dB]
+SPL = 70; % [dB]
+fs  = 44100; % [Hz]
+N   = 262144; % samples
+fm  = 4; %[Hz]
+\end{lstlisting}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]
+        {Fastl2007Psychoacoustics/img/FluctuationStrengthVsModulationDepth}
+    \caption{Fluctuation strength of two amplitude-modulated sounds as a
+        function of modulation depth (or modulation factor). (a)
+        Amplitude-modulated broadband noise of 60-dB SPL and 4-Hz modulation
+        frequency; (b) amplitude-modulated 1-kHz tone of 70-dB SPL and 4-Hz
+        modulation frequency \cite[pp. 249]{Fastl2007Psychoacoustics}}
+    \label{fig:flucstrenvsmoddep}
+\end{figure}
+
 \custombibliography
 
 \end{document}
