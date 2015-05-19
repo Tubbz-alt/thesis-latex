@@ -15,8 +15,8 @@ sampling frequency $f_s = 44100 $ Hz will be used.
 \section{Reference Value}
 
 An amplitude-modulated (AM) tone ($f_c = 1$ kHz, $f_m = 4$ Hz, $m_d = 1$,
-SPL $=60$ dB) serves as the reference value for fluctuation strength, with a
-value of 1 vacil assigned to it. As so, the model implementation must comply
+SPL $=60$ dB) is assigned a fluctuation strength of 1 vacil, and thus
+constitutes the reference value. As so, the model implementation must comply
 with this requisite.
 
 \section{Tests}
@@ -41,7 +41,7 @@ using the input stimuli whose parameters are shown on Listing
     caption={AM tones parameters modulation frequency plot},
     label={lst:amparamsfmplot}
 ]
-fc  = 1e3; % [Hz]
+fc  = 1000; % [Hz]
 md  = 40; % [dB]
 SPL = 70; % [dB]
 fs  = 44100; % [Hz]
@@ -64,18 +64,19 @@ FMs = [0.50 1.00 2.00 4.00 8.00 16.00 32.00]; % [Hz]
 
 \subsection{Carrier Frequency}
 
-In \citeauthor{Schrader2002} implementation, the parameter \matlabinline{gzi} is
-used to model the dependency of roughness on the carrier frequency. In order to
-evaluate if the proposed values hold, and if not to adjust them accordingly,
-Figure \ref{fig:flucstrenvscfreq}a will be used. The input stimuli parameters to
-be used are listed in Listing \ref{lst:amparamsfcplot}.
+In the implementation of \citeauthor{Schrader2002}, the parameter
+\matlabinline{gzi} is used to model the dependency of roughness on the carrier
+frequency. In order to evaluate whether the proposed values hold, and whether
+it is necessary to adjust them, Figure \ref{fig:flucstrenvscfreq}a will be used.
+The input stimuli parameters to be used are listed in Listing
+\ref{lst:amparamsfcplot}.
 
 \begin{lstlisting}[
     style=MATLAB-editor,
     caption={AM tones parameters carrier frequency plot},
     label={lst:amparamsfcplot}
 ]
-FCs = [125 250 500 1e3 2e3 4e3 8e3]; % [Hz]
+FCs = [125 250 500 1000 2000 4000 8000]; % [Hz]
 md  = 40; % [dB]
 SPL = 70; % [dB]
 fs  = 44100; % [Hz]
@@ -99,14 +100,14 @@ fm  = 4; % [Hz]
 \subsection{Sound Pressure Level}
 
 Figure \ref{fig:flucstrenvsndpreslvl} will be reproduced using the stimuli whose
-parameters are presented in Listing \ref{lst:amparamssplplot};
+parameters are shown in Listing \ref{lst:amparamssplplot};
 
 \begin{lstlisting}[
     style=MATLAB-editor,
     caption={AM tones parameters sound pressure level plot},
     label={lst:amparamssplplot}
 ]
-FCs     = 1e3; % [Hz]
+FCs     = 1000; % [Hz]
 md      = 40; % [dB]
 SPLs    = [50 60 70 80 90]; % [dB]
 fs      = 44100; % [Hz]
@@ -135,7 +136,7 @@ parameters are presented in Listing \ref{lst:amparamssmdplot}.
     caption={AM tones parameters modulation depth plot},
     label={lst:amparamssmdplot}
 ]
-FCs = 1e3; % [Hz]
+FCs = 1000; % [Hz]
 MDs = [1 2 4 6 8 12 16 20 40]; % [dB]
 SPL = 70; % [dB]
 fs  = 44100; % [Hz]
