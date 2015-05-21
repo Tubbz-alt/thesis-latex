@@ -215,6 +215,32 @@ fm      = 4; % [Hz]
 
 \subsection{Frequency Deviation}
 
+Figure \ref{fig:flucstrenvfreqdev} will be reproduced using the stimuli whose
+parameters are presented in Listing \ref{lst:fmparamsfreqdevplot}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]
+        {Fastl2007Psychoacoustics/img/FluctuationStrengthVsFrequencyDeviation}
+    \caption{Fluctuation strength as a function of frequency deviation for a
+        tone with 70 dB SPL, 1.5 kHz center frequency and a modulation frequency
+        of 4 Hz \cite[pp. 251]{Fastl2007Psychoacoustics}}
+    \label{fig:flucstrenvfreqdev}
+\end{figure}
+
+\begin{lstlisting}[
+    style=MATLAB-editor,
+    caption={FM tones parameters frequency deviation plot},
+    label={lst:fmparamsfreqdevplot}
+]
+fc      = 1500; % [Hz]
+DFs     = [16 32 100 300 700]; % [Hz]
+SPL     = 70; % [dB]
+fs      = 44100; % [Hz]
+N       = 262144; % samples
+fm      = 4; % [Hz]
+\end{lstlisting}
+
 \custombibliography
 
 \end{document}
