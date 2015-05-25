@@ -17,17 +17,35 @@ The results of pilot experiments are also reported.
 
 \subsubsection{Modulation Frequency}
 
-Figure \ref{fig:expres} shows the results regarding the relation between
-fluctuation strength and modulation frequency.
+Figure \ref{fig:expresstds} shows the results regarding the relation between
+fluctuation strength and modulation frequency by standard used. Figure
+\ref{fig:exprescomp} shows a comparison between the relative fluctuation
+strength of the experimental data, \citeauthor{Fastl2007Psychoacoustics} data
+and the proposed model.
 
 \begin{figure}[ht]
     \centering
     \resizebox{!}{10cm}{
-        \input{figure/experiment_results.tex}
+        \input{figure/experiment_results_standards.tex}
     }
     \caption{Relative fluctuation strength as a function of modulation
-        frequency for AM tones with $f_c = 1$ kHz, $m_d = 40$ dB, SPL $= 70$ dB}
-    \label{fig:expres}
+        frequency by standard used for AM tones with $f_c = 1$ kHz, $m_d = 40$
+        dB, SPL $= 70$ dB (error bars indicate standard deviation)}
+    \label{fig:expresstds}
 \end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \resizebox{!}{10cm}{
+        \input{figure/experiment_results_comparison.tex}
+    }
+    \caption{Comparison between relative fluctuation strength as a function of
+        modulation frequency for AM tones using the experimental data,
+        \citeauthor{Fastl2007Psychoacoustics} data and the proposed model
+        (error bars indicate standard deviation)}
+    \label{fig:exprescomp}
+\end{figure}
+
+\custombibliography
 
 \end{document}
