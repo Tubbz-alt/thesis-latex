@@ -17,9 +17,11 @@ xmax=5,
 xtick={-1,0,1,2,3,4,5},
 xticklabels={{0.5},{1},{2},{4},{8},{16},{32}},
 xlabel={$\text{f}_{\text{mod}}\text{ [Hz]}$},
+xmajorgrids,
 ymin=0,
 ymax=2.5,
-ylabel={Fluctuation strength [vacil]}
+ylabel={Fluctuation strength [vacil]},
+ymajorgrids
 ]
 \addplot [color=blue,dashed,mark=o,mark options={solid},forget plot]
   table[row sep=crcr]{%

@@ -12,12 +12,19 @@ width=6.027778in,
 height=4.754167in,
 at={(1.011111in,0.641667in)},
 scale only axis,
-xmin=0,
+xmode=log,
+xmin=16,
 xmax=700,
+xtick={16,32,100,300,700},
+xticklabels={{16},{32},{100},{300},{700}},
+xminorticks=true,
 xlabel={$\text{d}_{\text{f}}\text{ [Hz]}$},
+xmajorgrids,
+xminorgrids,
 ymin=0,
 ymax=2,
-ylabel={Fluctuation strength [vacil]}
+ylabel={Fluctuation strength [vacil]},
+ymajorgrids
 ]
 \addplot [color=blue,dashed,mark=o,mark options={solid},forget plot]
   table[row sep=crcr]{%

@@ -15,11 +15,16 @@ scale only axis,
 xmode=log,
 xmin=1,
 xmax=40,
+xtick={1,2,4,8,20,40},
+xticklabels={{1},{2},{4},{8},{20},{40}},
 xminorticks=true,
 xlabel={$\text{m}_{\text{d}}\text{ [dB]}$},
+xmajorgrids,
+xminorgrids,
 ymin=0,
-ymax=1.5,
-ylabel={Fluctuation strength [vacil]}
+ymax=1.4,
+ylabel={Fluctuation strength [vacil]},
+ymajorgrids
 ]
 \addplot [color=blue,dashed,mark=o,mark options={solid},forget plot]
   table[row sep=crcr]{%
