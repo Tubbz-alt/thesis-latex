@@ -1,0 +1,36 @@
+% This file was created by matlab2tikz.
+% Minimal pgfplots version: 1.9
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.027778in,
+height=4.754167in,
+at={(1.011111in,0.641667in)},
+scale only axis,
+xmin=0,
+xmax=8,
+xtick={1,2,3,4,5,6,7},
+xticklabels={{0.5},{1},{2},{4},{8},{16},{32}},
+xlabel={Modulation frequency [Hz]},
+ymin=10,
+ymax=110,
+ylabel={Relative fluctuation strength [\%]}
+]
+\addplot [color=blue,dashed,mark=o,mark options={solid},forget plot]
+ plot [error bars/.cd, y dir = both, y explicit]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+1	69.1964285714286	33.5539196634513	33.5539196634513\\
+2	78.5714285714286	6.03681610520369	6.03681610520369\\
+3	82.1428571428571	8.95404529325727	8.95404529325727\\
+4	100	7.63603548321213	7.63603548321213\\
+5	59.8214285714286	34.1360466267008	34.1360466267008\\
+6	39.2857142857143	13.7660587379919	13.7660587379919\\
+7	28.125	9.99954445026512	9.99954445026512\\
+};
+\end{axis}
+\end{tikzpicture}%
