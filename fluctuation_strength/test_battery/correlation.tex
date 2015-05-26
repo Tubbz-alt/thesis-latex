@@ -1,0 +1,59 @@
+\documentclass[a4paper]{article}
+\usepackage{mystyle}
+
+\begin{document}
+
+\customtitle{Fluctuation Strength Cross Correlation Analysis}
+
+\section{Introduction}
+
+This document presents a small analysis conducted in order to understand the
+effect of the cross correlation used in the fluctuation strength model.
+
+\section{Description}
+
+\subsection{Test Tones}
+
+Two test tones were used in the analysis, an AM tone ($f_c = 1000$ Hz, $f_m = 4$
+Hz, $m_d = 40$ dB, SPL = 70 dB) and a FM tone ($f_c = 1500$ Hz, $f_m = 4$ Hz,
+$d_f = 700$ Hz, SPL = 70 dB).
+
+\section{Results}
+
+Figure \ref{fig:corr} shows all the correlation coefficients for all the
+channel bands for the two test tones. For the AM tone, all the values are close
+to 1, whereas for the FM tone there is a gap between the 13th and the 26th
+channel were the values get significantly lower.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=8cm]{img/model_correlations_AM_FM}
+    \caption{Correlation coefficients for the two test tones}
+    \label{fig:corr}
+\end{figure}
+
+In order two understand the difference between the two test tones, two channel
+bands that present a different results in both tones were chosen. The 24th and
+the 26th channel bands present a value close to 1 for the AM tone, and the
+lowest value present in the case of the FM tone.
+
+Figure \ref{fig:am2426} and Figure \ref{fig:fm2425} show the time signals from
+the signals corresponding to the channel bands used in the correlation
+calculation. In the case of the AM tone, the two signals are very close to each
+other in regards to their phase, whereas for the FM tone this is not the case.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=8cm]{img/model_excitation_AM_24_26}
+    \caption{AM tone - Time signals for 24th and 26th channel bands}
+    \label{fig:am2426}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=8cm]{img/model_excitation_FM_24_26}
+    \caption{FM tone - Time signals for 24th and 26th channel bands}
+    \label{fig:fm2425}
+\end{figure}
+
+\end{document}
