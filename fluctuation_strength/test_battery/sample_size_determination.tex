@@ -24,10 +24,9 @@ are presented. The maximum interquartile range, which corresponds to the 8 Hz FM
 tone, is about 1.6 vacil. Using this value as the whole range for the values
 i.e., approximately 6 standard deviations), it can be derived that the standard
 deviation is of about 0.26 vacil. The median value for this point is of about
-0.4 vacil. 0.3 vacil. Furthermore, the minimum distance between values for
-Figure \ref{fig:fsvsmf}c is of about 0.15 vacil; this value will be used to
-calculate the confidence interval precision and to postulate the alternate
-hypothesis.
+0.4 vacil. Furthermore, the minimum distance between values for Figure
+\ref{fig:fsvsmf}c is of about 0.15 vacil; this value will be used to calculate
+the confidence interval precision and to postulate the alternate hypothesis.
 
 It is to note that in \citeauthor{Fastl1982Fluctuation} experiment
 \cite{Fastl1982Fluctuation}, the sample size for each point is of 24 samples
@@ -55,8 +54,8 @@ will be used for comparison with the obtained values later in this document.
 \subsection{Confidence Interval} % (fold)
 \label{sub:confidence_interval}
 
-Usingi Equation \ref{eq:ci} a sample size can be calculated. Using
-$z_{\alpha\2} = 2$ (95\% confidence interval), $\sigma = 0.26$  and E = 0.15,
+Using Equation \ref{eq:ci} a sample size can be calculated. Using
+$z_{\alpha/2} = 2$ (95\% confidence interval), $\sigma = 0.26$  and E = 0.15,
 a value of 12 is obtained.
 
 \begin{equation}
@@ -66,15 +65,24 @@ a value of 12 is obtained.
 
 % subsection confidence_interval (end)
 
-\subsection{T-Test} % (fold)
-\label{sub:t_test}
+\subsection{Means: Difference from constant (one sample case)} % (fold)
+\label{sub:means_difference_from_constant_}
 
-% subsection t_test (end)
+Using the software G*Power it is possible to calculate the sample size in the
+case where a sample mean is compared to a constant. In this case, the sample
+mean is set at 0.6 vacil, and the constant is set to 0.75 vacil (0.15 vacil
+appart). Using the standard deviation of 0.26 vacil, the obtained sample size
+is of 26. This is also shown in Figure \ref{fig:gpower}.
 
-\subsection{Repeated-Measures ANOVA} % (fold)
-\label{sub:repeated_measures_anova}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[height=8cm]
+        {img/g-power_means}
+    \caption{G*Power calculation}
+    \label{fig:gpower}
+\end{figure}
 
-% subsection repeated_measures_anova (end)
+% subsection means_difference_from_constant_ (end)
 
 % section calculations (end)
 
