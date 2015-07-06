@@ -58,8 +58,8 @@ FMs = [0.50 1.00 2.00 4.00 8.00 16.00 32.00]; % [Hz]
         SPL and 40-dB modulation depth; (b) amplitude-modulated 1-kHz tone of
         70-dB SPL and 40-dB modulation depth; (c) frequency-modulated pure tone
         of 70-dB SPL, 1500-Hz center frequency and $\pm$ 700-Hz frequency
-        deviation; \cite[pp. 248]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvmodfreq}
+        deviation~\cite[pp. 248]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvmodfreq}
 \end{figure}
 
 \subsection{Carrier Frequency}
@@ -67,7 +67,7 @@ FMs = [0.50 1.00 2.00 4.00 8.00 16.00 32.00]; % [Hz]
 In the implementation of \citeauthor{Schrader2002}, the parameter
 \matlabinline{gzi} is used to model the dependency of roughness on the carrier
 frequency. In order to evaluate whether the proposed values hold, and whether
-it is necessary to adjust them, Figure \ref{fig:flucstrenvscfreq}a will be used.
+it is necessary to adjust them, Figure~\ref{fig:flucstrenvscfreq}a will be used.
 The input stimuli parameters to be used are listed in Listing
 \ref{lst:amparamsfcplot}.
 
@@ -92,15 +92,15 @@ fm  = 4; % [Hz]
         frequency. (a) Amplitude-modulated pure tone of 70-dB SPL, 4-Hz
         modulation frequency and 40-dB modulation depth; (b)
         frequency-modulated pure tone of 70-dB SPL, 4-Hz modulation frequency,
-        and ±200-Hz frequency deviation
-        \cite[pp. 250]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvscfreq}
+        and ±200-Hz frequency
+        deviation~\cite[pp. 250]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvscfreq}
 \end{figure}
 
 \subsection{Sound Pressure Level}
 
-Figure \ref{fig:flucstrenvsndpreslvl} will be reproduced using the stimuli whose
-parameters are shown in Listing \ref{lst:amparamssplplot};
+Figure~\ref{fig:flucstrenvsndpreslvl} will be reproduced using the stimuli whose
+parameters are shown in Listing~\ref{lst:amparamssplplot};
 
 \begin{lstlisting}[
     style=MATLAB-editor,
@@ -120,16 +120,16 @@ fm      = 4; % [Hz]
     \includegraphics[height=5cm]
         {Fastl2007Psychoacoustics/img/FluctuationStrengthVsSoundPressureLevel}
     \caption{Fluctuation strength of modulated sounds as a function of sound
-        pressure level. Stimulus parameters are the same as in Figure
-        \ref{fig:flucstrenvmodfreq}, but the modulation frequency is 4Hz
-        \cite[pp. 249]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvsndpreslvl}
+        pressure level. Stimulus parameters are the same as in
+        Figure~\ref{fig:flucstrenvmodfreq}, but the modulation frequency is
+        4Hz~\cite[pp. 249]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvsndpreslvl}
 \end{figure}
 
 \subsection{Modulation Depth}
 
-Figure \ref{fig:flucstrenvsmoddep} will be reproduced using the stimuli whose
-parameters are presented in Listing \ref{lst:amparamssmdplot}.
+Figure~\ref{fig:flucstrenvsmoddep} will be reproduced using the stimuli whose
+parameters are presented in Listing~\ref{lst:amparamssmdplot}.
 
 \begin{lstlisting}[
     style=MATLAB-editor,
@@ -152,15 +152,15 @@ fm  = 4; % [Hz]
         function of modulation depth (or modulation factor). (a)
         Amplitude-modulated broadband noise of 60-dB SPL and 4-Hz modulation
         frequency; (b) amplitude-modulated 1-kHz tone of 70-dB SPL and 4-Hz
-        modulation frequency \cite[pp. 249]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvsmoddep}
+        modulation frequency~\cite[pp. 249]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvsmoddep}
 \end{figure}
 
 \section{FM Tones}
 
 \subsection{Modulation Frequency}
 
-Figure \ref{fig:flucstrenvmodfreq}c shows the dependency between modulation
+Figure~\ref{fig:flucstrenvmodfreq}c shows the dependency between modulation
 frequency and fluctuation strength for FM tones. Listing
 \ref{lst:fmparamsfmplot} describes the parameters of the test stimuli to use.
 
@@ -179,8 +179,8 @@ FMs = [0.50 1.00 2.00 4.00 8.00 16.00 32.00]; % [Hz]
 
 \subsection{Carrier Frequency}
 
-Figure \ref{fig:flucstrenvscfreq}b will be reproduced using the stimuli whose
-parameters are presented in Listing \ref{lst:fmparamsfcplot}.
+Figure~\ref{fig:flucstrenvscfreq}b will be reproduced using the stimuli whose
+parameters are presented in Listing~\ref{lst:fmparamsfcplot}.
 
 \begin{lstlisting}[
     style=MATLAB-editor,
@@ -197,8 +197,8 @@ fm  = 4; % [Hz]
 
 \subsection{Sound Pressure Level}
 
-Figure \ref{fig:flucstrenvsndpreslvl}c will be reproduced using the stimuli
-whose parameters are presented in Listing \ref{lst:fmparamssplplot}.
+Figure~\ref{fig:flucstrenvsndpreslvl}c will be reproduced using the stimuli
+whose parameters are presented in Listing~\ref{lst:fmparamssplplot}.
 
 \begin{lstlisting}[
     style=MATLAB-editor,
@@ -215,8 +215,8 @@ fm      = 4; % [Hz]
 
 \subsection{Frequency Deviation}
 
-Figure \ref{fig:flucstrenvfreqdev} will be reproduced using the stimuli whose
-parameters are presented in Listing \ref{lst:fmparamsfreqdevplot}.
+Figure~\ref{fig:flucstrenvfreqdev} will be reproduced using the stimuli whose
+parameters are presented in Listing~\ref{lst:fmparamsfreqdevplot}.
 
 \begin{figure}[ht]
     \centering
@@ -224,8 +224,8 @@ parameters are presented in Listing \ref{lst:fmparamsfreqdevplot}.
         {Fastl2007Psychoacoustics/img/FluctuationStrengthVsFrequencyDeviation}
     \caption{Fluctuation strength as a function of frequency deviation for a
         tone with 70 dB SPL, 1.5 kHz center frequency and a modulation frequency
-        of 4 Hz \cite[pp. 251]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvfreqdev}
+        of 4 Hz~\cite[pp. 251]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvfreqdev}
 \end{figure}
 
 \begin{lstlisting}[
@@ -241,6 +241,6 @@ N       = 262144; % samples
 fm      = 4; % [Hz]
 \end{lstlisting}
 
-\custombibliography
+\custombibliography{}
 
 \end{document}
