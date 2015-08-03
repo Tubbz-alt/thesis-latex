@@ -1,0 +1,215 @@
+\documentclass[a4paper]{article}
+\usepackage{mystyle}
+
+\begin{document}
+
+\customtitle{Fluctuation Strength Experiment Protocol}
+
+\section{Abstract} % (fold)
+\label{sec:abstract}
+
+This documents describe the protocol of the fluctuation strength
+amplitude-modulated (AM) and frequency-modulated (FM) experiments.
+
+% section abstract (end)
+
+\section{Procedure} % (fold)
+\label{sec:procedure}
+
+Three subprocedures are defined, corresponding to the period before, during, and
+after the subjects participation.
+
+\subsection{Before} % (fold)
+\label{sub:before}
+
+\begin{enumerate}
+  \item Verify that the sound interface is calibrated and working properly
+  \item Execute the corresponding experiment batch script\footnotemark[1]
+  \item Input participant's assigned ID and condition\footnotemark[2]
+  \item Turn off computer's monitor and wait for the participant to arrive
+\end{enumerate}
+
+\footnotetext[1]{\emph{run\_am\_experiments.bat} for AM tones,
+\emph{run\_fm\_experiments.bat} for FM tones}
+\footnotetext[2]{The condition refers to the order in which the experimental
+sections are presented, using a latin square design. It is assigned using the
+following equation: $\text{condition}=(\text{ID}-1)\%4+1$}
+
+% subsection before (end)
+
+\subsection{During} % (fold)
+\label{sub:during}
+
+\begin{enumerate}
+  \item Present the participant with the informed consent form and ask him to
+  sign it
+  \item Read the training phase prompt (\ref{sub:training_phase})
+  \item Present twice the pairs of non fluctuating and low fluctuating sounds,
+  indicating before and after their reproduction the level of fluctuation they
+  present
+  \item Ask whether a difference in sensation was felt between the sounds, if
+  not repeat previous point
+  \item Present twice the pairs of non fluctuating and low fluctuating sounds,
+  indicating before and after their reproduction the level of fluctuation they
+  present
+  \item Ask whether a difference in sensation was felt between the sounds, if
+  not repeat previous point
+  \item Read the rough tones prompt (\ref{sub:before_rough_tones})
+  \item Play the remaining triplets of sounds in descending order according to
+  their fluctuation strength
+  \item Ask for participant's perception of fluctuation strength
+  \item Read the rough tones prompt (\ref{sub:after_rough_tones})
+  \item Play the again the remaining triplets of sounds in descending order
+  according to their fluctuation strength
+  \item Ask to the participant is the difference between the high fluctuating
+  sound and the faster but less fluctuating rough tones is clear and agreed
+  upon
+  \item Read the long stimuli prompt (\ref{sub:long_stimuli}).
+  \item Play each of the long stimulus sounds, asking after each reproduction
+  whether a difference between the sounds regarding their fluctuation strength
+  was felt
+  \item Close the current experiment (pressing the ALT+F4 key combination)
+  \item Read the test trials prompt (\ref{sub:test_trials})
+  \item Observe the participant during the test trials completion. If he makes
+  any mistake correct him
+  \item Read the before sections prompt (\ref{sub:before_sections})
+  \item Leave the experiment room and wait for the participant to finish
+\end{enumerate}
+
+% subsection during (end)
+
+\subsection{After} % (fold)
+\label{sub:after}
+
+\begin{enumerate}
+  \item Copy the results files to a safer location, possibly to an USB Drive
+  \item Shutdown the experiment computer
+\end{enumerate}
+
+% subsection after (end)
+
+% section procedure (end)
+
+\clearpage
+
+\appendix
+
+\section{Prompts} % (fold)
+\label{sec:prompts}
+
+\subsection{Training Phase} % (fold)
+
+As you read in the informed consent form, this experiment is about an auditory
+sensation called fluctuation strength. Fluctuation strength is related to a
+fluctuating or circulating feeling that arises from certain sounds. For
+instance, ambulance sirens and washing machines have this quality, as their
+sounds have a certain movement, rotation or circulation associated to it.
+
+Since the concept of fluctuation strength is difficult to explain with words,
+the first part of the experiment consists of a training phase, aimed at making
+clear what is fluctuation strength to you. During this phase I will be
+presenting you with different sounds with different levels of fluctuation
+strength. After the training phase is over, and the concept of fluctuation
+strength is clear, we will start with the experiment itself.
+
+Now, we will start with the training phase.
+
+\label{sub:training_phase}
+
+% subsection training_phase (end)
+
+\subsection{Before Rough Tones} % (fold)
+\label{sub:before_rough_tones}
+
+The following three sounds are a little bit difference. First I will play them
+for you, and then I will ask you to tell me how do you perceive them in terms
+of fluctuation strength.
+
+% subsection before_rough_tones (end)
+
+\subsection{After Rough Tones} % (fold)
+\label{sub:after_rough_tones}
+
+As you may have perceived, as we move from one sound to another between these
+three sounds, their rate of change or speed increases. You may have also noted
+that also the sound begin to resemble noise. However, the increase of rate of
+change does not mean that the sound fluctuates more, as the sensation between
+the first sound and the other two is difference. The first sound is considered
+to have a high fluctuation, whereas the other two sound are considered to have
+a lower fluctuation.
+
+It is important that you focus on your sensation, on what you feel when you
+hear the sound. Since the fluctuating is not related to the speed of the sound,
+I do not want you to count cycles in order to estimate a fluctuation strength
+sensation. Remember that the fluctuating sensation is sometimes that moves, that
+circulates.
+
+Now I will reproduce the sounds again and I will ask you again what do you think
+about their fluctuation strength.
+
+% subsection after_rough_tones (end)
+
+\subsection{Long Stimuli} % (fold)
+\label{sub:long_stimuli}
+
+Now I'm going to present you with a couple of long duration sounds. Each sound
+is composed of shorter sounds, with silence pauses in between each of them. You
+will listen to approximately 10 sounds. What I want you to do is to pay
+attention to the sounds, and try to detect whether a difference of fluctuation
+between the sounds exist. I'm not interested in a specific pair of sounds, but
+in the set of sounds as a whole.
+
+% subsection long_stimuli (end)
+
+\subsection{Test Trials} % (fold)
+\label{sub:test_trials}
+
+This is a test experiment, to familiarize yourself with the interface that you
+will use for the rest of the experiment. When you click on the Start button
+on the top right corner of the screen, the experiment will start. You will
+hear a pair of sounds, with a silence pause in between. So, it will be one
+sound, then a silence, then another sound. What I want you to do is to estimate
+how much does the second sound fluctuates with respect to the first sound.
+
+In order to give an estimate, you will use the slider that is situated in the
+bottom part of the screen. For instance, if the second sound fluctuates more
+than the first sound, you will drag the slider to the right part of the area
+that it contains. In case both stimuli fluctuate around the same, you will
+position the slider close to the `Equal' label. In case the second sound
+fluctuates less than the first, you will position the slider in the left part
+of the area that in contains. Lastly, if the second sound presents no
+fluctuation at all, you will position the slider below the `None' label. When
+you are done with your answer, you can click the `Next' button below the slider,
+and another pair of sound will be presented to you.
+
+If by any chance you need to listen to the pair of sounds again, there is the
+`Repeat stimulus' button to the bottom right part of the screen that you can
+use. Below this button there is also a progress bar, so you can see how much of
+the experiment is left for you to do.
+
+Whenever you are ready you can click the `Start' button and begin with these
+test trials.
+
+% subsection test_trials (end)
+
+\subsection{Before Sections} % (fold)
+\label{sub:before_sections}
+
+We have just finished the training phase. The remaining sections constitute the
+actual experiment that we will be doing. These sections are similar to the test
+trials phase that you just did. Each section takes approximately 10 minutes.
+When you click the `Start' button the section will begin. Once you are done with
+it, the screen will close and another one that looks exactly the same will
+present to you. At this point you can choose to have a small break, go outside
+the isolation booth and stretch a bit, or you can continue if you wish.
+
+I will leave now and close the doors behind me, so you are in a complete audio
+isolated environment. The doors are not locked, so you may exist at any time
+you want. Just bear in mind that the doors are quite heavy and you need to pull
+them strongly.
+
+% subsection before_sections (end)
+
+% section prompts (end)
+
+\end{document}
