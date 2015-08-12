@@ -1,0 +1,31 @@
+\documentclass[a4paper]{article}
+\usepackage{mystyle}
+
+\begin{document}
+
+\customtitle{Fluctuation Strength Model Improvements}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+The following document contains remarks of possible improvements to the
+fluctuation strength model.
+
+% section introduction (end)
+
+\section{Improvements} % (fold)
+\label{sec:improvements}
+
+\subsection{Get\_params.m} % (fold)
+\label{sub:get_params_m}
+
+\begin{itemize}
+  \item Why \matlabinline{freqs=(qb+1)*df;} (line 23)? Isn't it
+    \matlabinline{freqs=qb*df;}?
+\end{itemize}
+
+% subsection get_params_m (end)
+
+% section improvements (end)
+
+\end{document}
