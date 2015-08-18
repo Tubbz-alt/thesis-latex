@@ -1,0 +1,188 @@
+\documentclass[a4paper]{article}
+\usepackage{mystyle}
+
+\newcommand{\figRes}[4]{
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[height=8cm]{img/#1-#2-#3.eps}
+  \caption{#4}
+\label{fig:#1-#2-#3}
+\end{figure}
+}
+
+\newcommand{\figPair}[3]{
+  \figRes{#1}
+    {#2}
+    {standards}
+    {#3, standards}
+  \figRes{#1}
+    {#2}
+    {comparison}
+    {#3, comparison}
+}
+
+\newcommand{\indRes}[4]{
+  \subsubsection{#1}
+  \foreach \i in {#4} {
+    \figPair{#2}
+      {\i}
+      {#3, participant \i}
+  }
+}
+
+\begin{document}
+
+\customtitle{Partial Results}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+This document reports the partial results of the fluctuation strength
+experiments.
+
+% section introduction (end)
+
+\section{Results} % (fold)
+\label{sec:results}
+
+The following are the results of all the participants grouped together by
+experiment. In the appendix the individual results can be found. In all the
+following figures, the error bars indicate the interquartile range and the
+marker indicates the median value.
+
+\subsection{AM Tones} % (fold)
+\label{subsec:results_am_tones}
+
+\figPair{AM-fm}
+  {All}
+  {Relative fluctuation strength as a function of modulation frequency for AM
+  tones}
+
+\figPair{AM-fc}
+  {All}
+  {Relative fluctuation strength as a function of center frequency for AM
+  tones}
+
+\figPair{AM-SPL}
+  {All}
+  {Relative fluctuation strength as a function of sound pressure level for AM
+  tones}
+
+\figPair{AM-md}
+  {All}
+  {Relative fluctuation strength as a function of modulation depth for AM
+  tones}
+
+% subsection results_am_tones (end)
+
+\subsection{FM Tones} % (fold)
+\label{subsec:results_fm_tones}
+
+\figPair{FM-fm}
+  {All}
+  {Relative fluctuation strength as a function of modulation frequency for FM
+  tones}
+
+\figPair{FM-fc}
+  {All}
+  {Relative fluctuation strength as a function of center frequency for FM
+  tones}
+
+\figPair{FM-SPL}
+  {All}
+  {Relative fluctuation strength as a function of sound pressure level for FM
+  tones}
+
+\figPair{FM-df}
+  {All}
+  {Relative fluctuation strength as a function of frequency deviation for FM
+  tones}
+
+% subsection results_fm_tones (end)
+
+% section results (end)
+
+\clearpage
+
+\appendix
+
+\section{Individual Results} % (fold)
+\label{sec:individual_results}
+
+\subsection{AM Tones} % (fold)
+\label{subsec:individual_results_am_tones}
+
+\indRes{Modulation Frequency}
+  {AM-fm}
+  {Relative fluctuation strength as a function of modulation frequency for AM
+  tones}
+  {1,3,5,7,9,11,13}
+
+\clearpage
+
+\indRes{Center Frequency}
+  {AM-fc}
+  {Relative fluctuation strength as a function of center frequency for AM
+  tones}
+  {1,3,5,7,9,11,13}
+
+\clearpage
+
+\indRes{Sound Pressure Level}
+  {AM-SPL}
+  {Relative fluctuation strength as a function of sound pressure level for AM
+  tones}
+  {1,3,5,7,9,11,13}
+
+\clearpage
+
+\indRes{Modulation Depth}
+  {AM-md}
+  {Relative fluctuation strength as a function of modulation depth for AM
+  tones}
+  {1,3,5,7,9,11,13}
+
+\clearpage
+
+% subsection individual_results_am_tones (end)
+
+\subsection{FM Tones} % (fold)
+\label{subsec:individual_results_fm_tones}
+
+\indRes{Modulation Frequency}
+  {FM-fm}
+  {Relative fluctuation strength as a function of modulation frequency for FM
+  tones}
+  {2,4,6,8,10,12}
+
+\clearpage
+
+\indRes{Center Frequency}
+  {FM-fc}
+  {Relative fluctuation strength as a function of center frequency for FM
+  tones}
+  {2,4,6,8,10,12}
+
+\clearpage
+
+\indRes{Sound Pressure Level}
+  {FM-SPL}
+  {Relative fluctuation strength as a function of sound pressure level for FM
+  tones}
+  {2,4,6,8,10,12}
+
+\clearpage
+
+\indRes{Frequency Deviation}
+  {FM-df}
+  {Relative fluctuation strength as a function of modulation depth for FM
+  tones}
+  {2,4,6,8,10,12}
+
+\clearpage
+
+% subsection individual_results_fm_tones (end)
+
+% section individual_results (end)
+
+\end{document}
