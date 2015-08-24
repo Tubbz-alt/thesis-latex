@@ -48,7 +48,48 @@ experiments.
 The following are the results of all the participants grouped together by
 experiment. In the appendix the individual results can be found. In all the
 following figures, the error bars indicate the interquartile range and the
-marker indicates the median value.
+marker indicates the median value. In Table \ref{tab:standards} the standards
+used in each experiments are detailed.
+
+\begin{table}
+  \centering
+  \rowcolors{3}{}{gray!25}
+  \begin{tabu}{l | l l l l l}
+  \tabucline[2pt]{-}
+  \rowcolor{white}
+  \multirow{2}{*}{Experiment} & \multicolumn{5}{c}{Parameters} \\\cline{2-6}
+  & fm [Hz] & fc [Hz] & SPL [dB] & md [dB] & df [Hz]
+  \\\tabucline[2pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{AM-fm}  & 4 & 1000 & 70 & 40 & --- \\\cline{2-6}
+                          & 0.25 & 1000 & 70 & 40 & --- \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{AM-fc}  & 4 & 1000 & 70 & 40 & --- \\\cline{2-6}
+                          & 4 & 250 & 70 & 40 & --- \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{AM-SPL} & 4 & 1000 & 70 & 40 & --- \\\cline{2-6}
+                          & 4 & 1000 & 50 & 40 & --- \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{AM-md}  & 4 & 1000 & 70 & 40 & --- \\\cline{2-6}
+                          & 4 & 1000 & 70 & 4 & --- \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{FM-fm}  & 4 & 1500 & 70 & --- & 700 \\\cline{2-6}
+                          & 0.5 & 1500 & 70 & --- & 700 \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{FM-fc}  & 4 & 6000 & 70 & --- & 200 \\\cline{2-6}
+                          & 4 & 500 & 70 & --- & 200 \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{FM-SPL} & 4 & 1500 & 60 & --- & 700 \\\cline{2-6}
+                          & 4 & 1500 & 40 & --- & 700 \\\tabucline[1pt]{-}
+  \cellcolor{white}
+  \multirow{2}{*}{FM-df}  & 4 & 1500 & 70 & --- & 700 \\\cline{2-6}
+                          & 4 & 1500 & 70 & --- & 32 \\\tabucline[1pt]{-}
+  \tabucline[2pt]{-}
+  \end{tabu}
+  \caption{Description of standards used per experiment. The light gray color
+  row represents the first standard.}
+\label{tab:standards}
+\end{table}
 
 \subsection{AM Tones} % (fold)
 \label{subsec:results_am_tones}
