@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+\usepackage{mystyle}
+
+\newcommand{\figCorr}[2]{
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[height=6cm]{img/Fastl2007_Model_#1.eps}
+  \caption{#2}
+\label{fig:#1}
+\end{figure}
+}
+
+\begin{document}
+
+\customtitle{Fluctuation Strength Linear Polynomial Fit Analysis}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+This documents presents the results of applying a linear polynomial between
+to experimental and Fastl's~\cite{Fastl2007Psychoacoustics} data.
+
+% section introduction (end)
+
+\section{Results} % (fold)
+\label{sec:results}
+
+The following are the results of the analysis. In each figure the adjusted
+R-Squared is reported for the given polynomial fit.
+
+\figCorr{AM-fm}{AM --- Modulation Frequency}
+\figCorr{AM-fc}{AM --- Center Frequency}
+\figCorr{AM-SPL}{AM --- Sound Pressure Level}
+\figCorr{AM-md}{AM --- Modulation Depth}
+\figCorr{FM-fm}{FM --- Modulation Frequency}
+\figCorr{FM-fc}{FM --- Center Frequency}
+\figCorr{FM-SPL}{FM --- Sound Pressure Level}
+\figCorr{FM-df}{FM --- Frequency Deviation}
+
+% section results (end)
+
+\custombibliography{}
+
+\end{document}
