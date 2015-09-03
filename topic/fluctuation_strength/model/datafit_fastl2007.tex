@@ -1,0 +1,114 @@
+\documentclass[a4paper]{article}
+\usepackage{mystyle}
+
+\newcommand{\pairHeight}{4cm}
+
+\newcommand{\figPair}[5]{
+  \begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+    \centering
+      \includegraphics[width=0.95\textwidth,height=\pairHeight]
+        {img/Model_#1_wh-#2_wg-#3_AM-#4}
+      \caption{AM Tones}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+    \centering
+      \includegraphics[width=0.95\textwidth,height=\pairHeight]
+        {img/Model_#1_wh-#2_wg-#3_FM-#4}
+      \caption{FM Tones}
+    \end{minipage}
+    \caption{#5 --- $w_h=#2$, $w_g=#3$}
+  \end{figure}
+}
+
+\newcommand{\figCorr}[2]{
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[height=6cm]{img/Linear_fastl2007_model_#1.eps}
+    \caption{#2}
+  \end{figure}
+}
+
+\begin{document}
+
+\customtitle{Fluctuation Strength\\Data Fit Analysis}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+This document presents the results of the data fit process to
+Fastl's~\cite{Fastl2007Psychoacoustics} data. First, the weights used in the
+process are described and analysed. After that, a linear polynomial fit is
+obtained to determine the goodness of fit of the model. Finally, the results
+of the model compared to the experimental data and to Fastl's data are
+presented.
+
+% section introduction (end)
+
+\section{Weights Adjustment} % (fold)
+\label{sec:weights_adjustment}
+
+This section presents the results of different weights for the Hweight and gzi
+vectors.
+
+\subsection{Modulation Frequency} % (fold)
+\label{sub:modulation_frequency}
+
+To model the dependency of fluctuation strength on modulation frequency, the
+vector Hweight is adjusted using the parameter $w_h$. Two Hweight vectors were
+obtained, $H0_{AM}$ and $H0_{FM}$, which are intended to fit AM and FM tones
+separately. By using $w_h$, a proportion between the two vectors is obtained.
+When $w_h=0$ only $H0_{FM}$ is used. The following are the results for several
+values of $w_h$.
+
+\figPair{fastl2007}{0}{50}{fm}{Modulation Frequency}
+\figPair{fastl2007}{30}{50}{fm}{Modulation Frequency}
+\figPair{fastl2007}{50}{50}{fm}{Modulation Frequency}
+\figPair{fastl2007}{70}{50}{fm}{Modulation Frequency}
+\figPair{fastl2007}{100}{50}{fm}{Modulation Frequency}
+
+\clearpage
+
+% subsection modulation_frequency (end)
+
+\subsection{Center Frequency} % (fold)
+\label{sub:center_frequency}
+
+To model the dependency of fluctuation strength on center frequency, the vector
+gzi is adjusted using the parameter $w_g$. Similarly to the Hweight vector, two
+vectors were obtained for AM and FM tones. The following are the results for
+several values of $w_g$.
+
+\figPair{fastl2007}{50}{0}{fc}{Center Frequency}
+\figPair{fastl2007}{50}{30}{fc}{Center Frequency}
+\figPair{fastl2007}{50}{50}{fc}{Center Frequency}
+\figPair{fastl2007}{50}{70}{fc}{Center Frequency}
+\figPair{fastl2007}{50}{100}{fc}{Center Frequency}
+
+\clearpage
+
+% subsection center_frequency (end)
+
+% section weights_adjustment (end)
+
+\section{Linear Polynomial Fit} % (fold)
+\label{sec:linear_polynomial_fit}
+
+The following are the results of the analysis. In each figure the adjusted
+R-Squared is reported for the given polynomial fit.
+
+\figCorr{AM-fm}{AM --- Modulation Frequency}
+\figCorr{AM-fc}{AM --- Center Frequency}
+\figCorr{AM-SPL}{AM --- Sound Pressure Level}
+\figCorr{AM-md}{AM --- Modulation Depth}
+\figCorr{FM-fm}{FM --- Modulation Frequency}
+\figCorr{FM-fc}{FM --- Center Frequency}
+\figCorr{FM-SPL}{FM --- Sound Pressure Level}
+\figCorr{FM-df}{FM --- Frequency Deviation}
+
+% section linear_polynomial_fit (end)
+
+\custombibliography{}
+
+\end{document}
