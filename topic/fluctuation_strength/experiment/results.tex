@@ -1,39 +1,10 @@
-\documentclass[a4paper]{article}
+\documentclass{article}
 \usepackage{mystyle}
-
-\newcommand{\figRes}[4]{
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[height=8cm]{img/#1-#2-#3.eps}
-  \caption{#4}
-\label{fig:#1-#2-#3}
-\end{figure}
-}
-
-\newcommand{\figPair}[3]{
-  \figRes{#1}
-    {#2}
-    {standards}
-    {#3, standards}
-  \figRes{#1}
-    {#2}
-    {comparison}
-    {#3, comparison}
-}
-
-\newcommand{\indRes}[4]{
-  \subsubsection{#1}
-  \foreach \i in {#4} {
-    \figPair{#2}
-      {\i}
-      {#3, participant \i}
-    \clearpage
-  }
-}
+\usepackage{results-commands}
 
 \begin{document}
 
-\customtitle{Results}
+\mytitle{Results}
 
 \section{Introduction} % (fold)
 \label{sec:introduction}
@@ -100,22 +71,22 @@ fitted to Fastl's data.
 \label{subsec:results_am_tones}
 
 \figPair{AM-fm}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of modulation frequency for AM
   tones}
 
 \figPair{AM-fc}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of center frequency for AM
   tones}
 
 \figPair{AM-SPL}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of sound pressure level for AM
   tones}
 
 \figPair{AM-md}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of modulation depth for AM
   tones}
 
@@ -125,22 +96,22 @@ fitted to Fastl's data.
 \label{subsec:results_fm_tones}
 
 \figPair{FM-fm}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of modulation frequency for FM
   tones}
 
 \figPair{FM-fc}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of center frequency for FM
   tones}
 
 \figPair{FM-SPL}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of sound pressure level for FM
   tones}
 
 \figPair{FM-df}
-  {All}
+  {all}
   {Relative fluctuation strength as a function of frequency deviation for FM
   tones}
 

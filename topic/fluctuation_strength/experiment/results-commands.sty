@@ -1,0 +1,37 @@
+\ProvidesPackage{results-commands}
+
+\RequirePackage{pgffor}
+\usepackage{tabu}
+\usepackage[table]{xcolor}
+
+\newcommand{\figRes}[4]{
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[height=8cm]{img/#1_#2_#3.eps}
+  \caption{#4}
+\label{fig:#1-#2-#3}
+\end{figure}
+}
+
+\newcommand{\figPair}[3]{
+  \figRes{#1}
+    {#2}
+    {standards}
+    {#3, standards}
+  \figRes{#1}
+    {#2}
+    {comparison}
+    {#3, comparison}
+}
+
+\newcommand{\indRes}[4]{
+  \subsubsection{#1}
+  \foreach \i in {#4} {
+    \figPair{#2}
+      {\i}
+      {#3, participant \i}
+    \clearpage
+  }
+}
+
+\endinput
