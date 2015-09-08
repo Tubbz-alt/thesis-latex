@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{mystyle}
+\usepackage{fastl2007-commands}
+
+\begin{document}
+
+\mytitle{Fastl's Data Fitting}
+
+\section{Introduction}
+\label{sec:introduction}
+
+This document presents the results of the data fitting process to
+Fastl's~\cite{Fastl2007Psychoacoustics} data. First, the weights used in the
+process are described and analysed. After that, a linear polynomial fit is
+obtained to determine the goodness of fit of the model. Finally, the results
+of the model compared to the experimental data and to Fastl's data are
+presented.
+
+\section{Weights Adjustment}
+\label{sec:weights_adjustment}
+
+This section presents the results of different weights for the Hweight and gzi
+vectors.
+
+\subsection{Modulation Frequency}
+\label{sub:modulation_frequency}
+
+To model the dependency of fluctuation strength on modulation frequency, the
+vector Hweight is adjusted using the parameter $w_h$. Two Hweight vectors were
+obtained, $H0_{AM}$ and $H0_{FM}$, which are intended to fit AM and FM tones
+separately. By using $w_h$, a proportion between the two vectors is obtained.
+When $w_h=0$ only $H0_{FM}$ is used. The following are the results for several
+values of $w_h$.
+
+\subsection{Center Frequency}
+\label{sub:center_frequency}
+
+To model the dependency of fluctuation strength on center frequency, the vector
+gzi is adjusted using the parameter $w_g$. Similarly to the Hweight vector, two
+vectors were obtained for AM and FM tones. The following are the results for
+several values of $w_g$.
+
+
+\section{Linear Polynomial Fit}
+\label{sec:linear_polynomial_fit}
+
+\figurepair%
+  {fastl2007_r-squared_comparison_wh}
+  {$R^2$ as a function of $w_h$ for $f_m$ response curves}
+  {fastl2007_r-squared_comparison_wg}
+  {$R^2$ as a function of $w_g$ for $f_c$ response curves}
+
+\figurequad%
+  {fastl2007_linear_am-fm}
+  {Linear polynomial fit for AM-fm response curve}
+  {fastl2007_linear_am-fc}
+  {Linear polynomial fit for AM-fc response curve}
+  {fastl2007_linear_am-spl}
+  {Linear polynomial fit for AM-SPL response curve}
+  {fastl2007_linear_am-md}
+  {Linear polynomial fit for AM-md response curve}
+
+\figurequad%
+  {fastl2007_linear_fm-fm}
+  {Linear polynomial fit for FM-fm response curve}
+  {fastl2007_linear_fm-fc}
+  {Linear polynomial fit for FM-fc response curve}
+  {fastl2007_linear_fm-spl}
+  {Linear polynomial fit for FM-SPL response curve}
+  {fastl2007_linear_fm-df}
+  {Linear polynomial fit for FM-df response curve}
+
+\begin{comparison}
+\figurequad%
+  {AM-fm_all_comparison}
+  {Relative fluctuation strength as a function of modulation frequency}
+  {AM-fc_all_comparison}
+  {Relative fluctuation strength as a function of center frequency}
+  {AM-SPL_all_comparison}
+  {Relative fluctuation strength as a function of sound pressure level}
+  {AM-md_all_comparison}
+  {Relative fluctuation strength as a function of modulation depth}
+
+\figurequad%
+  {FM-fm_all_comparison}
+  {Relative fluctuation strength as a function of modulation frequency}
+  {FM-fc_all_comparison}
+  {Relative fluctuation strength as a function of center frequency}
+  {FM-SPL_all_comparison}
+  {Relative fluctuation strength as a function of sound pressure level}
+  {FM-df_all_comparison}
+  {Relative fluctuation strength as a function of frequency deviation}
+\end{comparison}
+
+The following are the results of the analysis. In each figure the adjusted
+R-Squared is reported for the given polynomial fit.
+
+\section{Results}
+\label{sec:results}
+
+The following are the results of the model, experimental data and Fastl data.
+
+\subsection{AM Tones}
+\label{subsec:results_am_tones}
+
+
+\subsection{FM Tones}
+\label{subsec:results_fm_tones}
+
+\clearpage
+
+\section{Discussion}
+\label{sec:discussion}
+
+\begin{itemize}
+  \item For modulation frequency and center frequency, a tradeoff must be made
+  when adjusting the model parameters. The chosen weights adjust better to the
+  AM tones, but by changing the weight the contrary can be achieved
+  \item It remains unclear how the curves regarding SPL, modulation depth and
+  frequency deviation can be adjusted
+\end{itemize}
+
+\mybibliography{}
+
+\clearpage
+
+\appendix
+
+\section{Adjusted R-squared and model weights}
+
+\tablepair{AM-fm}{FM-fm}
+\tablepair{AM-fc}{FM-fc}
+\tablepair{AM-SPL}{FM-SPL}
+\tablepair{AM-md}{FM-df}
+
+\end{document}

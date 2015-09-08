@@ -1,0 +1,449 @@
+\ProvidesPackage{fastl2007-commands}
+
+\RequirePackage{xstring}
+
+\newcommand{\mytable}[1]{
+  \begin{tabular}{c c c c}
+    \toprule
+    Adjusted $R^2$ & $w_g$ & $w_h$ \\
+    \midrule
+    \mytablecontents{#1}
+    \bottomrule
+  \end{tabular}
+  \caption{Adjusted $R^2$ and model weights for \mbox{#1} response curve}
+  \label{tab:#1}
+}
+
+\newcommand{\mytablecontents}[1]{
+  \IfStrEqCase{#1}{
+    {AM-fm}{\mytablecontentsamfm}
+    {AM-fc}{\mytablecontentsamfc}
+    {AM-SPL}{\mytablecontentsamspl}
+    {AM-md}{\mytablecontentsammd}
+    {FM-fm}{\mytablecontentsfmfm}
+    {FM-fc}{\mytablecontentsfmfc}
+    {FM-SPL}{\mytablecontentsfmspl}
+    {FM-df}{\mytablecontentsfmdf}
+  }
+}
+
+\newcommand{\tablepair}[2]{
+  \begin{table}[ht]
+    \newcommand{\myminipagewidth}{0.45\textwidth}
+    \centering
+    \myminipage{\mytable{#1}}{\myminipagewidth}
+    \myminipage{\mytable{#2}}{\myminipagewidth}
+  \end{table}
+}
+
+\newcommand{\myminipage}[2]{
+    \begin{minipage}{#2}
+      \centering
+      #1
+    \end{minipage}
+}
+
+\newcommand{\myfigure}[2]{
+  \centering
+  \includegraphics[width=\textwidth]{#1.eps}
+  \caption{#2}
+  \label{fig:#1}
+}
+
+\newcommand{\figurepair}[4]{
+  \begin{figure}[h!]
+    \newcommand{\myminipagewidth}{0.45\textwidth}
+    \centering
+    \myminipage{\myfigure{#1}{#2}}{\myminipagewidth}
+    \myminipage{\myfigure{#3}{#4}}{\myminipagewidth}
+  \end{figure}
+}
+
+\newcommand{\figurequad}[8]{
+  \begin{figure}[h!]
+    \newcommand{\myminipagewidth}{0.45\textwidth}
+    \centering
+    \myminipage{\myfigure{#1}{#2}}{\myminipagewidth}
+    \myminipage{\myfigure{#3}{#4}}{\myminipagewidth}
+    \myminipage{\myfigure{#5}{#6}}{\myminipagewidth}
+    \myminipage{\myfigure{#7}{#8}}{\myminipagewidth}
+  \end{figure}
+}
+
+\newenvironment{comparison}
+  {\graphicspath{ {/Users/rodrigo/Documents/TUe/thesis/latex/topic/fluctuation_strength/experiment/img/} }}
+  {\graphicspath{ {./img/} }}
+
+% ******************************************************************************
+%
+% ******************************************************************************
+
+\newcommand{\mytablecontentsamfm}{
+  0.256 & 0 & 50 \\
+  \midrule
+  0.327 & 10 & 50 \\
+  \midrule
+  0.411 & 20 & 50 \\
+  \midrule
+  0.506 & 30 & 50 \\
+  \midrule
+  0.610 & 40 & 50 \\
+  \midrule
+  0.714 & 50 & 50 \\
+  \midrule
+  0.812 & 60 & 50 \\
+  \midrule
+  0.895 & 70 & 50 \\
+  \midrule
+  0.955 & 80 & 50 \\
+  \midrule
+  0.990 & 90 & 50 \\
+  \midrule
+  1.000 & 100 & 50 \\
+  \midrule
+  0.713 & 50 & 0 \\
+  \midrule
+  0.713 & 50 & 10 \\
+  \midrule
+  0.714 & 50 & 20 \\
+  \midrule
+  0.714 & 50 & 30 \\
+  \midrule
+  0.714 & 50 & 40 \\
+  \midrule
+  0.714 & 50 & 50 \\
+  \midrule
+  0.714 & 50 & 60 \\
+  \midrule
+  0.715 & 50 & 70 \\
+  \midrule
+  0.715 & 50 & 80 \\
+  \midrule
+  0.715 & 50 & 90 \\
+  \midrule
+  0.715 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsamfc}{
+  0.213 & 0 & 50 \\
+  \midrule
+  0.213 & 10 & 50 \\
+  \midrule
+  0.213 & 20 & 50 \\
+  \midrule
+  0.213 & 30 & 50 \\
+  \midrule
+  0.214 & 40 & 50 \\
+  \midrule
+  0.214 & 50 & 50 \\
+  \midrule
+  0.214 & 60 & 50 \\
+  \midrule
+  0.214 & 70 & 50 \\
+  \midrule
+  0.215 & 80 & 50 \\
+  \midrule
+  0.215 & 90 & 50 \\
+  \midrule
+  0.215 & 100 & 50 \\
+  \midrule
+  -0.137 & 50 & 0 \\
+  \midrule
+  -0.109 & 50 & 10 \\
+  \midrule
+  -0.068 & 50 & 20 \\
+  \midrule
+  -0.008 & 50 & 30 \\
+  \midrule
+  0.082 & 50 & 40 \\
+  \midrule
+  0.214 & 50 & 50 \\
+  \midrule
+  0.396 & 50 & 60 \\
+  \midrule
+  0.617 & 50 & 70 \\
+  \midrule
+  0.828 & 50 & 80 \\
+  \midrule
+  0.952 & 50 & 90 \\
+  \midrule
+  0.952 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsammd}{
+  0.946 & 0 & 50 \\
+  \midrule
+  0.946 & 10 & 50 \\
+  \midrule
+  0.945 & 20 & 50 \\
+  \midrule
+  0.945 & 30 & 50 \\
+  \midrule
+  0.945 & 40 & 50 \\
+  \midrule
+  0.945 & 50 & 50 \\
+  \midrule
+  0.945 & 60 & 50 \\
+  \midrule
+  0.944 & 70 & 50 \\
+  \midrule
+  0.944 & 80 & 50 \\
+  \midrule
+  0.944 & 90 & 50 \\
+  \midrule
+  0.944 & 100 & 50 \\
+  \midrule
+  0.947 & 50 & 0 \\
+  \midrule
+  0.947 & 50 & 10 \\
+  \midrule
+  0.947 & 50 & 20 \\
+  \midrule
+  0.946 & 50 & 30 \\
+  \midrule
+  0.945 & 50 & 40 \\
+  \midrule
+  0.945 & 50 & 50 \\
+  \midrule
+  0.944 & 50 & 60 \\
+  \midrule
+  0.944 & 50 & 70 \\
+  \midrule
+  0.943 & 50 & 80 \\
+  \midrule
+  0.942 & 50 & 90 \\
+  \midrule
+  0.941 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsamspl}{
+  0.966 & 0 & 50 \\
+  \midrule
+  0.966 & 10 & 50 \\
+  \midrule
+  0.966 & 20 & 50 \\
+  \midrule
+  0.966 & 30 & 50 \\
+  \midrule
+  0.966 & 40 & 50 \\
+  \midrule
+  0.966 & 50 & 50 \\
+  \midrule
+  0.967 & 60 & 50 \\
+  \midrule
+  0.967 & 70 & 50 \\
+  \midrule
+  0.967 & 80 & 50 \\
+  \midrule
+  0.967 & 90 & 50 \\
+  \midrule
+  0.967 & 100 & 50 \\
+  \midrule
+  0.960 & 50 & 0 \\
+  \midrule
+  0.961 & 50 & 10 \\
+  \midrule
+  0.963 & 50 & 20 \\
+  \midrule
+  0.964 & 50 & 30 \\
+  \midrule
+  0.965 & 50 & 40 \\
+  \midrule
+  0.966 & 50 & 50 \\
+  \midrule
+  0.968 & 50 & 60 \\
+  \midrule
+  0.969 & 50 & 70 \\
+  \midrule
+  0.970 & 50 & 80 \\
+  \midrule
+  0.971 & 50 & 90 \\
+  \midrule
+  0.972 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsfmfm}{
+  0.994 & 0 & 50 \\
+  \midrule
+  0.957 & 10 & 50 \\
+  \midrule
+  0.857 & 20 & 50 \\
+  \midrule
+  0.700 & 30 & 50 \\
+  \midrule
+  0.577 & 40 & 50 \\
+  \midrule
+  0.493 & 50 & 50 \\
+  \midrule
+  0.410 & 60 & 50 \\
+  \midrule
+  0.313 & 70 & 50 \\
+  \midrule
+  0.209 & 80 & 50 \\
+  \midrule
+  0.104 & 90 & 50 \\
+  \midrule
+  0.012 & 100 & 50 \\
+  \midrule
+  0.434 & 50 & 0 \\
+  \midrule
+  0.446 & 50 & 10 \\
+  \midrule
+  0.458 & 50 & 20 \\
+  \midrule
+  0.470 & 50 & 30 \\
+  \midrule
+  0.482 & 50 & 40 \\
+  \midrule
+  0.493 & 50 & 50 \\
+  \midrule
+  0.504 & 50 & 60 \\
+  \midrule
+  0.515 & 50 & 70 \\
+  \midrule
+  0.525 & 50 & 80 \\
+  \midrule
+  0.535 & 50 & 90 \\
+  \midrule
+  0.545 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsfmfc}{
+  0.975 & 0 & 50 \\
+  \midrule
+  0.974 & 10 & 50 \\
+  \midrule
+  0.973 & 20 & 50 \\
+  \midrule
+  0.972 & 30 & 50 \\
+  \midrule
+  0.970 & 40 & 50 \\
+  \midrule
+  0.969 & 50 & 50 \\
+  \midrule
+  0.967 & 60 & 50 \\
+  \midrule
+  0.966 & 70 & 50 \\
+  \midrule
+  0.964 & 80 & 50 \\
+  \midrule
+  0.963 & 90 & 50 \\
+  \midrule
+  0.961 & 100 & 50 \\
+  \midrule
+  0.989 & 50 & 0 \\
+  \midrule
+  0.990 & 50 & 10 \\
+  \midrule
+  0.989 & 50 & 20 \\
+  \midrule
+  0.985 & 50 & 30 \\
+  \midrule
+  0.978 & 50 & 40 \\
+  \midrule
+  0.969 & 50 & 50 \\
+  \midrule
+  0.957 & 50 & 60 \\
+  \midrule
+  0.943 & 50 & 70 \\
+  \midrule
+  0.927 & 50 & 80 \\
+  \midrule
+  0.908 & 50 & 90 \\
+  \midrule
+  0.888 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsfmdf}{
+  0.978 & 0 & 50 \\
+  \midrule
+  0.972 & 10 & 50 \\
+  \midrule
+  0.959 & 20 & 50 \\
+  \midrule
+  0.943 & 30 & 50 \\
+  \midrule
+  0.926 & 40 & 50 \\
+  \midrule
+  0.909 & 50 & 50 \\
+  \midrule
+  0.896 & 60 & 50 \\
+  \midrule
+  0.885 & 70 & 50 \\
+  \midrule
+  0.878 & 80 & 50 \\
+  \midrule
+  0.873 & 90 & 50 \\
+  \midrule
+  0.870 & 100 & 50 \\
+  \midrule
+  0.920 & 50 & 0 \\
+  \midrule
+  0.918 & 50 & 10 \\
+  \midrule
+  0.916 & 50 & 20 \\
+  \midrule
+  0.914 & 50 & 30 \\
+  \midrule
+  0.912 & 50 & 40 \\
+  \midrule
+  0.909 & 50 & 50 \\
+  \midrule
+  0.907 & 50 & 60 \\
+  \midrule
+  0.905 & 50 & 70 \\
+  \midrule
+  0.903 & 50 & 80 \\
+  \midrule
+  0.900 & 50 & 90 \\
+  \midrule
+  0.898 & 50 & 100 \\
+}
+
+\newcommand{\mytablecontentsfmspl}{
+  0.991 & 0 & 50 \\
+  \midrule
+  0.991 & 10 & 50 \\
+  \midrule
+  0.990 & 20 & 50 \\
+  \midrule
+  0.989 & 30 & 50 \\
+  \midrule
+  0.987 & 40 & 50 \\
+  \midrule
+  0.985 & 50 & 50 \\
+  \midrule
+  0.983 & 60 & 50 \\
+  \midrule
+  0.981 & 70 & 50 \\
+  \midrule
+  0.979 & 80 & 50 \\
+  \midrule
+  0.978 & 90 & 50 \\
+  \midrule
+  0.976 & 100 & 50 \\
+  \midrule
+  0.953 & 50 & 0 \\
+  \midrule
+  0.960 & 50 & 10 \\
+  \midrule
+  0.967 & 50 & 20 \\
+  \midrule
+  0.974 & 50 & 30 \\
+  \midrule
+  0.980 & 50 & 40 \\
+  \midrule
+  0.985 & 50 & 50 \\
+  \midrule
+  0.989 & 50 & 60 \\
+  \midrule
+  0.993 & 50 & 70 \\
+  \midrule
+  0.995 & 50 & 80 \\
+  \midrule
+  0.997 & 50 & 90 \\
+  \midrule
+  0.998 & 50 & 100 \\
+}
+
+\endinput
