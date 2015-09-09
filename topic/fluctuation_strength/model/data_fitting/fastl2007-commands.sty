@@ -53,7 +53,7 @@
 }
 
 \newcommand{\mytablepair}[2]{
-  \begin{table}[!ht]
+  \begin{table}[ht]
     \newcommand{\myminipagewidth}{0.45\textwidth}
     \centering
     \myminipage{\mytable{#1}}{\myminipagewidth}
@@ -80,7 +80,7 @@
   \end{figure}
 }
 
-\newcommand{\myfigurequad}[8]{
+\newcommand{\myfigurequad}[9]{
   \begin{figure}[!ht]
     \newcommand{\myminipagewidth}{0.45\textwidth}
     \centering
@@ -90,6 +90,7 @@
     \myminipage{\myfigure{#5}{#6}}{\myminipagewidth}
     \hfill
     \myminipage{\myfigure{#7}{#8}}{\myminipagewidth}
+    #9
   \end{figure}
 }
 
