@@ -81,17 +81,19 @@
 }
 
 \newcommand{\myfigurequad}[9]{
-  \begin{figure}[!ht]
-    \newcommand{\myminipagewidth}{0.45\textwidth}
-    \centering
-    \myminipage{\myfigure{#1}{#2}}{\myminipagewidth}
-    \hfill
-    \myminipage{\myfigure{#3}{#4}}{\myminipagewidth}
-    \myminipage{\myfigure{#5}{#6}}{\myminipagewidth}
-    \hfill
-    \myminipage{\myfigure{#7}{#8}}{\myminipagewidth}
-    #9
-  \end{figure}
+  \begin{figurequad}
+    \begin{figure}[!ht]
+      \newcommand{\myminipagewidth}{0.45\textwidth}
+      \centering
+      \myminipage{\myfigure{#1}{#2}}{\myminipagewidth}
+      \hfill
+      \myminipage{\myfigure{#3}{#4}}{\myminipagewidth}
+      \myminipage{\myfigure{#5}{#6}}{\myminipagewidth}
+      \hfill
+      \myminipage{\myfigure{#7}{#8}}{\myminipagewidth}
+      #9
+    \end{figure}
+  \end{figurequad}
 }
 
 % ******************************************************************************
@@ -99,14 +101,12 @@
 % ******************************************************************************
 
 \newenvironment{comparison}
-  {
-    \setmyvspace{env=figurequad}
-    \graphicspath{ {\experimentimgpath} }
-  }
-  {
-    \setmyvspace{env=default}
-    \graphicspath{ {./img/} }
-  }
+  { \graphicspath{ {\experimentimgpath} } }
+  { \graphicspath{ {./img/} } }
+
+\newenvironment{figurequad}
+  { \setmyvspace{env=figurequad} }
+  { \setmyvspace{env=default} }
 
 % ******************************************************************************
 % Setup
