@@ -11,16 +11,14 @@
 
 This document presents the results of the data fitting process to
 Fastl's~\cite{Fastl2007Psychoacoustics} data. First, the weights used in the
-process are described and analysed. After that, a linear polynomial fit is
-obtained to determine the goodness of fit of the model. Finally, the results
-of the model compared to the experimental data and to Fastl's data are
-presented.
+process are described. Them a set of $R^2$ are generated for several
+combinations of these weights to find the best fit given the chosen weights set.
+After that, a linear polynomial fit is plotted with the best values of the
+weights. Finally, the results of the model compared to the experimental data and
+to Fastl's data are presented.
 
-\section{Weights Adjustment}
-\label{sec:weights_adjustment}
-
-This section presents the results of different weights for the Hweight and gzi
-vectors.
+\section{Model Weights}
+\label{sec:model_weights}
 
 \subsection{Modulation Frequency}
 \label{sub:modulation_frequency}
@@ -28,27 +26,40 @@ vectors.
 To model the dependency of fluctuation strength on modulation frequency, the
 vector Hweight is adjusted using the parameter $w_h$. Two Hweight vectors were
 obtained, $H0_{AM}$ and $H0_{FM}$, which are intended to fit AM and FM tones
-separately. By using $w_h$, a proportion between the two vectors is obtained.
-When $w_h=0$ only $H0_{FM}$ is used. The following are the results for several
-values of $w_h$.
+respectively. By using $w_h$, a proportion between the two vectors is obtained.
+When $w_h=0$ only $H0_{FM}$ is used. Values of $w_h$ from 0 to 100 in
+increments of 10 were used and adjusted $R^2$ values were obtained from those,
+as will be explained in \cref{sec:linear_polynomial_fit}.
 
 \subsection{Center Frequency}
 \label{sub:center_frequency}
 
 To model the dependency of fluctuation strength on center frequency, the vector
 gzi is adjusted using the parameter $w_g$. Similarly to the Hweight vector, two
-vectors were obtained for AM and FM tones. The following are the results for
-several values of $w_g$.
-
+vectors were obtained for AM and FM tones. The same range of values of $w_h$ was
+also used for $w_g$.
 
 \section{Linear Polynomial Fit}
 \label{sec:linear_polynomial_fit}
+
+\Cref{fig:fastl2007_r-squared_comparison_wh,fig:fastl2007_r-squared_comparison_wg}
+report the values of $R^2$ for AM tones, FM tones, the sum of the values for
+both types of tones, and finally the absolute value of the difference of the
+value of both types of tones. All these values can be found also in tables in
+the appendix section at the end of this document.
 
 \myfigurepair%
   {fastl2007_r-squared_comparison_wh}
   {$R^2$ as a function of $w_h$ for $f_m$ response curves}
   {fastl2007_r-squared_comparison_wg}
   {$R^2$ as a function of $w_g$ for $f_c$ response curves}
+
+From the figures the values that minimize the difference between conditions
+and still maintained a high sum between them are $w_h = 40$ and $w_g = 90$. As
+so, these values will be considered to be the ones that yield the best model
+fit. Furthermore, linear polynomial fit plots using the chosen weight values for
+all the experimental conditions are presented in
+\cref{fig:fastl2007_linear_am,fig:fastl2007_linear_fm}.
 
 \myfigurequad%
   {fastl2007_linear_am-fm}
@@ -78,18 +89,13 @@ several values of $w_g$.
     \label{fig:fastl2007_linear_fm}
   }
 
-The following are the results of the analysis. In each figure the adjusted
-R-Squared is reported for the given polynomial fit.
-
 \section{Results}
 \label{sec:results}
 
-The following are the results of the model, experimental data and Fastl data.
+The comparison between the results of the model, the experimental data and
+Fastl's data are shown in \cref{fig:AM_all_comparison,fig:FM_all_comparison}.
 
 \begin{comparison}
-
-\subsection{AM Tones}
-\label{subsec:results_am_tones}
 
 \myfigurequad%
   {AM-fm_all_comparison}
@@ -104,9 +110,6 @@ The following are the results of the model, experimental data and Fastl data.
     \caption{Relative fluctuation strength for AM tones}
     \label{fig:AM_all_comparison}
   }
-
-\subsection{FM Tones}
-\label{subsec:results_fm_tones}
 
 \myfigurequad%
   {FM-fm_all_comparison}
@@ -128,9 +131,8 @@ The following are the results of the model, experimental data and Fastl data.
 \label{sec:discussion}
 
 \begin{itemize}
-  \item For modulation frequency and center frequency, a tradeoff must be made
-  when adjusting the model parameters. The chosen weights adjust better to the
-  AM tones, but by changing the weight the contrary can be achieved
+  \item For modulation frequency and center frequency, a trade-off must be made
+  when adjusting the model parameters.
   \item It remains unclear how the curves regarding SPL, modulation depth and
   frequency deviation can be adjusted
 \end{itemize}
