@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{mystyle}
+
+\begin{document}
+
+\mytitle{Roughness Model\\Power Coefficient Analysis}
+
+\section{Results}
+
+\myfigurequad%
+  {power_am-fm}
+  {Modulation frequency}
+  {power_am-fc}
+  {Center frequency}
+  {power_am-spl}
+  {Sound pressure level}
+  {power_am-md}
+  {Modulation depth}
+  {
+    \caption{Model response curves for AM tones}
+    \label{fig:AM}
+  }
+
+\myfigurequad%
+  {power_fm-fm}
+  {Modulation frequency}
+  {power_fm-fc}
+  {Center frequency}
+  {power_fm-spl}
+  {Sound pressure level}
+  {power_fm-df}
+  {Frequency deviation}
+  {
+    \caption{Model response curves for FM tones}
+    \label{fig:FM}
+  }
+
+\end{document}
