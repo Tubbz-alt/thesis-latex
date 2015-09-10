@@ -1,0 +1,27 @@
+\ProvidesPackage{power_coefficients_analysis-commands}
+
+% ******************************************************************************
+% Figure Commands
+% ******************************************************************************
+
+\newcommand{\myfigurecoefficientescaption}[1]{
+  \IfStrEqCase{#1}{{am}{Modulation depth}{fm}{Frequency deviation}}
+}
+
+\newcommand{\myfigurecoefficients}[3]{
+  \myfigurequad%
+    {#1_#2-fm}
+    {Modulation frequency}
+    {#1_#2-fc}
+    {Center frequency}
+    {#1_#2-spl}
+    {Sound pressure level}
+    {#1_#2-#3}
+    {\protect\myfigurecoefficientescaption{#2}}
+    {
+      \caption{\uppercase{#2} tones model response curves varying $#1$}
+      \label{fig:#1_#2}
+    }
+}
+
+\endinput

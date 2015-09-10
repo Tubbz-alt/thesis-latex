@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{mystyle}
+\usepackage{power_coefficients_analysis-commands}
+
+\begin{document}
+
+\mytitle{Roughness Model\\Power Coefficients Analysis}
+
+\section{Introduction}
+
+This document reports the results from modifying the coefficients present in the
+power law used to establish a relation between modulation depth and roughness.
+
+\section{Model}
+
+The sensation of fluctuation strength is modeled after its dependency on the
+modulation depth of the incoming signal, as stated in \cref{eq:eq1}
+\cite[p.~115]{daniel1997psychoacoustical}.
+
+\begin{equation}
+  \label{eq:eq1}
+  R \sim m ^ p
+\end{equation}
+
+Furthermore, \citeauthor{daniel1997psychoacoustical} model is based on the
+concept of specific roughness. For each auditory filter, a roughness value is
+calculated and then the sum of them is obtained to obtain the total roughness
+value. \Cref{eq:eq2} illustrates how to obtain a specific roughness for a given
+auditory band.
+
+\begin{equation}
+  \label{eq:eq2}
+  r_i = (g(z_i) \cdot m_i \cdot k_{i-2} \cdot k_i)^2
+\end{equation}
+
+\Cref{eq:eq2} can be further generalized by specifying separate power
+coefficients for the terms inside the parenthesis. \Cref{eq:eq3} corresponds to
+a more generalized equation, where it can be seen that the original
+\cref{eq:eq2} can be obtained by setting $p_g = p_m = p_k = 2$.
+
+\begin{equation}
+  \label{eq:eq3}
+  r_i = g(z_i)^{p_g} \cdot m_{i}^{p_m} \cdot (k_{i-2} \cdot k_i)^{p_k}
+\end{equation}
+
+Using \cref{eq:eq3} the effect of the power coefficients on the total roughness
+value will be investigated.
+
+\section{Results}
+
+To understand the effect of each power coefficient on the roughness, one of them
+will be varied while the other two remain constant with a value of 2. The set
+of values to use when varying the power coefficient will be displayed in the
+results figures.
+
+Varying $p_g$ results in a minimal effect on most curves,
+\cref{fig:p_g_am,fig:p_g_fm}. Only \cref{fig:p_g_am-fc} presents a significant
+variation, which makes sense since this coefficient affects $g_{zi}$, which in
+turn models the effect of center frequency on roughness.
+
+\myfigurecoefficients{p_g}{am}{md}
+\myfigurecoefficients{p_g}{fm}{df}
+
+Varying $p_m$ yields the significant changes, more pronounced for AM tones than
+for FM tones. For FM tones the responses to modulation frequency and center
+frequency are affected (\cref{fig:p_m_fm-fm,fig:p_m_fm-fc}). For AM tones all
+responses are affected. Particularly important is the change on modulation depth
+(\cref{fig:p_m_am-md}), which shows a way to adjust this response for the data
+fitting process.
+
+\myfigurecoefficients{p_m}{am}{md}
+\myfigurecoefficients{p_m}{fm}{df}
+
+Varying $p_k$ has little effect on AM tones. However, for FM tones the
+responses are affected. Again, the most important result to highlight
+corresponds to the frequency deviation curve (\cref{fig:p_k_fm-df}), which
+shows also a possible way to adjust this response for the data fitting process.
+
+\myfigurecoefficients{p_k}{am}{md}
+\myfigurecoefficients{p_k}{fm}{df}
+
+\section{Conclusions}
+
+Adjusting the power coefficients $p_m$ and $p_k$ allows to fine tune the model
+response curves for the modulation depth and frequency deviation cases. However,
+the effect of modifying these values not only affect these responses but all of
+them.
+
+\mybibliography{}
+
+\end{document}
