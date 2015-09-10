@@ -28,8 +28,7 @@ vector Hweight is adjusted using the parameter $w_h$. Two Hweight vectors were
 obtained, $H0_{AM}$ and $H0_{FM}$, which are intended to fit AM and FM tones
 respectively. By using $w_h$, a proportion between the two vectors is obtained.
 When $w_h=0$ only $H0_{FM}$ is used. Values of $w_h$ from 0 to 100 in
-increments of 10 were used and adjusted $R^2$ values were obtained from those,
-as will be explained in \cref{sec:linear_polynomial_fit}.
+increments of 10 were used.
 
 \subsection{Center Frequency}
 \label{sub:center_frequency}
@@ -43,10 +42,11 @@ also used for $w_g$.
 \label{sec:linear_polynomial_fit}
 
 \Cref{fig:fastl2007_r-squared_comparison_wh,fig:fastl2007_r-squared_comparison_wg}
-report the values of $R^2$ for AM tones, FM tones, the sum of the values for
-both types of tones, and finally the absolute value of the difference of the
-value of both types of tones. All these values can be found also in tables in
-the appendix section at the end of this document.
+report the values of $R^2$ for AM tones, FM tones, the sum of the $R_2$ values
+for both types of tones, the absolute value of the difference of the $R^2$
+value of both types of tones, and finally the sum of the sum and the difference
+is provided. The $R^2$ values can be found also in tables in the appendix
+section at the end of this document.
 
 \myfigurepair%
   {fastl2007_r-squared_comparison_wh}
@@ -54,11 +54,11 @@ the appendix section at the end of this document.
   {fastl2007_r-squared_comparison_wg}
   {$R^2$ as a function of $w_g$ for $f_c$ response curves}
 
-From the figures the values that minimize the difference between conditions
-and still maintained a high sum between them are $w_h = 40$ and $w_g = 90$. As
-so, these values will be considered to be the ones that yield the best model
-fit. Furthermore, linear polynomial fit plots using the chosen weight values for
-all the experimental conditions are presented in
+Using the sum of the sum and difference of $R^2$ values (the total curve), the
+best possible trade-off is achieved when $w_h = 40$ and $w_g = 90$. As so,
+these values will be considered to be the ones that yield the best model fit.
+Furthermore, linear polynomial fit plots using the chosen weight values for all
+the experimental conditions are presented in
 \cref{fig:fastl2007_linear_am,fig:fastl2007_linear_fm}.
 
 \myfigurequad%
