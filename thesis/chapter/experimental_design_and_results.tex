@@ -4,6 +4,152 @@
 
 \chapter{Experimental Design and Results}
 
+\section{Design}
+
+\subsection{Equipment}
+
+A personal computer with an audio interface M-Audio Transit and a set of
+headphones Sennheiser HD 265 Linear were used to conduct the experiment. The
+computer was positioned in a sound-isolated booth. The experiment itself was
+programmed using the APEX software platform and Windows batch files.
+
+\subsection{Stimuli}
+
+All the sounds presented during the experiment consisted of diotic stimuli. Two
+types of stimuli were considered, \gls{am} tones (\cref{eq:am}) and \gls{fm}
+tones (\cref{eq:fm}). In these equations, a $-\frac{\pi}{2}$ phase shift is
+introduced to the modulating signal for both tones in order to start the
+corresponding modulation at its lowest point and therefore avoid pops and clicks
+due to an abrupt onset when presenting the sounds to the participants.
+Additionaly, a cosine ramp with attack and release times of 25 ms was applied to
+the stimuli to further prevent this phenomenon.
+
+\begin{equation}
+  x_{AM} = A_c \cdot [1 - m_d \cdot \cos(2 \pi f_m t)] \cdot \sin(2 \pi f_c t),
+ \text{where } m_d = \frac{A_m}{A_c}
+  \label{eq:am}
+\end{equation}
+
+\begin{equation}
+  x_{FM} = A_c \cdot \sin \{2 \pi [f_c - d_f \cdot \cos(2 \pi f_m t)] t \}
+  \label{eq:fm}
+\end{equation}
+
+The duration of the stimuli was specified such that it presented at least three
+periods of the modulating signal, limited to range of values between 2 and 4
+seconds. Therefore, stimuli with long periods (e.g., 0.25 Hz) were truncated to
+4 seconds and stimuli with short periods (e.g., 128 Hz) were repeated to reach
+a 2 seconds duration. This was done to mantain an uniform duration among stimuli
+while keeping the whole experiment duration to an acceptable value.
+
+Furthermore, the stimuli were generated such that a 100 dB SPL value
+corresponds to a 0 dBFS value.
+
+\Cref{tab:stimuli} presents all the stimuli used for the different experimental
+sections, stating which parameters were fixed and which were varied.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{l p{3cm} l}
+  \toprule
+  \multirow{2}{*}{Section} & \multicolumn{2}{c}{Parameters} \\
+  \cmidrule{2-3}
+  & Fixed & Varied \\
+  \midrule
+  AM-fm  & fc = 1 [kHz]\par SPL = 70 [dB]\par md = 40 [dB]
+         & fm = \{0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128\} [Hz] \\
+  \midrule
+  AM-fc  & fm = 4 [Hz]\par SPL = 70 [dB]\par md = 40 [dB]
+         & fc = \{0.125, 0.25, 0.5, 1, 2, 4, 8\} [kHz] \\
+  \midrule
+  AM-SPL & fm = 4 [Hz]\par fc = 1 [kHz]\par md = 40 [dB]
+         & SPL = \{50, 60, 70, 80, 90\} [dB] \\
+  \midrule
+  AM-md  & fm = 4 [Hz]\par fc = 1 [kHz]\par SPL = 70 [dB]
+         & md = \{1, 2, 4, 10, 20, 40\} [dB] \\
+  \midrule
+  FM-fm  & fc = 1.5 [kHz]\par SPL = 70 [dB]\par df = 700 [Hz]
+         & fm = \{0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128\} [Hz] \\
+  \midrule
+  FM-fc  & fm = 4 [Hz]\par SPL = 70 [dB]\par df = 200 [Hz]
+         & fc = \{0.5, 1, 1.5, 2, 3, 4, 6, 8\} [kHz] \\
+  \midrule
+  FM-SPL & fm = 4 [Hz]\par fc = 1.5 [kHz]\par df = 700 [Hz]
+         & SPL = \{40, 50, 60, 70, 80\} [Hz] \\
+  \midrule
+  FM-df  & fm = 4 [Hz]\par fc = 1.5 [kHz]\par SPL = 70 [dB]
+         & df = \{16, 32, 100, 300, 700\} [Hz] \\
+  \bottomrule
+  \end{tabular}
+  \caption{Description of stimuli used per experiment section}
+\label{tab:stimuli}
+\end{table}
+
+\subsection{Methods}
+
+A magnitude estimation procedure used to obtain the relative fluctuation
+strength as a function of a varying parameter for the two types of tones. There
+were four different parametrical variations:
+\begin{inparaenum}[(1)]
+  \item \gls{f_m};
+  \item \gls{f_c};
+  \item \gls{spl};
+  \item \gls{m_d} for \gls{am} tones, \gls{d_f} for \gls{fm} tones.
+\end{inparaenum}
+
+Each of these parameters defined an experiment on its own, with the exception of
+the \gls{f_m} parameter whose section was split in two due to having a longer
+duration that the other experiment sections.
+
+In order to deal with possible learning effects due to the presentation order
+of the parametrical sections, a latin square design was used to vary
+presentation order among participants.
+
+Each magnitude estimation presented pairs of sounds, composed of one of two
+possible standards (\cref{tab:standards}) and a stimulus from the section set.
+There were four repetitions per pair, and hence eight per stimulus.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{l l l l l l}
+    \toprule
+    \multirow{2}{*}{Section} & \multicolumn{5}{c}{Parameters} \\
+    \cmidrule{2-6}
+    & $f_m$ [Hz] & $f_c$ [Hz] & SPL [dB] & $m_d$ [dB] & $d_f$ [Hz] \\
+    \midrule
+    \multirow{2}{*}{AM-fm}  & 4 & 1000 & 70 & 40 & --- \\
+                            & 0.25 & 1000 & 70 & 40 & --- \\
+    \midrule
+    \multirow{2}{*}{AM-fc}  & 4 & 1000 & 70 & 40 & --- \\
+                            & 4 & 250 & 70 & 40 & --- \\
+    \midrule
+    \multirow{2}{*}{AM-SPL} & 4 & 1000 & 70 & 40 & --- \\
+                            & 4 & 1000 & 50 & 40 & --- \\
+    \midrule
+    \multirow{2}{*}{AM-md}  & 4 & 1000 & 70 & 40 & --- \\
+                            & 4 & 1000 & 70 & 4 & --- \\
+    \midrule
+    \multirow{2}{*}{FM-fm}  & 4 & 1500 & 70 & --- & 700 \\
+                            & 0.5 & 1500 & 70 & --- & 700 \\
+    \midrule
+    \multirow{2}{*}{FM-fc}  & 4 & 6000 & 70 & --- & 200 \\
+                            & 4 & 500 & 70 & --- & 200 \\
+    \midrule
+    \multirow{2}{*}{FM-SPL} & 4 & 1500 & 60 & --- & 700 \\
+                            & 4 & 1500 & 40 & --- & 700 \\
+    \midrule
+    \multirow{2}{*}{FM-df}  & 4 & 1500 & 70 & --- & 700 \\
+                            & 4 & 1500 & 70 & --- & 32 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Description of the standards used per experiment section}
+\label{tab:standards}
+\end{table}
+
+\subsection{Procedure}
+
+Experiment prompt available in appendix
+
 \section{Results}
 
 \begin{results}
@@ -47,7 +193,7 @@
   {AM-md_all_comparison}
   {
     \caption{Comparison between Fastl and experimental data --- AM tones}
-    \label{fig:AM-comparison}
+    \label{fig:am_comparison}
   }
 
 \myfigurequad%
@@ -57,7 +203,7 @@
   {FM-df_all_comparison}
   {
     \caption{Comparison between Fastl and experimental data --- FM tones}
-    \label{fig:FM-comparison}
+    \label{fig:fm_comparison}
   }
 
 \end{results}
