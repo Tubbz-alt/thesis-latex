@@ -1,13 +1,29 @@
-\documentclass[a4paper]{report}
+\documentclass{report}
 \usepackage{mystyle}
+\usepackage{literature_review-commands}
 
 \begin{document}
 
-\customtitle{Fluctuation Strength Literature Review}
+\mytitle{Fluctuation Strength Literature Review}
 
-\subimport{book/}{index}
-\subimport{paper/}{index}
+\begin{reference}{book}
+  \addreferences{
+    Mueller2012Handbook,
+    Fastl2007Psychoacoustics,
+    Blauert2005Communication,
+    gelfand2009hearing%
+  }
+\end{reference}
 
-\custombibliography
+\begin{reference}{paper}
+  \addreferences{
+    Fastl1982,
+    Accolti2009Fluctuation,
+    Wickelmaier2004Scaling,
+    Miura2013Fluctuation%
+  }
+\end{reference}
+
+\mybibliography{}
 
 \end{document}

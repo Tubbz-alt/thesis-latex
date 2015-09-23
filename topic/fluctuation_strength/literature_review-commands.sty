@@ -1,0 +1,73 @@
+\ProvidesPackage{literature_review-commands}
+
+% ******************************************************************************
+% New Commands
+% ******************************************************************************
+
+\newcommand
+  {\referencedir}
+  {/Users/rodrigo/Documents/TUe/thesis/latex/reference/}
+
+\define@key
+  {myreference}
+  {type}
+  {\def\add@reference{\csname add@reference@#1\endcsname}}
+
+\newcommand
+  {\add@reference@generic}
+  [2]
+  {\subfile{\referencedir#1/#2/summary}}
+
+\newcommand
+  {\add@reference@book}
+  [1]
+  {\add@reference@generic{book}{#1}}
+
+\newcommand
+  {\add@reference@paper}
+  [1]
+  {\add@reference@generic{paper}{#1}}
+
+\newcommand
+  {\addreference}
+  [1]
+  {\add@reference{#1}}
+
+\newcommand
+  {\addreferences}
+  [1]
+  {
+    \foreach \i in {#1} {
+      \addreference{\i}
+    }
+  }
+
+\newcommand
+  {\setmyreference}
+  [1]
+  {\setkeys{myreference}{#1}}
+
+% ******************************************************************************
+% New Enviroments
+% ******************************************************************************
+
+\newenvironment
+  {reference}
+  [1]
+  {
+    \chapter{\texorpdfstring{\capitalisewords{#1}s}{}}
+    \setmyreference{type=#1}
+  }
+  {}
+
+% ******************************************************************************
+% Setup
+% ******************************************************************************
+
+\graphicspath{
+  {img/}
+  {/Users/rodrigo/Documents/TUe/thesis/latex/reference/book/%
+  Fastl2007Psychoacoustics/img/}
+}
+
+\endinput

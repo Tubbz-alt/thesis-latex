@@ -1,3 +1,10 @@
+\documentclass%
+  [/Users/rodrigo/Documents/TUe/thesis/latex/topic/fluctuation_strength/
+  literature_review.tex]
+  {subfiles}
+
+\begin{document}
+
 \section{Psychoacoustics: Facts and models}
 
 This book contains a chapter dedicated to discuss fluctuation strength and its
@@ -5,49 +12,76 @@ properties. First, several variables and their interactions with fluctuation
 strength will be described; then, a model for fluctuation strength will be
 presented.
 
+\subsection{Fluctuation Strength}
+
+Fluctuation strength corresponds to the sensation that arises when a sound
+presents a slow envelope (i.e., a modulation signal whose frequency is less than
+20 Hz). Fluctuation strength is closely related to roughness, the difference
+between the two being the frequency of the envelope.
+Fluctuation strength can have a significant effect on the pleasantness of sound,
+and a particularly clear example of this are alarms, which must have a sharp and
+distinctive sound.
+
+The effect of fluctuation strength can be seen as a temporary masking pattern on
+the original signal, in which the modulation depth is of utmost importance. This
+is also the case for roughness, which resembles fluctuation strength in this
+regard.
+
 \subsection{Dependencies of Fluctuation Strength}
+
+As a reference, the unit of 1 vacil is defined as a 1 kHz tone sound having a
+SPL of 60 dB, with an amplitude-modulated envelope of 4 Hz and a modulation
+index of 1. The maximum of this quantity seems to occur around 4 Hz, regardless
+of the modulation technique used (\cref{fig:flucstrenvmodfreq}).
+
+\begin{figure}
+  \centering
+  \includegraphics[height=5cm]{FluctuationStrengthVsModulationFrequency}
+  \caption{Fluctuation strength as a function of modulation frequency for (a)
+    amplitude-modulated broad-band noises, (b) amplitude-modulated tones and (c)
+    frequency-modulated tones~\cite[pp.~248]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvmodfreq}
+\end{figure}
 
 It seems that a relation between fluctuation strength and speech production
 exists, as the normal production rate of syllables during normal conversation
 speed is about 4 syllables/second. This coincides with the frequency in which a
 maximum value of fluctuation strength occurs (4 Hz).
 
-Regarding sound pressure level (SPL) and fluctuation strength, Figure
-\ref{fig:flucstrenvsndpreslvl} shows their relation for two different stimuli
+Regarding sound pressure level (SPL) and fluctuation strength,
+\cref{fig:flucstrenvsndpreslvl} shows their relation for two different stimuli
 (tones and broad-band noise) and two modulation techniques (amplitude modulation
 and frequency modulation). An increase in SPL entails an increase of fluctuation
-strength, this being stronger when using modulation of amplitude.
+strength, this being stronger when using amplitude-modulation.
 
 \begin{figure}
-    \centering
-    \includegraphics[height=5cm]
-        {img/FluctuationStrengthVsSoundPressureLevel}
-    \caption{Fluctuation strength as a function of sound pressure level for
-        amplitude-modulated broad-band noise (a), an amplitude-modulated tone
-        (b) and a frequency-modulated tone (c); modulation frequency of 4 Hz
-        \cite[pp. 249]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvsndpreslvl}
+  \centering
+  \includegraphics[height=5cm]{FluctuationStrengthVsSoundPressureLevel}
+  \caption{Fluctuation strength as a function of sound pressure level for (a)
+    amplitude-modulated broad-band noises, (b) amplitude-modulated tones and (c)
+    frequency-modulated tones; modulation frequency of
+    4Hz~\cite[pp.~249]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvsndpreslvl}
 \end{figure}
 
 Next the effect of modulation depth on fluctuation strength is analyzed, which
-can be observed on figure \ref{fig:flucstrenvsmoddep}. It can be observer than,
+can be observed on \cref{fig:flucstrenvsmoddep}. It can be observer than,
 between 3 dB and 30 dB the relation between fluctuation strength and modulation
 depth is somewhat linear. After reaching a maximum value at around 30 dB, which
 corresponds to a modulation factor of 94\%, fluctuation strength remains
 constant with further increments of modulation depth.
 
 \begin{figure}
-    \centering
-    \includegraphics[height=5cm]
-        {img/FluctuationStrengthVsModulationDepth}
-    \caption{Fluctuation strength as a function of modulation depth for
-        amplitude-modulated broad-band noise of 60 dB SPL (a), and
-        amplitude-modulated tone of 70 dB SPL and 1 kHz frequency; both with a
-        modulation frequency of 4 Hz \cite[pp. 249]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenvsmoddep}
+  \centering
+  \includegraphics[height=5cm]{FluctuationStrengthVsModulationDepth}
+  \caption{Fluctuation strength as a function of modulation depth for (a)
+    amplitude-modulated broad-band noises of 60 dB SPL and (b)
+    amplitude-modulated tones of 70 dB SPL and 1 kHz frequency; both with a
+    modulation frequency of 4 Hz~\cite[pp.~249]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenvsmoddep}
 \end{figure}
 
-Figure \ref{fig:flucstrenvscfreq} shows the relation between the center
+\Cref{fig:flucstrenvscfreq} shows the relation between the center
 frequency and fluctuation strength. Here a clear difference exists between the
 type of modulation used. For amplitude-modulated tones there is a small
 variability in the fluctuation strength, implying this a very little dependence
@@ -59,7 +93,7 @@ it experiences a linear decrease until it fades away.
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/FluctuationStrengthVsCenterFrequency}
+        {FluctuationStrengthVsCenterFrequency}
     \caption{Fluctuation strength as a function of center frequency for an
         amplitude-modulated tone of 70 dB SPL, 4 Hz modulation frequency and 40
         dB modulation depth (a), and a frequency-modulated tone with 70 dB SPL,
@@ -91,9 +125,9 @@ It can be seen that, after a frequency deviation of 20 Hz, there is a linear
 increase of fluctuation strength with frequency.
 
 \begin{figure}
-    \centering
-    \includegraphics[height=5cm]
-        {img/FluctuationStrengthVsFrequencyDeviation}
+  \centering
+  \includegraphics[height=5cm]
+        {FluctuationStrengthVsFrequencyDeviation}
     \caption{Fluctuation strength as a function of frequency deviation for a
         tone with 70 dB SPL, 1.5 kHz center frequency and a modulation frequency
         of 4 Hz \cite[pp. 251]{Fastl2007Psychoacoustics}}
@@ -132,7 +166,7 @@ sound sources.
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/FluctuationStrengthvsBandwidth}
+        {FluctuationStrengthvsBandwidth}
     \caption{Fluctuation strength as a function of bandwidth for non modulated
         narrow-band noise with 70 dB SPL and a center frequency of 1 kHz
         \cite[pp. 252]{Fastl2007Psychoacoustics}}
@@ -149,7 +183,7 @@ fluctuation strength sums across critical bands.
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/FluctuationStrengthSounds}
+        {FluctuationStrengthSounds}
     \caption{Fluctuation strength of sounds 1--5 as described in Table
         \ref{tab:flucstrensnds} \cite[pp. 252]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrensnds}
@@ -157,9 +191,10 @@ fluctuation strength sums across critical bands.
 
 \begin{table}
     \centering
-    \begin{tabu}{ l r r r r r }
-        \hline
-        Sound & 1 & 2 & 3 & 4 & 5 \\\hline
+    \begin{tabular}{ l r r r r r }
+        \toprule
+        Sound & 1 & 2 & 3 & 4 & 5 \\
+        \midrule
         Abbreviation & FM & AM & AM & FM & \\
         & SIN & BBN & SIN & SIN & NBN \\
         Frequency [Hz] & 1500 & --- & 2000 & 1500 & 1000 \\
@@ -167,8 +202,9 @@ fluctuation strength sums across critical bands.
         Modulation frequency [Hz] & 4 & 4 & 4 & 4 & --- \\
         Modulation depth [dB] & --- & 40 & 40 & --- & --- \\
         Frequency deviation [Hz] & 700 & --- & --- & 32 & --- \\
-        Bandwidth [Hz] & --- & 16000 & --- & --- & 10 \\\hline
-    \end{tabu}
+        Bandwidth [Hz] & --- & 16000 & --- & --- & 10 \\
+        \bottomrule
+    \end{tabular}
     \caption{Physical data of sounds 1--5
         \cite[pp. 253]{Fastl2007Psychoacoustics}}
     \label{tab:flucstrensnds}
@@ -185,7 +221,7 @@ modulation frequency $f_{mod}$.
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/FluctuationStrengthModel}
+        {FluctuationStrengthModel}
     \caption{Model of fluctuation strength
         \cite[pp. 254]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrenmodel}
@@ -220,7 +256,7 @@ linearly with modulation frequency.
 \begin{figure}
     \centering
     \includegraphics[height=5cm]
-        {img/FluctuationStrengthTemporalMasking}
+        {FluctuationStrengthTemporalMasking}
     \caption{Temporal masking pattern for an amplitude-modulated broad-band
         noise \cite[pp. 255]{Fastl2007Psychoacoustics}}
     \label{fig:flucstrenmasking}
@@ -243,3 +279,5 @@ across the auditory filters.
         {(f_{mod}/4\text{ Hz})+(4\text{ Hz}/f_{mod})} \text{ vacil}
     \label{eq:flucstrenexamfm}
 \end{equation}
+
+\end{document}
