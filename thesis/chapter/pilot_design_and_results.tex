@@ -14,6 +14,7 @@ conclusions that lead to the final experimental design are presented.
 \section{Design}
 
 \subsection{Equipment}
+\label{subsec:pilot_equipment}
 
 A personal computer with an audio interface M-Audio Transit and a set of
 headphones Sennheiser HD 265 Linear were used to conduct the experiment. The
@@ -22,8 +23,7 @@ programmed using the APEX software platform and Windows batch files.
 
 \subsection{Methods}
 
-A participant is assigned either to \gls{am} tones or to \gls{fm} tones. Then,
-the experiment can be divided into two phases:
+The experiment is divided in two phases:
 \begin{inparaenum}[(1)]
   \item the training phase (\ref{subsub:training_phase});
   \item and the experimental phase (\ref{subsub:experimental_phase}).
@@ -59,7 +59,7 @@ difference in the fluctuation strength among stimuli is detected.
 \end{table}
 
 Afterwards, a longer stimulus composed several stimuli
-\cref{tab:initial_am_training_stimuli}, separated by 800 ms of silence, is
+(\cref{tab:initial_am_training_stimuli}), separated by 800 ms of silence, is
 presented to the participants. This to expose them to a wider range of stimuli
 and thus familiarize them to them.
 
@@ -89,7 +89,8 @@ and thus familiarize them to them.
     9 & 0.25 & 1 & 70 & 40 \\
     \bottomrule
   \end{tabu}
-  \caption{Longer stimulus composed of \gls{am} stimuli for training phase}
+  \caption{Initial longer stimulus composed of \gls{am} stimuli for training
+  phase}
 \label{tab:initial_am_all_stimulus}
 \end{table}
 
@@ -155,6 +156,7 @@ standard and the stimulus used is randomized.
 \end{table}
 
 \subsection{Stimuli}
+\label{subsec:pilot_stimuli}
 
 All the sounds presented during the experiment consisted of diotic stimuli. Two
 types of stimuli were considered: \gls{am} tones, \cref{eq:am}; and \gls{fm}
@@ -162,7 +164,7 @@ tones, \cref{eq:fm}. In these equations, a $-\frac{\pi}{2}$ phase shift is
 introduced to the modulating signal for both tones in order to start the
 corresponding modulation at its lowest point. This phase shift is needed to
 avoid pops and clicks due to an abrupt onset when presenting the sounds to the
-participants. Additionaly, a cosine ramp with attack and release times of 25 ms
+participants. Additionally, a cosine ramp with attack and release times of 25 ms
 was applied to the stimuli to further prevent this phenomenon.
 
 \begin{equation}
@@ -180,15 +182,15 @@ The duration of the stimuli was specified such that it presented at least three
 periods of the modulating signal, within a range of values between 2 and 4
 seconds. Therefore, stimuli with long periods (e.g., $f_m$ = 0.25 Hz) were
 truncated to 4 seconds and stimuli with short periods (e.g., $f_m$ = 32 Hz) were
-generated to reach a 2 seconds duration. This was done to mantain a similar
+generated to reach a 2 seconds duration. This was done to maintain a similar
 duration among stimuli while keeping the whole experiment duration to an
 acceptable value.
 
 Furthermore, the stimuli were generated such that a 100 dB SPL value
 corresponds to a 0 dBFS value.
 
-\Cref{tab:stimuli} presents all the stimuli used for the different experimental
-sections, stating which parameters were fixed and which were varied.
+\Cref{tab:initial_stimuli} presents all the stimuli used for the different
+experimental sections, stating which parameters were fixed and which were varied.
 
 \begin{table}[!ht]
   \centering
@@ -312,7 +314,34 @@ conditions.
 
 \section{Results}
 
+The following are the results of all the participants grouped together by
+experiment. In the appendix the individual results can be found. In all the
+following figures, the error bars indicate the interquartile range and the
+marker indicate the median value.
 
+\begin{pilotresults}
+
+\myfigurequad%
+  {AM-fm_all_standards}
+  {AM-fc_all_standards}
+  {AM-SPL_all_standards}
+  {AM-md_all_standards}
+  {
+    \caption{Pilot results --- Relative fluctuation strength for AM tones}
+    \label{fig:pilot_AM_all_comparison}
+  }
+
+\myfigurequad%
+  {FM-fm_all_standards}
+  {FM-fc_all_standards}
+  {FM-SPL_all_standards}
+  {FM-df_all_standards}
+  {
+    \caption{Pilot results --- Relative fluctuation strength for FM tones}
+    \label{fig:pilot_FM_all_comparison}
+  }
+
+\end{pilotresults}
 
 \section{Conclusions}
 
