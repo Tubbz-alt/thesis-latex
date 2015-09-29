@@ -1,7 +1,12 @@
 \documentclass{beamer}
+
 \mode<presentation>
 \usetheme{Pittsburgh}
 \usecolortheme{whale}
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamerfont{caption}{size=\tiny}
+\beamertemplatenavigationsymbolsempty{}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -11,17 +16,20 @@
 \usepackage{multimedia}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[round]{natbib}
 
 \title{Modeling the sensation of fluctuation strength}
 \author{Rodrigo García León
-  \texorpdfstring{\\\texttt{r.garcia.leon@student.tue.nl}}{}}
-\institute{Eindhoven University of Technology}
+  \texorpdfstring{\\ M.Sc Student Human-Technology Interaction
+  \\ \texttt{r.garcia.leon@student.tue.nl}}{}}
+\institute{Department of Industrial Engineering \& Innovation Sciences
+  \texorpdfstring{\\Eindhoven University of Technology}{}}
 \date{\today}
 
-\newcommand{\playbutton}{\raisebox{-1.9mm}{\hbox%
+\newcommand{\playbutton}{\raisebox{-1ex}{\hbox%
   {\includegraphics[height=18pt]{play}}}}
 \newcommand{\addsound}[1]{
-  \movie[label=#1]{}{#1.aiff}
+  \movie[label=#1]{}{#1.wav}
   \hyperlinkmovie{#1}{\playbutton}
 }
 
@@ -37,31 +45,151 @@
 
 \section{Introduction}
 \subsection{Perceptual Attributes}
-
 \begin{frame}
-
-\begin{itemize}
-  \item AM tone \addsound{am}
-\end{itemize}
-
+  \frametitle{Perceptual Attributes}
+  \begin{itemize}
+    \item Discernible dimensions in which an auditory event can be decomposed
+    \item Derived from physical characteristics of sounds (frequency, sound
+      pressure level, etc.)
+    \item Examples of them are: loudness, sharpness, roughness, fluctuations
+      strength; among others.
+    \item Allow to understand auditory events from a perceptual point of view
+  \end{itemize}
 \end{frame}
 
 \subsection{Fluctuation Strength}
+\begin{frame}
+  \frametitle{Fluctuation Strength}
+  \begin{itemize}
+    \item Sensation that arises from modulated sounds with a slowly varying
+      envelope (i.e., a modulation frequency $f_m < 20$ Hz)
+    \item Envelope fluctuation can be amplitude-modulated (AM) or
+    frequency-modulated (FM)
+  \end{itemize}
 
-\section{Methods}
+  \begin{columns}
+    \begin{column}{0.175\textwidth}
+      \hbox{\hbox to 12mm{AM tone} \addsound{am}} \\
+      \medskip
+      { \scriptsize
+        $f_m = 4$ [Hz] \\ $f_c = 1$ [kHz] \\
+        SPL = 70 [dB] \\ $m_d = 40$ [dB] \\}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{am_time}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{am_frequency}
+    \end{column}
+  \end{columns}
+
+  \vspace{2mm}
+
+  \begin{columns}
+    \begin{column}{0.175\textwidth}
+      \hbox{\hbox to 12mm{FM tone} \addsound{fm}} \\
+      \medskip
+      { \scriptsize
+        $f_m = 4$ [Hz] \\ $f_c = 1.5$ [kHz] \\
+        SPL = 70 [dB] \\ $d_f = 700$ [Hz] \\}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{fm_time}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{fm_frequency}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fluctuation Strength and Roughness}
+  \begin{itemize}
+    \item A transition area around 32 Hz exists between fluctuation strength
+    and roughness
+  \end{itemize}
+
+  \begin{columns}
+    \begin{column}{0.175\textwidth}
+      \hbox{\hbox to 24mm{Fluctuating tone} \addsound{am}} \\
+      \medskip
+      { \scriptsize
+        $f_m = 4$ [Hz] \\ $f_c = 1$ [kHz] \\
+        SPL = 70 [dB] \\ $m_d = 40$ [dB] \\}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{am_time}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{am_frequency}
+    \end{column}
+  \end{columns}
+
+  \vspace{2mm}
+
+  \begin{columns}
+    \begin{column}{0.175\textwidth}
+      \hbox{\hbox to 16mm{Rough tone} \addsound{rough}} \\
+      \medskip
+      { \scriptsize
+        $f_m = 70$ [Hz] \\ $f_c = 1.5$ [kHz] \\
+        SPL = 70 [dB] \\ $m_d = 40$ [dB] \\}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{rough_time}
+    \end{column}
+    \begin{column}{0.175\textwidth}
+      \includegraphics[height=0.25\textheight]{rough_frequency}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Band-pass Characteristic}
+  \begin{figure}
+    \includegraphics[width=\textwidth]{fs_vs_md}
+    \caption{Fluctuation strength as a function of modulation frequency for: (a)
+      amplitude-modulated broad-band noises, (b) amplitude-modulated tones and
+      (c) frequency-modulated tones; as presented by
+      \citet{Fastl2007Psychoacoustics}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Importance}
+  \begin{itemize}
+    \item Apparent relation to speech
+    \item Pleasantness of sounds
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Research}
+  \begin{itemize}
+    \item Methodological issues in the past
+    \item Not widely available computational models
+  \end{itemize}
+\end{frame}
+
+\section{Experimental Design}
 \subsection{Training Phase}
 \subsection{Experimental Phase}
 
-\section{Results}
+\section{Model Development}
 
 \section{Discussion}
 
 
 \section*{Credits}
-
 \begin{frame}
   \frametitle{Credits}
   play \playbutton{} by Mike Ashley from the Noun Project
+\end{frame}
+
+\section*{Bibliography}
+\begin{frame}<beamer:0>
+  \bibliographystyle{plainnat}
+  \bibliography{/Users/rodrigo/Library/texmf/tex/latex/References.bib}
 \end{frame}
 
 \end{document}
