@@ -1,0 +1,66 @@
+\documentclass{beamer}
+\mode<presentation>
+\usetheme{Pittsburgh}
+\usecolortheme{whale}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[american]{babel}
+\usepackage{cmbright}
+\usepackage[scaled=0.85]{beramono}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\title{Modeling the sensation of fluctuation strength}
+\author{Rodrigo García León
+  \texorpdfstring{\\\texttt{r.garcia.leon@student.tue.nl}}{}}
+\institute{Eindhoven University of Technology}
+\date{\today}
+
+\newcommand{\playbutton}{\raisebox{-1.9mm}{\hbox%
+  {\includegraphics[height=18pt]{play}}}}
+\newcommand{\soundbutton}[1]{\hyperlinkmovie{#1}{\playbutton}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section*{Outline}
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\subsection{Perceptual Attributes}
+
+\begin{frame}
+
+\begin{itemize}
+  \item AM tone \soundbutton{am}
+\end{itemize}
+
+\movie[label=am]{}{am.aiff}
+
+\end{frame}
+
+\subsection{Fluctuation Strength}
+
+\section{Methods}
+\subsection{Training Phase}
+\subsection{Experimental Phase}
+
+\section{Results}
+
+\section{Discussion}
+
+
+\section*{Credits}
+
+\begin{frame}
+  \frametitle{Credits}
+  play \playbutton{} by Mike Ashley from the Noun Project
+\end{frame}
+
+\end{document}
