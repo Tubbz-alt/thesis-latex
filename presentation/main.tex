@@ -20,7 +20,10 @@
 
 \newcommand{\playbutton}{\raisebox{-1.9mm}{\hbox%
   {\includegraphics[height=18pt]{play}}}}
-\newcommand{\soundbutton}[1]{\hyperlinkmovie{#1}{\playbutton}}
+\newcommand{\addsound}[1]{
+  \movie[label=#1]{}{#1.aiff}
+  \hyperlinkmovie{#1}{\playbutton}
+}
 
 \begin{document}
 
@@ -38,10 +41,8 @@
 \begin{frame}
 
 \begin{itemize}
-  \item AM tone \soundbutton{am}
+  \item AM tone \addsound{am}
 \end{itemize}
-
-\movie[label=am]{}{am.aiff}
 
 \end{frame}
 
