@@ -33,6 +33,13 @@
   \hyperlinkmovie{#1}{\playbutton}
 }
 
+\AtBeginSection[] {
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
 \begin{document}
 
 \frame{\titlepage}
@@ -64,7 +71,7 @@
     \item Sensation that arises from modulated sounds with a slowly varying
       envelope (i.e., a modulation frequency $f_m < 20$ Hz)
     \item Envelope fluctuation can be amplitude-modulated (AM) or
-    frequency-modulated (FM)
+      frequency-modulated (FM)
   \end{itemize}
 
   \begin{columns}
@@ -105,8 +112,8 @@
 \begin{frame}
   \frametitle{Fluctuation Strength and Roughness}
   \begin{itemize}
-    \item A transition area around 32 Hz exists between fluctuation strength
-    and roughness
+    \item Above $f_m > 20$ Hz the fluctuation strength sensation diminishes
+      and the roughness sensation begins to take effect
   \end{itemize}
 
   \begin{columns}
@@ -149,25 +156,53 @@
   \begin{figure}
     \includegraphics[width=\textwidth]{fs_vs_md}
     \caption{Fluctuation strength as a function of modulation frequency for: (a)
-      amplitude-modulated broad-band noises, (b) amplitude-modulated tones and
+      amplitude-modulated broad-band noise, (b) amplitude-modulated tones and
       (c) frequency-modulated tones; as presented by
       \citet{Fastl2007Psychoacoustics}}
   \end{figure}
 \end{frame}
 
+\subsection{Current Research}
+
 \begin{frame}
   \frametitle{Importance}
   \begin{itemize}
-    \item Apparent relation to speech
-    \item Pleasantness of sounds
+    \item Possible relation with the speech system
+    \begin{itemize}
+      \item Maximum fluctuation strength value occurs around $f_m = 4$ Hz
+      \item Humans beings utter syllables at a rate of 4 syllables per second
+    \end{itemize}
+    \item Influences pleasantness of sounds
+    \begin{itemize}
+      \item Functionally (alarm signals)
+      \item Musicality (instruments enjoyableness)
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Research}
+  \frametitle{Rationale for Research}
   \begin{itemize}
-    \item Methodological issues in the past
-    \item Not widely available computational models
+    \item Methodological issues in past studies
+    \begin{itemize}
+      \item Unfamiliarity with fluctuation strength
+      \item Confusion between roughness and fluctuation strength
+    \end{itemize}
+    \item Not widely available work when it comes to modeling the fluctuation
+      strength sensation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Objectives}
+  \begin{itemize}
+    \item Formulate a clear methodological procedure to eliminate problems
+      found in past studies
+    \item Propose a fluctuation strength model
+    \begin{itemize}
+      \item Based on existing roughness models
+      \item Adjusted to collected experimental data
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
