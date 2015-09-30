@@ -5,6 +5,7 @@
 \usecolortheme{whale}
 \setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
 \setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{enumerate items}[default]
 \setbeamerfont{caption}{size=\tiny}
 \beamertemplatenavigationsymbolsempty{}
 
@@ -163,7 +164,6 @@
 \end{frame}
 
 \subsection{Current Research}
-
 \begin{frame}
   \frametitle{Importance}
   \begin{itemize}
@@ -207,8 +207,64 @@
 \end{frame}
 
 \section{Experimental Design}
+
+\begin{frame}
+  \frametitle{General Details}
+  \begin{itemize}
+    \item Two conditions: AM tones and FM tones
+    \item 24 participants assigned to one of the two conditions
+    \item Two parts
+      \begin{enumerate}
+        \item Training phase
+        \item Experimental phase
+      \end{enumerate}
+    \item Duration of approximately 60 minutes
+  \end{itemize}
+\end{frame}
+
 \subsection{Training Phase}
+\begin{frame}
+  \frametitle{Training Phase}
+  \begin{enumerate}
+    \item Comparison between stimuli: the following types of stimuli were
+      presented sequentially to participants (both for AM and FM):
+      \begin{itemize}
+        \item Pure tone
+        \item Tone with low value of fluctuation
+        \item Tone with high value of fluctuation
+        \item Tone with low value of roughness
+        \item Tone with high value of roughness
+      \end{itemize}
+    \item Continuous stimuli: two stimuli (AM and FM), composed of stimuli
+      presenting all the values of modulation frequency used in the experiment,
+      were presented to the participants
+    \item Test section: composed of 4 trials, designed to familiarize
+      participants with the experimental procedure and interface
+  \end{enumerate}
+\end{frame}
+
 \subsection{Experimental Phase}
+\begin{frame}
+  \frametitle{Experimental Phase}
+  \begin{itemize}
+    \item Magnitude estimation procedure
+    \begin{itemize}
+      \item Trial composed of a pair, a standard or anchor with a stimulus,
+        separated by 800 ms of silence
+      \item Two standards
+      \item Four repetitions per pair
+      \item Pairs presentation was randomized
+    \end{itemize}
+    \item Four parametric variations
+    \begin{itemize}
+      \item Modulation frequency ($f_m$)
+      \item Center frequency ($f_c$)
+      \item Sound pressure level (SPL)
+      \item Modulation depth ($m_d$) for AM tones;\\Frequency deviation ($d_f$)
+        for FM tones
+    \end{itemize}
+  \end{itemize}
+\end{frame}
 
 \begin{frame}
   \frametitle{APEX Software Platform}
@@ -218,9 +274,58 @@
   \addsound{pair}
 \end{frame}
 
+\subsection{Results}
+\begin{frame}
+  \frametitle{Results --- AM Tones}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{AM-fm_all_standards}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{AM-fc_all_standards}
+    \end{column}
+  \end{columns}
+
+  \vspace{2mm}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{AM-SPL_all_standards}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{AM-md_all_standards}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Results --- FM Tones}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{FM-fm_all_standards}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{FM-fc_all_standards}
+    \end{column}
+  \end{columns}
+
+  \vspace{2mm}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{FM-SPL_all_standards}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.9\textwidth]{FM-df_all_standards}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
 \section{Model Development}
 
-\section{Results}
+\section{Discussion}
 
 \section*{Credits}
 \begin{frame}
