@@ -9,6 +9,16 @@
 \setbeamerfont{caption}{size=\tiny}
 \beamertemplatenavigationsymbolsempty{}
 
+\newcommand{\nofootline}{\setbeamertemplate{footline}{}}
+\newcommand{\mainfootline}{
+  \setbeamertemplate{footline}{
+  \hspace*{\fill}
+    \insertframenumber{}/\inserttotalframenumber{}
+    \hspace*{\fill}
+    \vspace{2mm}
+  }
+}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[american]{babel}
@@ -35,23 +45,35 @@
 }
 
 \AtBeginSection[] {
-  \begin{frame}
-    \frametitle{Outline}
-    \tableofcontents[currentsection]
-  \end{frame}
+  {
+    \nofootline{}
+    \begin{frame}
+      \frametitle{Outline}
+      \tableofcontents[currentsection]
+    \end{frame}
+  }
+  \addtocounter{framenumber}{-1}
 }
+
+\mainfootline{}
 
 \begin{document}
 
-\frame{\titlepage}
+{\nofootline{} \frame{\titlepage}}
 
 \section*{Outline}
-\begin{frame}
-  \frametitle{Outline}
-  \tableofcontents
-\end{frame}
+{
+  \nofootline{}
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+  \end{frame}
+}
 
 \section{Introduction}
+
+\setcounter{framenumber}{0}
+
 \subsection{Perceptual Attributes}
 \begin{frame}
   \frametitle{Perceptual Attributes}
@@ -337,15 +359,20 @@
 \end{frame}
 
 \section*{Credits}
-\begin{frame}
-  \frametitle{Credits}
-  play \playbutton{} by Mike Ashley from the Noun Project
-\end{frame}
+{
+  \nofootline{}
+  \begin{frame}
+    \frametitle{Credits}
+    play \playbutton{} by Mike Ashley from the Noun Project
+  \end{frame}
+}
+\addtocounter{framenumber}{-1}
 
 \section*{Bibliography}
 \begin{frame}<beamer:0>
   \bibliographystyle{plainnat}
   \bibliography{/Users/rodrigo/Library/texmf/tex/latex/References.bib}
 \end{frame}
+\addtocounter{framenumber}{-1}
 
 \end{document}
