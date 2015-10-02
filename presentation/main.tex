@@ -27,7 +27,11 @@
 \usepackage{multimedia}
 \usepackage{hyperref}
 \usepackage{graphicx}
-\usepackage[round]{natbib}
+\usepackage{silence}
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\bibliography{/Users/rodrigo/Library/texmf/tex/latex/References.bib}
+\WarningFilter{biblatex}{Patching footnotes failed}
 
 \title{Modeling the sensation of fluctuation strength}
 \author{Rodrigo García León
@@ -42,6 +46,11 @@
 \newcommand{\addsound}[1]{
   \movie[label=#1]{}{#1.wav}
   \hyperlinkmovie{#1}{\playbutton}
+}
+\newcommand{\addcite}[1]{%
+  \citeauthor{#1}
+  (\citeyear{#1}),
+  \citetitle{#1}
 }
 
 \AtBeginSection[] {
@@ -193,7 +202,7 @@
     \caption{Fluctuation strength as a function of modulation frequency for: (a)
       amplitude-modulated broad-band noise, (b) amplitude-modulated tones and
       (c) frequency-modulated tones; as presented by
-      \citet{Fastl2007Psychoacoustics}}
+      \addcite{Fastl2007Psychoacoustics}}
   \end{figure}
 \end{frame}
 
@@ -383,7 +392,7 @@
     \centering
     \includegraphics[height=0.7\textheight]{model}
     \caption{Structure of roughness model, as presented by
-      \citet{daniel1997psychoacoustical}}
+      \addcite{daniel1997psychoacoustical}}
   \end{figure}
 \end{frame}
 
@@ -395,13 +404,6 @@
     play \playbutton{} by Mike Ashley from the Noun Project
   \end{frame}
 }
-\addtocounter{framenumber}{-1}
-
-\section*{Bibliography}
-\begin{frame}<beamer:0>
-  \bibliographystyle{plainnat}
-  \bibliography{/Users/rodrigo/Library/texmf/tex/latex/References.bib}
-\end{frame}
 \addtocounter{framenumber}{-1}
 
 \end{document}
