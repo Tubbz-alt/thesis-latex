@@ -185,7 +185,7 @@
       \hbox{\hbox to 16mm{Rough tone} \addsound{rough}} \\
       \medskip
       { \scriptsize
-        $f_m = 70$ [Hz] \\ $f_c = 1.5$ [kHz] \\
+        $f_m = 70$ [Hz] \\ $f_c = 1$ [kHz] \\
         SPL = 70 [dB] \\ $m_d = 40$ [dB] \\}
     \end{column}
     \begin{column}{0.175\textwidth}
@@ -338,51 +338,37 @@
 
 \subsection{Results}
 \begin{frame}
-  \frametitle{Results --- AM Tones}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{AM-fm_all_standards}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{AM-fc_all_standards}
-    \end{column}
-  \end{columns}
-
-  \vspace{2mm}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{AM-SPL_all_standards}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{AM-md_all_standards}
-    \end{column}
-  \end{columns}
-
+  \frametitle{Results --- AM tones, $f_m$}
+  \begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{Fastl2007_AM-fm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{Garcia2015_AM-fm}
+    \end{minipage}
+    \caption{Relative fluctuation strength as a function of modulation
+    frequency for AM tones --- \citeauthor{Fastl2007Psychoacoustics} (left),
+    current research (right)}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Results --- FM Tones}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{FM-fm_all_standards}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{FM-fc_all_standards}
-    \end{column}
-  \end{columns}
-
-  \vspace{2mm}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{FM-SPL_all_standards}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.9\textwidth]{FM-df_all_standards}
-    \end{column}
-  \end{columns}
-
+  \frametitle{Results --- FM tones, $f_m$}
+  \begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{Fastl2007_FM-fm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{Garcia2015_FM-fm}
+    \end{minipage}
+    \caption{Relative fluctuation strength as a function of modulation
+    frequency for FM tones --- \citeauthor{Fastl2007Psychoacoustics} (left),
+    current research (right)}
+  \end{figure}
 \end{frame}
 
 \section{Model Development}
