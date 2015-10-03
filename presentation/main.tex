@@ -35,6 +35,8 @@
 \DeclareFieldFormat*{citetitle}{#1}
 \DeclareFieldFormat*{title}{#1}
 
+\graphicspath{ {img/} }
+
 \title{Modeling the sensation of fluctuation strength}
 \author{Rodrigo García León
   \texorpdfstring{\\ M.Sc Student Human-Technology Interaction
@@ -46,7 +48,7 @@
 \newcommand{\playbutton}{\raisebox{-1ex}{\hbox%
   {\includegraphics[height=18pt]{play}}}}
 \newcommand{\addsound}[1]{
-  \movie[label=#1]{}{#1.wav}
+  \movie[label=#1]{}{snd/#1.wav}
   \hyperlinkmovie{#1}{\playbutton}
 }
 \newcommand{\addcite}[1]{%
