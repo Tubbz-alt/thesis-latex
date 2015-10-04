@@ -27,6 +27,7 @@
 \usepackage{multimedia}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{silence}
 \usepackage{csquotes}
 \usepackage[backend=biber]{biblatex}
@@ -386,16 +387,142 @@
 
 \section{Model Development}
 
-\subsection{Roughness Model}
 \begin{frame}
   \frametitle{Roughness Model}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item<1-> Presented by \addcite{daniel1997psychoacoustical}
+        \item<2-> Composed of three stages
+        \begin{enumerate}
+          \item<3-> Peripheral stage
+          \item<4-> Modulation depth extraction stage
+          \item<5-> Specific fluctuation stage
+        \end{enumerate}
+        \item<6-> Based on dependence of roughness on modulation depth
+        \begin{itemize}
+          \item<7-> $R \sim m^p$
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{model}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Peripheral Stage}
+\begin{frame}
+  \frametitle{Peripheral Stage}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item<1-> Separation of input signal into frames
+        \item<2-> Outer and middle ear transmission efects
+        \item<3-> Excitation patterns calculation
+        \item<4-> Critical-band filterbank
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] at (0,0) {
+          \includegraphics[width=\textwidth]{model}
+        };
+        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,1mm) rectangle (53mm,45mm);
+        \draw[blue,ultra thick,rounded corners] (1mm,45mm) rectangle (53mm,77mm);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Modulation Depth Extraction Stage}
+\begin{frame}
+  \frametitle{Modulation Depth Extraction Stage}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item<1-> Extraction of modulation depth per channel
+        \begin{itemize}
+          \item<2-> RMS (root mean square) value of bandpass filtered signal
+            divided by its mean
+          \item<3-> ${m_i}^* = \tilde{h}_{BP,i}(t)/h_{0,i}$
+        \end{itemize}
+        \item<4-> Bandpass filter using $H_i$ parameter
+        \begin{itemize}
+          \item<5-> Models the dependence on modulation frequency
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] at (0,0) {
+          \includegraphics[width=\textwidth]{model}
+        };
+        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,1mm) rectangle (53mm,26mm);
+        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,45mm) rectangle (53mm,77mm);
+        \draw[blue,ultra thick,rounded corners] (1mm,26mm) rectangle (53mm,45mm);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Roughness of AM Tones}
   \begin{figure}
     \centering
-    \includegraphics[height=0.7\textheight]{model}
-    \caption{Structure of roughness model, as presented by
+    \includegraphics[height=0.75\textheight]{model_roughness}
+    \caption{Roughness of AM tones, as presented by
       \addcite{daniel1997psychoacoustical}}
   \end{figure}
 \end{frame}
+
+\subsection{Specific Fluctuation Strength Stage}
+\begin{frame}
+  \frametitle{Specific Fluctuation Strength Stage}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item<1-> Specific fluctuation strength \\
+          $f_i = [g(z_i) \cdot {m_i}^* \cdot k_{i-2} \cdot k_i]^2$
+        \item<2-> Channel weighting using $g(z_i)$ parameter
+        \begin{itemize}
+          \item<3-> Models the dependence on center frequency
+        \end{itemize}
+        \item<4-> Cross correlations among channels $k_i$
+        \item<5-> Total fluctuation strength \\
+          $F = \displaystyle\sum_{i=1}^{47} f_i$
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] at (0,0) {
+          \includegraphics[width=\textwidth]{model}
+        };
+        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,26mm) rectangle (53mm,77mm);
+        \draw[blue,ultra thick,rounded corners] (1mm,1mm) rectangle (53mm,26mm);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Preliminary Results}
+\begin{frame}
+  \frametitle{Preliminary Results}
+  \begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{model_am}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{model_fm}
+    \end{minipage}
+    \caption{Relative fluctuation strength as a function of modulation
+      frequency --- comparison between experimental data and model output}
+  \end{figure}
+\end{frame}
+
+\section{Discussion}
 
 \section*{Credits}
 {
