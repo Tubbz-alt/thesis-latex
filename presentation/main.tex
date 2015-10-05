@@ -228,7 +228,7 @@
     \begin{itemize}
       \item Functionally (alarm signals)
       \pause{}
-      \item Musicality (instruments sound quality and naturalness)
+      \item Musicality (sound quality and naturalness)
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -244,8 +244,8 @@
       \item Confusion between roughness and fluctuation strength
     \end{itemize}
     \pause{}
-    \item To our knowledge, there is not public work when it comes to modeling
-      the fluctuation strength sensation
+    \item To our knowledge, there is no publicly available work when it comes to
+      modeling the fluctuation strength sensation
   \end{itemize}
 \end{frame}
 
@@ -317,7 +317,7 @@
     \item Magnitude estimation procedure
     \pause{}
     \begin{itemize}
-      \item Trial composed of a pair, a standard or reference with a stimulus,
+      \item Trial composed of a pair, a standard (reference) with a stimulus,
         separated by 800 ms of silence
       \pause{}
       \item Two standards
@@ -397,7 +397,7 @@
         \begin{enumerate}
           \item<3-> Peripheral stage
           \item<4-> Modulation depth extraction stage
-          \item<5-> Specific fluctuation stage
+          \item<5-> Specific roughness stage
         \end{enumerate}
         \item<6-> Based on dependence of roughness on modulation depth
         \begin{itemize}
@@ -416,11 +416,11 @@
   \frametitle{Peripheral Stage}
   \begin{columns}
     \begin{column}{0.5\textwidth}
+    Fluctuation strength model adaptations
       \begin{itemize}
         \item<1-> Separation of input signal into frames
         \item<2-> Outer and middle ear transmission effects
-        \item<3-> Excitation patterns calculation
-        \item<4-> Critical-band filterbank
+        \item<3-> Critical-band filterbank
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -440,6 +440,7 @@
   \frametitle{Modulation Depth Extraction Stage}
   \begin{columns}
     \begin{column}{0.5\textwidth}
+      Fluctuation strength model adaptations
       \begin{itemize}
         \item<1-> Extraction of modulation depth per channel
         \begin{itemize}
@@ -470,8 +471,8 @@
   \frametitle{Roughness of AM Tones}
   \begin{figure}
     \centering
-    \includegraphics[height=0.75\textheight]{model_roughness}
-    \caption{Roughness of AM tones, as presented by
+    \includegraphics[height=0.5\textheight]{model_roughness}
+    \caption{Roughness of AM tones, adapted from
       \addcite{daniel1997psychoacoustical}}
   \end{figure}
 \end{frame}
@@ -481,6 +482,7 @@
   \frametitle{Specific Fluctuation Strength Stage}
   \begin{columns}
     \begin{column}{0.5\textwidth}
+      Fluctuation strength model adaptations
       \begin{itemize}
         \item<1-> Specific fluctuation strength \\
           $f_i = [g(z_i) \cdot {m_i}^* \cdot k_{i-2} \cdot k_i]^2$
