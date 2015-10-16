@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{mystyle}
+
+\newcommand\resultsfigure[1]{
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[height=8cm]{garcia2015_#1}
+    \caption{#1}
+  \end{figure}
+}
+
+\begin{document}
+
+\mytitle{Garcia's Data Fitting}
+
+\resultsfigure{am-fm}
+\resultsfigure{am-fc}
+\resultsfigure{am-spl}
+\resultsfigure{am-md}
+\resultsfigure{fm-fm}
+\resultsfigure{fm-fc}
+\resultsfigure{fm-spl}
+\resultsfigure{fm-df}
+
+\end{document}
