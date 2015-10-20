@@ -201,11 +201,15 @@ these components can be weighted and adjusted individually.
 \end{equation}
 
 After the adjustments, the parameter $g(z_i)$ was removed, since the data
-gathered did not show a dependence on the center frequency. The final form
-of the specific fluctuation strength equation is shown in \cref{eq:fi_final}.
+gathered did not show a dependence on the center frequency. Furthermore, to
+avoid imaginary values when using power coefficients lesser than 1, the absolute
+value of the product of the cross correlations coefficients was used. Although
+this negates the substraction of specific fluctuation due to a negative
+coefficient, it yields better fitting results. The final form of the specific
+fluctuation strength equation is shown in \cref{eq:fi_final}.
 
 \begin{equation}
-  f_i = [{m_i}^{*\prime}]^{0.25} \cdot [k_{i-2} \cdot k_i]^{0.375}
+  f_i = [{m_i}^{*\prime}]^{0.25} \cdot |k_{i-2} \cdot k_i|^{0.375}
   \label{eq:fi_final}
 \end{equation}
 
