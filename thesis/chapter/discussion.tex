@@ -4,50 +4,6 @@
 
 \chapter{Discussion}
 
-\iffalse
-
-\section{Summmary}
-
-\begin{itemize}
-  \item Experiment
-  \begin{itemize}
-    \item sequential stimuli in training phase useless
-    \item possible confusion of participants, fixation on modulation and not
-      on sensation
-    \item long duration -> participants tired; reduce number of repetitions?
-      this could affect the outcome? (medians with big IQR)
-    \item modulation frequency curves have the expected bandpass response,
-      although the bandwidth of these responses is wider
-    \begin{itemize}
-      \item addition of tones in modulation frequency conditions can bias
-        results? this could also explain the shift in the peak value of the
-        curve
-    \end{itemize}
-    \item AM-fc presents a flat response, different from Fastl's but deemed
-      satisfactory due to the high uncertainty in the original results
-    \item SPL curves present some variations but overall behave as expected
-   \end{itemize}
-    \item There are sistematical variations in the AM-md, FM-fc and FM-df curves
-    \item Taking md and df as analogous quantities, participants seem to exhibit
-      a high sensitivity towards these parameters
-    \item FM-fc deviates significantly from Fastl's data, the later presenting
-      a monotonic descent, while the obtain data remains flat. Less sensitivity
-      to auditory filtering, frequency spread?
-    \item for FM tones, center frequency experiment not very representative
-  \item Model
-
-  \begin{itemize}
-    \item Absolute value of cross correlation coefficients may pose problems
-      when model is extended to BBN
-    \item Model designed for AM, FM fit is worse, bandpass filtering less
-      efective in this case, modulation filterbank as a solution?
-    \item Big frame size makes model slow, must be improved
-    \item ERB and Gammatone filters could be used for a more up to date model
-  \end{itemize}
-\end{itemize}
-
-\fi
-
 This chapter develops on the insights gathered from the experimental and
 modeling phases of the study. First the remarks concerning the experiments will
 be addressed, and later the details regarding the model will be explored.
@@ -129,7 +85,7 @@ values. Since they usually do not have the concept completely clear from the
 start, during the realization of the experiment they progressively adjust the
 internal references values assigned to the two standards provided. This could
 also explain why in general responses are higher. {\color{red} \bf (CHECK
-\cite{Krantz1972} and \cite{Marley1972} FOR SUPPORT ON THIS)}
+\cite{Krantz1972} and~\cite{Marley1972} FOR SUPPORT ON THIS)}
 
 Regarding the fluctuation strength as a function of center frequency, for
 \gls{am} a mostly flat response was found. Although it is somewhat different
@@ -145,7 +101,7 @@ The \gls{spl} curves present some minor differences but overall are consistent
 with the expected behavior, regardless of the comments that participants made
 about its impact on the actual fluctuation strength value.
 
-The last two paramters, modulation depth and frequency deviation, present also
+The last two parameters, modulation depth and frequency deviation, present also
 systematical variations with respect to those reported by
 \citeauthor{Fastl2007Psychoacoustics}. Since these two parameters can be
 considered analogous indicators for the amount of modulation for each type of
@@ -171,8 +127,41 @@ filters increase.
 Finally, due to the change of both center frequency and number of auditory
 filters excited inherently present in the center frequency curve for \gls{fm}
 tones, this particular response is not very suitable for analyzing only the
-effect of center frequency itselft. As an improvement to the methodology,
+effect of center frequency itself. As an improvement to the methodology,
 stimuli with a lower value for deviation frequency could be used, to eliminate
 the auditory filters effect.
+
+\section{Model}
+
+\subsection{Results}
+
+Overall the model provides an acceptable estimate for the fluctuation strength
+values presented by the experimental data. However, it adapts better to the
+\gls{am} tones than to the \gls{fm} tones. This make sense, since the model
+was intended to be used with \gls{am} stimuli, hence the fundamental use of
+modulation depth (a property found in \gls{am} only) to estimate the amount of
+fluctuation. Therefore, a trade-off must be established when adjusting the model
+parameters having each type of tone in mind. Nevertheless, the model predicts
+values close to those found in the data for \gls{fm} tones. One possible
+improvement in this regard in to substitute the generalized modulation depth
+formula proposed by \citeauthor{daniel1997psychoacoustical} with a modulation
+filterbank, that could model better the energy distribution of the signal
+among specific frequency bands. {\bf \color{red} (CHECK \cite{Dau1997} for
+support on this)}
+
+\subsection{Limitations}
+
+The use of the absolute value of cross correlation coefficients may pose
+problems when using the model with \gls{BBN} \gls{am} tones, the other type
+of stimulus used by \citeauthor{Fastl2007Psychoacoustics} in their study.
+
+The increased frame size needed to achieve the frequency resolution for the
+model renders it unfeasible to implement in practical application. Currently
+a frame size of $2ˆ20$ samples is needed, which corresponds to around 24 seconds
+for a sampling frequency of 44.1 kHz.
+
+Finally, more modern modeling techniques, such as the use of the ERB perceptual
+scale and a Gammatone filterbank instead of \citeauthor{Terhardt1979}'s can be
+implemented, to improve the model and bring it to a more up to date state.
 
 \end{document}
