@@ -314,155 +314,64 @@ across the auditory filters.
     \label{eq:flucstrenexamfm}
 \end{equation}
 
+The modeling based on the temporal masking property, proposed by
+\citeauthor{Fastl2007Psychoacoustics}, poses difficulties when its
+implementation details are addressed. Furthermore, it does not exist up to this
+date a publicly available implementation for any given model of fluctuation
+strength. There are, however, implementation models when it comes to roughness,
+a sensation that it was already mentioned as being similar to fluctuation
+strength regarding its physical characteristics. The most prominent of these
+models is the one developed by \citeauthor{daniel1997psychoacoustical}
+\cite{daniel1997psychoacoustical}, which is based on the dependency of roughness
+on modulation depth (\cref{eq:R})). Their model proposed a generalized
+modulation depth function, intended to model the modulation depth dependence
+per critical filterbank and obtain specific roughness values. Then a total
+overall roughness value is obtained.
+\begin{equation}
+   R \sim m^p
+   \label{eq:R}
+\end{equation}
+
+\subsection{Further Studies}
+
+Although the work by \citeauthor{Fastl2007Psychoacoustics} is the most extensive
+reference for the fluctuation strength sensation, other studies have been
+carried out to investigate further the phenomena.
+\citeauthor{Accolti2009Fluctuation} applied a model based on the temporal
+masking envelope proposed by \citeauthor{Fastl2007Psychoacoustics} to sounds
+composed of two mixed \gls{AM} sources. They found that the model could not be
+extended to these type of stimuli. However, the most remarkable part of their
+study is the inclusion of a training phase before they performed the actual
+experiment. This is supported by the fact that individuals are not familiarized
+with the concept of fluctuation strength, leading this to erroneous answers.
+
+Building upon this last point, \citeauthor{Wickelmaier2004Scaling} carried out
+a three-part experiment that came out with similar results in that sense. First,
+a full-factorial design with 54 pairs of stimuli, with nine modulation
+frequencies and six modulation depths, and a magnitude estimation test is run.
+The results differ from those reported by \citeauthor{Fastl2007Psychoacoustics}
+fluctuation strength model, since they do not show the characteristic band-pass
+response expected. The second experiment tries to assess the contribution of the
+two factors used in the past experiment (modulation frequency and modulation
+depth) separately, by varying one while leaving the other constant. It was found
+that the variation of the modulation depth conforms to
+\citeauthor{Fastl2007Psychoacoustics} model, while the variation of the
+modulation frequency does not. In the last experiment they try to assess whether
+fluctuation can be represented by an additive combination of modulation
+frequency and modulation depth. To test this they use the Thomsen condition,
+which results suggest that listeners do not integrate these two variables as an
+unidimensional percept. \citeauthor{Wickelmaier2004Scaling} conclusions are that
+\citeauthor{Fastl2007Psychoacoustics} data does not conform properly to their
+data, and that the status of fluctuation strength as a basic auditory perceptual
+attribute could be debated. The discrepancy between the two data sets could also
+be attributed to the lack of understanding of participants, as
+\citeauthor{Accolti2009Fluctuation} mentioned.
+
 \section{Methods}
 
-Absolute sensitivity accounts for the minimum level in which a stimulus is
-detected. Differential sensitivity describes the extend to which changes between
-stimuli can be detected. Sensory capability refers to what people actually hear,
-and response proclivity refer to how people react to sounds.
-
-\subsection{Classic Methods of Measurement}
-
-\subsubsection{Method of Limits}
-
-This method is used to determine the absolute sensitivity or the threshold for a
-given sound characteristics. The experimenter is in control of the stimuli, and
-the participant must state whether the stimuli characteristic is detected or
-not. Several runs (presentations of stimuli with the physical characteristic
-increasing or decreasing between presentations), alternating between ascending
-and descending, are presented to the participants until the stimuli changes
-status (detected to undetected, or the other way around). At the end, the mean
-value of all the estimated thresholds is taken as the estimated global
-threshold.
-
-Responses biases may arise due to the anticipation of the threshold by
-participants (since the run direction is known), or by habituation to the
-stimuli, in this case reporting higher or lower values than the real threshold.
-
-Step size between the stimuli can affect speed and reliability of the results.
-A bigger step size allows faster experiments, but it is unreliable as it could
-be not sensitive enough to detect the actual threshold. Smaller step sizes are
-more effective in this regard but take more time of the experiment.
-
-This method can also be used to determine differential threshold. In this case,
-pairs of stimuli are presented, and the participant must state whether the
-stimuli are equal or if one is greater than the other. One stimulus is keep as a
-reference, while the other is varied, both in an ascending and in a descending
-way. This gives three possible ranges of responses:
-\begin{inparaenum}[(i)]
-    \item stimulus A is greater than,
-    \item stimulus B, stimuli are equal,
-    \item stimulus A is lesser than stimulus B.
-\end{inparaenum}
-The range in which the stimuli are considered equal is called the interval of
-uncertainty, and the just noticeable difference (JND) is usually taken as half
-of this value.
-
-\subsubsection{Method of Adjustment}
-
-In this method the participant is in control of the stimulus, usually via a
-continuous dial or knob. Then the participant must adjust the sound until it is
-audible or inaudible, according to the stimulus starting point. The threshold is
-then taken as the mean value of both values. In a differential setting, the
-participant must adjust the stimulus strength until it matches the reference
-stimulus strength.
-
-This method can suffer from the persistence of stimulus bias, which results in
-lower threshold when going in an downward direction and higher threshold when
-going in an upward direction. To counteract this, both types of runs must be
-used.
-
-\subsubsection{Method of Constant Stimuli}
-
-Similar to the method of limits, but in this case stimuli are presented in a
-random order to participants. Then participants must state whether the stimulus
-was detected or not. From the responses of all participants the psychometric
-function can be obtained. The point where 50\% of the responses is achieved is
-considered then the threshold.
-
-In the case of a differential setting, pairs of stimuli are presented and the
-participants must state whether the second stimulus was stronger or weaker than
-the first (reference) stimulus. The point were the responses are at 50\% is
-considered the point of subjective equality (both stimuli are perceived the
-same), and the difference between the 50\% and the 75\% is the JND.
-
-This method allows the placement of so-called ``catch trials'', i.e.\ trials
-where there is no second stimulus present. This allows to control for guessing,
-and reduces responses biases.
-
-This method is more accurate than the other two methods, although is it usually
-longer in duration. This can impact negatively participants, leading up to
-fatigue and making it difficult for them to maintain motivation during the
-experiment.
-
-\subsection{Adaptive Procedures}
-
-Adaptive procedures presents stimuli to the participants in one direction until
-there is a change in participants answer; at that point then direction is
-reversed until another change of answer is reached. It is said that adaptive
-procedures converge to the threshold point, and make better use of trials by
-placing most of them near the threshold itself.
-
-\subsubsection{Bekesy's Tracking Method}
-
-The direction of the change of the stimulus characteristic under study is under
-control of the participant. For instance, in the case of loudness, the stimulus
-begins with an inaudible level that is gradually incremented. As soon as the
-participant starts hearing the stimulus he or she can push the button, that will
-change the direction of the change to a decreasing one. While the button is
-pressed, the change will continue downward. When the sound becomes inaudible
-again, the participant can release the button, and the sound will start going
-up again. In this way, the threshold can be tracked by the participant. This
-procedure can lead to response biases in the cases which the stimulus change
-rate is faster than the participant response rate.
-
-\subsubsection{Simple Up-Down or Staircase Method}
-
-This procedure is similar to the Bekesy's Tracking method, but in a discrete
-way. Stimuli are presented sequentially either in a downward or upward direction
-until a answer reversal occurs. In that case the direction is then reversed.
-After six to eight changes of direction the method ends, and the 50\% point
-value is calculated either with the mean value of the midpoints between changes
-or with the mean value of all the peaks and troughs. As the stimuli are
-presented in a sequential way, this can lead to response biases from the
-participants, as they anticipate the stimuli that will be presented to them.
-Also it is dependent of the step size, as the method of limits.
-
-\subsubsection{PEST Procedure}
-
-The parameter estimation by sequential testing (PEST) procedure is an adaptive
-procedure that involves changes in direction and step size. When two consecutive
-trials result in the same answer the step size is doubled. When a change of
-answer occurs the step size of halved. When two consecutive changes of direction
-occur the threshold is taken as the midpoint between these two values.
-
-\subsubsection{BUDTIF Procedure}
-
-The block up-down temporal interval forced-choice (BUDTIF) procedure is similar
-to the PEST procedure. In this case blocks of stimuli are used instead of
-individual ones. Also, instead of a yes-no response, a two-alternative forced
-choice is used. Finally, it is possible to determine points in the psychometric
-function other than 50\% by modifying the number of trials per block. For
-instance, for a 75\% rate a block of 4 stimuli can be used, where if 3 out of 4
-are classified correctly then the threshold is considered as the obtained value.
-Otherwise the same procedure as the PEST is followed to alter the direction of
-the trials, decreasing the stimuli intensity when four corrects responses are
-obtained, and increasing them when there are less than three correct answers.
-
-A variation of this procedure which utilizes a yes-no response also exists,
-named the block up-down yes-no (BUDYEN) method. However, this method has the
-disadvantage of not allowing to estimate false alarm responses, as a result of
-the fact that pairs of stimuli are not used.
-
-\subsubsection{Transformed Up-Down Procedures}
-
-Simple Up-Down procedure converges only to the 50\% point in the psychometric
-curves. By altering the criteria for increasing the stimuli level (up rule) and
-decreasing the stimuli level (down rule), other points can be achieved. For
-instance, by only decreasing the stimuli level when two consecutive positive
-answer occur, the point to which the procedure converges is 70.7\%.
-
 \subsection{Scales of Measurement}
+
+In this method several presentations of pairs of sounds are used, composed of an anchor sound, that remains unchanged, and a test sound ,that is varied across trials. A reference value, for example 100, is assigned to one perceptual characteristic of the anchor sound, for instance its loudness. Is then the task of the participants to estimate the ratio of the perceptual attribute of the test and the anchor sound. For instance the test sound loudness is 80 percent of the anchor sound loudness. Intra-individual and inter-individual differences usually come out in a 10 percent variation range. The anchor sound can influence the results significantly; therefore it is recommended to use at least two of them.
 
 Nominal scales refer to categorization of stimuli according to groups. Ordinal
 scales imply that the values of the scale can be ranked, but a distance between
