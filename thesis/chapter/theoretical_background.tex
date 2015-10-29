@@ -255,19 +255,18 @@ As so, it can be said that fluctuation strength sums across critical bands.
 
 \subsection{Models of Fluctuation Strength}
 
-A basic model (proposed by \citeauthor{Fastl2007Psychoacoustics}
-\cite[pp.~254]{Fastl2007Psychoacoustics}) on the temporal variation of a masking
-pattern in shown on \Cref{fig:flucstrenmodel}, where the temporal variation of
-the amplitude of the masker, also called temporal masking depth, is denoted by
-the magnitude $\Delta L$. The inverse of the time difference between peak
-corresponds to the modulation frequency $f_{m}$.
+A basic model (proposed by \textcite[pp.~254]{Fastl2007Psychoacoustics}) on the
+temporal variation of a masking pattern is shown in \Cref{fig:flucstrenmodel},
+where the temporal variation of the amplitude of the masker, also called
+temporal masking depth, is denoted by the magnitude $\Delta L$. The inverse of
+the time difference between peak corresponds to the \gls{f_m}.
 
 \begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{FluctuationStrengthModel}
-    \caption{Model of fluctuation strength
-        \cite[pp. 254]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenmodel}
+  \centering
+  \includegraphics[width=\textwidth]{FluctuationStrengthModel}
+  \caption{Model of fluctuation
+    strength~\cite[pp. 254]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenmodel}
 \end{figure}
 
 \Cref{eq:flucstrentempmaskmodfreq} shows the relationship between fluctuation
@@ -275,105 +274,99 @@ strength $F$, temporal masking depth $\Delta L$ and modulation frequency
 $f_{m}$, where the importance of the 4 Hz frequency is emphasized.
 
 \begin{equation}
-    F \sim \frac{\Delta L}{(f_{m}/4\text{ Hz}) + (4\text{ Hz}/f_{m})}
-    \label{eq:flucstrentempmaskmodfreq}
+  F \sim \frac{\Delta L}{(f_{m}/4\text{ Hz}) + (4\text{ Hz}/f_{m})}
+  \label{eq:flucstrentempmaskmodfreq}
 \end{equation}
 
-It is to note that there is dependency between the temporal masking depth
+It is to note that there is a dependency between the temporal masking depth
 $\Delta L$ and the modulation frequency depending on the type of stimuli. In the
 case of broad-band noise, temporal masking depth seems largely unaffected by
 modulation frequency, whereas amplitude and frequency modulates tones these two
-variable are dependent on each other, this being strongest on the frequency
-modulated case. In order to address this, when modeling fluctuation strength
-for these tones not a single $\Delta L$ value is taken, but instead it is
-integrated across the critical-band rate scale.
+variable are dependent on each other, this being strongest for \gls{FM} stimuli.
+In order to address this, when modeling the fluctuation strength for these tones
+not a single $\Delta L$ value is taken, but instead it is integrated across the
+critical-band rate scale.
 
-\Cref{fig:flucstrenmasking} shows the resulting temporal masking pattern for
-several values of modulation frequency. It can be seen that, as the modulation
-frequency increases, the temporal masking depth decreases. This leads to the
-idea that, although fluctuation strength presents a bandpass response with
-respect to modulation frequency, the temporal masking suffers from a low pass
-effect. It can be considered that the temporal masking depth decreases linearly
-with modulation frequency.
+The resulting temporal masking pattern for several values of modulation
+frequency is shown in \Cref{fig:flucstrenmasking}. It can be seen that, as the
+modulation frequency increases, the temporal masking depth decreases. This leads
+to the idea that, although fluctuation strength presents a bandpass response
+with respect to modulation frequency, the temporal masking suffers from a low
+pass effect. It can be considered that the temporal masking depth decreases
+linearly with modulation frequency.
 
 \begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{FluctuationStrengthTemporalMasking}
-    \caption{Temporal masking pattern for an amplitude-modulated broad-band
-        noise \cite[pp. 255]{Fastl2007Psychoacoustics}}
-    \label{fig:flucstrenmasking}
+  \centering
+  \includegraphics[width=\textwidth]{FluctuationStrengthTemporalMasking}
+  \caption{Temporal masking pattern for an amplitude-modulated broad-band
+    noise~\cite[pp. 255]{Fastl2007Psychoacoustics}}
+\label{fig:flucstrenmasking}
 \end{figure}
-
-Taking all these into account, \Cref{eq:flucstrenexbbn} presents an
-updated model, in which $m$ is the modulation factor, and $L_{BBN}$ is the level
-of broad-band noise. Similarly, \Cref{eq:flucstrenexamfm} presents the
-equivalent for the tone signals, where the temporal masking depth is integrated
-across the auditory filters.
-
-\begin{equation}
-    F_{BBN} = \frac{5.8(1.25m-0.25)[0.05(L_{BBN}/\text{dB})-1]}
-        {(f_{m}/5\text{ Hz})^2+(4\text{ Hz}/f_{m})+1.5} \text{ vacil}
-    \label{eq:flucstrenexbbn}
-\end{equation}
-
-\begin{equation}
-    F = \frac{0.008 \int_0^{24\text{ Bark}}(\Delta L/\text{dB Bark})\mathrm{d}z}
-        {(f_{m}/4\text{ Hz})+(4\text{ Hz}/f_{m})} \text{ vacil}
-    \label{eq:flucstrenexamfm}
-\end{equation}
 
 The modeling based on the temporal masking property, proposed by
 \citeauthor{Fastl2007Psychoacoustics}, poses difficulties when its
-implementation details are addressed. Furthermore, it does not exist up to this
-date a publicly available implementation for any given model of fluctuation
-strength. There are, however, implementation models when it comes to roughness,
-a sensation that it was already mentioned as being similar to fluctuation
-strength regarding its physical characteristics. The most prominent of these
-models is the one developed by \citeauthor{daniel1997psychoacoustical}
-\cite{daniel1997psychoacoustical}, which is based on the dependency of roughness
-on modulation depth (\Cref{eq:R})). Their model proposed a generalized
-modulation depth function, intended to model the modulation depth dependence
-per critical filterbank and obtain specific roughness values. Then a total
-overall roughness value is obtained.
+implementation details are addressed. Furthermore, to our knowledge, there is
+not a publicly available implementation for any given model of fluctuation
+strength up to this date. There are, however, implementation models when it
+comes to roughness, a sensation that it was already mentioned as being similar
+to fluctuation strength regarding its physical characteristics. The most
+prominent of these models is the one developed by
+\textcite{daniel1997psychoacoustical}, which is based on the dependency of
+roughness on modulation depth, shown in \Cref{eq:R}.
+
 \begin{equation}
-   R \sim m^p
-   \label{eq:R}
+  R \sim m^p
+  \label{eq:R}
 \end{equation}
 
-\subsection{Further Studies}
+Their model propose a generalized modulation depth function, intended to model
+the modulation depth dependence per critical filterbank channel and obtain
+specific roughness values. Then a total overall roughness value is obtained by
+summing the specific roughness values.
+
+Given the similarity in physical terms that fluctuation strength and roughness
+possess,  model for the sensation of fluctuation strength could be elaborated
+taking as a base \citeauthor{daniel1997psychoacoustical}'s model. In this
+regard, \textcite{Sontacchi1998} has already formulated a model whose structure
+is similar to that of the roughness model. Hovewer, as part of work done a
+subjective evaluation of the model used participants was not presented. The
+present work expands on this point, including a subjective evaluation of the
+model with the experimental data collected.
+
+\subsection{Related Studies}
 
 Although the work by \citeauthor{Fastl2007Psychoacoustics} is the most extensive
 reference for the fluctuation strength sensation, other studies have been
-carried out to investigate further the phenomena.
-\citeauthor{Accolti2009Fluctuation} applied a model based on the temporal
-masking envelope proposed by \citeauthor{Fastl2007Psychoacoustics} to sounds
-composed of two mixed \gls{AM} sources. They found that the model could not be
-extended to these type of stimuli. However, the most remarkable part of their
-study is the inclusion of a training phase before they performed the actual
-experiment. This is supported by the fact that individuals are not familiarized
-with the concept of fluctuation strength, leading this to erroneous answers.
+carried out to further investigate the phenomenon.
+\textcite{Accolti2009Fluctuation} applied a model based on the temporal masking
+envelope proposed to sounds composed of two mixed \gls{AM} sources. They found
+that the model could not be extended to these type of stimuli. However, the most
+remarkable part of their study is the inclusion of a training phase before they
+performed the actual experiment. This is supported by the fact that individuals
+are not familiarized with the concept of fluctuation strength; which might lead
+to erroneous answers.
 
 Building upon this last point, \citeauthor{Wickelmaier2004Scaling} carried out
 a three-part experiment that came out with similar results in that sense. First,
 a full-factorial design with 54 pairs of stimuli, with nine modulation
-frequencies and six modulation depths, and a magnitude estimation test is run.
-The results differ from those reported by \citeauthor{Fastl2007Psychoacoustics}
-fluctuation strength model, since they do not show the characteristic band-pass
-response expected. The second experiment tries to assess the contribution of the
-two factors used in the past experiment (modulation frequency and modulation
-depth) separately, by varying one while leaving the other constant. It was found
-that the variation of the modulation depth conforms to
-\citeauthor{Fastl2007Psychoacoustics} model, while the variation of the
-modulation frequency does not. In the last experiment they try to assess whether
-fluctuation can be represented by an additive combination of modulation
-frequency and modulation depth. To test this they use the Thomsen condition,
-which results suggest that listeners do not integrate these two variables as an
-unidimensional percept. \citeauthor{Wickelmaier2004Scaling} conclusions are that
-\citeauthor{Fastl2007Psychoacoustics} data does not conform properly to their
+frequencies and six modulation depths, and a magnitude estimation test was run.
+The results differ from those reported by \citeauthor{Fastl2007Psychoacoustics},
+since they do not show the characteristic band-pass response expected. The
+second experiment tries to assess the contribution of the two factors used in
+the past experiment (modulation frequency and modulation depth) separately, by
+varying one while leaving the other constant. It was found that the variation of
+the modulation depth is similar to \citeauthor{Fastl2007Psychoacoustics} data,
+while the variation of the modulation frequency does not. In the last experiment
+they try to assess whether fluctuation can be represented by an additive
+combination of modulation frequency and modulation depth. To test this they used
+the Thomsen condition. Their results suggest that listeners do not integrate
+these two variables as an unidimensional percept.
+\citeauthor{Wickelmaier2004Scaling} conclusions are that
+\citeauthor{Fastl2007Psychoacoustics} data do not conform properly to their
 data, and that the status of fluctuation strength as a basic auditory perceptual
 attribute could be debated. The discrepancy between the two data sets could also
 be attributed to the lack of understanding of participants, as
-\citeauthor{Accolti2009Fluctuation} mentioned.
+\citeauthor{Accolti2009Fluctuation} stated.
 
 \end{theoreticalbackground}
 
