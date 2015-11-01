@@ -2,14 +2,14 @@
 
 \begin{document}
 
-\chapter{Pilot Design and Results}
+\chapter{Pilot Experiments Design and Results}
 
-This chapter details the process of development of the experimental design,
-through the execution of several pilot experiments. First, the initial design
-(based from \citeauthor{Fastl1982Fluctuation} study~\cite{Fastl1982Fluctuation})
-is presented. Then, the iterative process of the pilots execution is detailed,
-stating the progressive changes made to the initial design. Finally, a series of
-conclusions that lead to the final experimental design are presented.
+This chapter describes the experimental design for the evaluation of the
+fluctuation strength attribute. First, the initial design (as
+in~\cite{Fastl1982Fluctuation}) is presented. Then, the iterative process of the
+pilots execution is detailed, stating the progressive changes made to the
+initial design. Finally, a series of conclusions that lead to the final
+experimental design are presented.
 
 \section{Design}
 
@@ -18,25 +18,34 @@ conclusions that lead to the final experimental design are presented.
 
 A personal computer with an audio interface M-Audio Transit and a set of
 headphones Sennheiser HD 265 Linear were used to conduct the experiment. The
-computer was positioned in a sound-isolated booth. The experiment itself was
-programmed using the APEX software platform and Windows batch files.
+headphones provided a diffuse-field equalization to the reproduced sounds. The
+sampling rate was set to 44.1~kHz. The computer was positioned in a
+sound-isolated booth. The experiment itself was programmed using the APEX
+software platform~\cite{Francart2008} and Windows batch files.
 
 \subsection{Methods}
 
 The experiment is divided in two phases:
-\begin{inparaenum}[(1)]
-  \item the training phase (\ref{subsub:training_phase});
-  \item and the experimental phase (\ref{subsub:experimental_phase}).
-\end{inparaenum}
+\begin{enumerate}
+  \item Training phase (\Cref{subsub:training_phase})
+  \item Experimental phase (\Cref{subsub:experimental_phase})
+\end{enumerate}
 
-\subsubsection{Training phase}
+\subsubsection{Training Phase}
 \label{subsub:training_phase}
 
-The objective of this phase is to make clear the concept of fluctuation strength
-to the participants. First, a subset of \gls{AM} tones
-(\cref{tab:initial_am_training_stimuli}) is presented to the participants
-sequentially according to their id in pairs, while being asked whether a
-difference in the fluctuation strength among stimuli is detected.
+The objective of this phase was to make clear the concept of fluctuation
+strength to the participants. Past studies~\cite{Accolti2009Fluctuation} have
+pointed the need of such a phase to familiarize subjects with the sensation.
+However, this must be approached with caution, as the intention of the training
+phase is the show participants what the sensation is, not teach them how to
+answer to specific questions regarding the stimuli.
+
+First, a subset of \gls{AM} tones (\Cref{tab:initial_am_training_stimuli}) was
+presented to the participants sequentially according to their id in pairs (i.e.,
+first stimuli 1 and 2, then 2 and 3, etc.). After each presentation,
+participants were asked whether a difference in the fluctuation strength among
+stimuli was detected. In case of a negative answer the pair was repeated.
 
 \begin{table}[!ht]
   \centering
@@ -51,14 +60,14 @@ difference in the fluctuation strength among stimuli is detected.
     4 & 32  & 1 & 70 & 40 \\
     \bottomrule
   \end{tabu}
-  \caption{Initial subset of \gls{AM} stimuli for training phase}
+  \caption{Initial subset of AM stimuli for training phase}
 \label{tab:initial_am_training_stimuli}
 \end{table}
 
-Afterwards, a longer stimulus composed several stimuli
-(\cref{tab:initial_am_training_stimuli}), separated by 800 ms of silence, is
+Afterwards, a longer interval composed several stimuli
+(\Cref{tab:initial_am_training_stimuli}), separated by 800 ms of silence, was
 presented to the participants. This to expose them to a wider range of stimuli
-and thus familiarize them to them.
+and thus familiarize them more to these kind of sounds.
 
 \begin{table}[!ht]
   \centering
@@ -78,37 +87,47 @@ and thus familiarize them to them.
     9 & 0.25 & 1 & 70 & 40 \\
     \bottomrule
   \end{tabu}
-  \caption{Initial longer stimulus composed of \gls{AM} stimuli for training
-  phase}
+  \caption{Initial longer stimulus composed of AM stimuli for training phase}
 \label{tab:initial_am_all_stimulus}
 \end{table}
 
-\subsubsection{Experimental phase}
+\subsubsection{Experimental Phase}
 \label{subsub:experimental_phase}
 
-A magnitude estimation procedure was used to obtain the relative fluctuation
-strength as a function of a varying parameter for the two types of tones. There
-were four different parametric variations:
-\begin{inparaenum}[(1)]
-  \item \gls{f_m};
-  \item \gls{f_c};
-  \item \gls{SPL};
-  \item \gls{m_d} for \gls{AM} tones, \gls{d_f} for \gls{FM} tones.
-\end{inparaenum}
-Each of these parameters defined an experiment section on its own.
+\glsreset{f_m}
+\glsreset{f_c}
+\glsreset{SPL}
+\glsreset{d_f}
+\glsreset{m_d}
 
-Each magnitude estimation presented pairs of sounds, composed of one of two
-possible standards (\cref{tab:standards}) and a stimulus from the section set.
-The standard and the stimulus are separated by a 800 ms silence. There were four
-repetitions per pair, and hence eight per stimulus. The selection of the
-standard and the stimulus used is randomized.
+A magnitude estimation procedure was used to obtain the relative fluctuation
+strength as a function of a varying parameter for the two types of tones. Four
+different parametric variations were used:
+\begin{itemize}
+  \item \Gls{f_m}
+  \item \Gls{f_c}
+  \item \Gls{SPL}
+  \item \Gls{m_d} for \gls{AM} tones; \gls{d_f} for \gls{FM} tones
+\end{itemize}
+These parametric variations were chosen in order to assess all the dependencies
+that the sensation of fluctuation strength presents in regard to the type of
+stimuli used. Each of these parameters defined an experiment section on its own.
+
+For each magnitude estimation procedure pairs of sounds were presented, composed
+of one of two possible standards (\Cref{tab:standards}) and a stimulus from the
+section set. The standard and the stimulus are separated by a 800 ms silence.
+There were four repetitions per pair, and hence eight per stimulus. The
+selection of the standard and the stimulus used is randomized. After each
+pair presentation, the participant must indicate how much does the second
+sound fluctuate with respect to the first one. A screenshot of the final
+experiment design in shown in \Cref{fig:apex}.
 
 \begin{table}[!ht]
   \centering
-  \begin{tabu} to \linewidth{XXXXXX}
+  \begin{tabu} to \linewidth{XXXXXXX}
     \toprule
     \rowfont\bfseries
-    \multirow{2}{*}{Section} &
+    \multirow{2}{*}{Section\footnotemark} &
     \multicolumn{5}{c}{Parameters} \\
     \cmidrule{2-6}
     \rowfont\bfseries
@@ -144,12 +163,24 @@ standard and the stimulus used is randomized.
 \label{tab:standards}
 \end{table}
 
+\footnotetext{Each experimental section is designated with the type of stimuli
+followed by the parameter varied. Therefore, AM-fm represents the fluctuation
+strength as a function of modulation frequency experiment for AM tones.}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{apex}
+  \caption{Screenshot of an experiment section interface}
+\label{fig:apex}
+\end{figure}
+
 \subsection{Stimuli}
 \label{subsec:pilot_stimuli}
 
-All the sounds presented during the experiment consisted of diotic stimuli. Two
-types of stimuli were considered: \gls{AM} tones, \cref{eq:am}; and \gls{FM}
-tones, \cref{eq:fm}. In these equations, a $-\frac{\pi}{2}$ phase shift is
+All the sounds presented during the experiment consisted of diotic stimuli,
+where a monaural stimulus is reproduced for both ears simultaneously. Two
+types of stimuli were considered: \gls{AM} tones, \Cref{eq:am}; and \gls{FM}
+tones, \Cref{eq:fm}. In these equations, a phase shift of $-\frac{\pi}{2}$ was
 introduced to the modulating signal for both tones in order to start the
 corresponding modulation at its lowest point. This phase shift is needed to
 avoid pops and clicks due to an abrupt onset when presenting the sounds to the
@@ -168,14 +199,14 @@ was applied to the stimuli to further prevent this phenomenon.
 \end{equation}
 
 The duration of the stimuli was specified such that it presented at least three
-periods of the modulating signal, within a range of values between 2 and 4
-seconds. Therefore, stimuli with long periods (e.g., $f_m$ = 0.25 Hz) were
-truncated to 4 seconds and stimuli with short periods (e.g., $f_m$ = 32 Hz) were
-generated to reach a 2 seconds duration. This was done to maintain a similar
+periods of the modulating signal, within a range of values between 2 and
+4~seconds. Therefore, stimuli with long periods (e.g., $f_m$ = 0.25~Hz) were
+truncated to 4~seconds and stimuli with short periods (e.g., $f_m$ = 32~Hz) were
+generated to reach a 2~seconds duration. This was done to maintain a similar
 duration among stimuli while keeping the whole experiment duration to an
 acceptable value.
 
-Furthermore, the stimuli were generated such that a 100 dB SPL value
+Furthermore, the stimuli were generated such that a level of 100 dB SPL value
 corresponds to a 0 dBFS value.
 
 \Cref{tab:initial_stimuli} presents all the stimuli used for the different
@@ -221,12 +252,17 @@ experimental sections, stating which parameters were fixed and which were varied
 \label{tab:initial_stimuli}
 \end{table}
 
+\section{Subjects}
+
+They were in total 9 participants for the pilot experiments. Participants were
+between 20 and 30 years old. All of them had self-reported ``normal hearing''.
+
 \section{Development}
 
-They were in total 9 participants in the pilot experiments. Not all participants
-were subjected to the same experimental conditions, and not all of them used the
-same version of the experiments. \Cref{tab:partexpconver} presents the
-conditions and version to which the participants were subjected.
+Not all participants were subjected to the same experimental conditions, and
+not all of them used the same version of the experiments.
+\Cref{tab:partexpconver} presents the conditions and version to which the
+participants were subjected.
 
 \begin{table}[!ht]
   \centering
@@ -259,16 +295,16 @@ frequencies of 64 and 128 Hz. The idea behind the addition of these two tones
 was that, if participant have stimuli that are clearly rough, it would be easier
 for them to distinguish between a fluctuating and a rough tone. Additionally,
 FM tones were included in the training, since up to this point only AM tones
-were used in the training phase This constitutes the second version of the
+were used in the training phase. This constitutes the second version of the
 experiment.
 
 Participant 5 was the only participant that was subjected to version 2 of the
-experiment. Its results did not show any significant improvements with regard
+experiment. The results did not show any significant improvements with regard
 to the confusion between fluctuation strength and roughness. However, by talking
 to the participants it was discovered that the instructions during the training
 phase were not clear enough, and this may have affected the results of the
 experiment. Several participants associated the rate of change of the stimuli
-(modulation frequency in this case) to a bigger fluctuation in the presented
+(modulation frequency in this case) with a bigger fluctuation in the presented
 sounds. As so, they tended to deem as highly fluctuating sounds that had a high
 modulation frequency. Participants 4 and 5 explicitly stated that they were
 counting the number of cycles in the stimuli, due to confusion on what to
@@ -277,9 +313,9 @@ answer.
 Taking all these comments as feedback, version 3 of the experiment was
 elaborated. In this version, explicit instructions regarding the rough tones
 were given. It was indicated that the sensation of fluctuation was unrelated to
-the apparent `speed' of the stimuli, and that the answers should be based on a
-intuitive way, based on the arising sensation and not rationalizing it (for
-instance by counting cycles). Using this approach participants were able to
+the apparent `speed' of the stimuli, and that the answers should be intuitive,
+based on the arising sensation and not rationalizing any judgment about it
+(for instance by counting cycles). Using this approach participants were able to
 understand better the fluctuation strength concept, some of them even coming
 with analogies to the sensation itself (the sound of an ambulance alarm, the
 sound of a washing machine).
@@ -287,18 +323,19 @@ sound of a washing machine).
 The final version, number 4, of the experiment added a small test experiment
 before starting the actual experiment sections. This was added as a suggestion
 of participant 8, who indicated that although the training phase was effective
-in making clear the fluctuation strength concept, it did not showed the
+in making clear the fluctuation strength concept, it did not show the
 participant how to do the expected judgments using the magnitude estimation
-procedure. Moreover, a latin square randomization approach was used, to
-distribute possible learning effects of participants among the experimental
-conditions.
+procedure. Moreover, a latin square randomization approach was used, rotating
+the order of the experimental sections for each participant. The purpose of this
+was to distribute possible learning effects of participants among the
+experimental conditions.
 
 \section{Results}
 
 The following are the results of all the participants grouped together by
-experiment. In the appendix the individual results can be found. In all the
-following figures, the error bars indicate the interquartile range and the
-marker indicate the median value.
+experiment. In the appendix the individual results can be found. In
+\Cref{fig:pilot_AM_all_comparison,fig:pilot_FM_all_comparison} the error bars
+indicate the interquartile range and the marker indicates the median value.
 
 \begin{pilotresults}
 
@@ -309,7 +346,7 @@ marker indicate the median value.
   {AM-md_all_standards}
   {
     \caption{Pilot results --- Relative fluctuation strength for AM tones}
-    \label{fig:pilot_AM_all_comparison}
+\label{fig:pilot_AM_all_comparison}
   }
 
 \myfigurequad%
@@ -319,7 +356,7 @@ marker indicate the median value.
   {FM-df_all_standards}
   {
     \caption{Pilot results --- Relative fluctuation strength for FM tones}
-    \label{fig:pilot_FM_all_comparison}
+\label{fig:pilot_FM_all_comparison}
   }
 
 \end{pilotresults}
@@ -327,12 +364,13 @@ marker indicate the median value.
 \section{Conclusions}
 
 From the obtained data it can be concluded that the main problem when dealing
-with the fluctuation strength perceptual attribute is its ambiguity and
-confusion with the roughness perceptual attribute. The proposed training phase
-was effective in clarifying the concept to participants, by adding stimuli with
-a clear rough sensation, and by clearly instructing them on what the sensation
-is about. It should be noted that only with regard to modulation frequency this
-confusion arises, the other parameters do not present this particularity and as
-so it was not necessary to adapt the experimental procedure with them.
+with the perceptual attribute of fluctuation strength is its ambiguity and
+confusion with the perceptual attribute of roughness perceptual. The proposed
+training phase was effective in clarifying the concept to participants, by
+adding stimuli with a clear rough sensation, and by clearly instructing them on
+what the sensation is about. It should be noted that only with regard to
+modulation frequency this confusion arises, the other parameters do not present
+this particularity and as so it was not necessary to adapt the experimental
+procedure with them.
 
 \end{document}
