@@ -6,15 +6,18 @@
 \mytitle{\thesistitle}
 
 \tableofcontents
-\printglossary[type=\acronymtype,title={List of Abbreviations}]
+\printglossary[type=\acronymtype,
+  title=List of Abbreviations,
+  toctitle=List of Abbreviations]
 
+\subfile{chapter/introduction.tex}
 \subfile{chapter/theoretical_background.tex}
 \subfile{chapter/pilot_experiments_design_and_results.tex}
 \subfile{chapter/experimental_design_and_results.tex}
 \subfile{chapter/model_development.tex}
 \subfile{chapter/discussion.tex}
 
-\printbibliography{}
+\printbibliography[heading=bibintoc]{}
 
 \appendix
 \subfile{appendix/experiment_protocol}
