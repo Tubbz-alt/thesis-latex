@@ -1,14 +1,18 @@
-\documentclass{scrreprt}
+\documentclass{scrbook}
 \usepackage{mystyle}
 \usepackage{thesis-commands}
 
 \begin{document}
-\mytitle{\thesistitle}
 
+\frontmatter{}
+
+\mytitle{\thesistitle}
 \tableofcontents
 \printglossary[type=\acronymtype,
   title=List of Abbreviations,
   toctitle=List of Abbreviations]
+
+\mainmatter{}
 
 \subfile{chapter/introduction.tex}
 \subfile{chapter/theoretical_background.tex}
