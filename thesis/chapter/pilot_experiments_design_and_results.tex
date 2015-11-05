@@ -24,9 +24,9 @@ sampling rate was set to 44.1~kHz. The computer was positioned in a
 sound-isolated booth. The experiment itself was programmed using the APEX
 software platform~\cite{Francart2008} and Windows batch files.
 
-\section{Subjects}
+\subsection{Subjects}
 
-They were in total 9 participants for the pilot experiments. Participants were
+There were in total 9 participants for the pilot experiments. Participants were
 between 20 and 30 years old. All of them had self-reported ``normal hearing''.
 
 \subsection{Methods}
@@ -176,7 +176,7 @@ strength as a function of modulation frequency experiment for AM tones.}
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\textwidth]{apex}
-  \caption{Screenshot of an experiment section interface}
+  \caption{Screenshot of the final experiment interface}
 \label{fig:apex}
 \end{figure}
 
@@ -340,25 +340,81 @@ indicate the interquartile range and the marker indicates the median value.
 
 \begin{pilotresults}
 
-\myfigurequad%
-  {AM-fm_all_standards}
-  {AM-fc_all_standards}
-  {AM-SPL_all_standards}
-  {AM-md_all_standards}
-  {
-    \caption{Pilot results --- Relative fluctuation strength for AM tones}
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{AM-fm_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{a}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{AM-fc_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{b}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{AM-SPL_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{c}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{AM-md_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{d}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+\caption{Pilot results --- Relative fluctuation strength for AM tones as a
+  function of (a) modulation frequency, (b) center frequency, (c) sound
+  pressure level, (d) modulation depth}
 \label{fig:pilot_AM_all_comparison}
-  }
+\end{figure}
 
-\myfigurequad%
-  {FM-fm_all_standards}
-  {FM-fc_all_standards}
-  {FM-SPL_all_standards}
-  {FM-df_all_standards}
-  {
-    \caption{Pilot results --- Relative fluctuation strength for FM tones}
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{FM-fm_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{a}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{FM-fc_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{b}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{FM-SPL_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{c}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{\myminipagewidth}
+    \centering
+    \begin{lpic}[l(5mm)]{fM-df_all_standards(0.4,0.4)}
+    \lbl[bW]{0,135;\textbf{d}}
+    \end{lpic}
+    \vspace{\baselineskip}
+  \end{minipage}
+\caption{Pilot results --- Relative fluctuation strength for FM tones as a
+  function of (a) modulation frequency, (b) center frequency, (c) sound
+  pressure level, (d) frequency deviation}
 \label{fig:pilot_FM_all_comparison}
-  }
+\end{figure}
 
 \end{pilotresults}
 
