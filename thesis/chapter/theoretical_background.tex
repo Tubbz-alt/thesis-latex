@@ -323,16 +323,30 @@ roughness on modulation depth, shown in \Cref{eq:R}.
   \label{eq:R}
 \end{equation}
 
-Their model propose a generalized modulation depth function, intended to model
-the modulation depth dependence per critical filterbank channel and obtain
-specific roughness values. Then a total overall roughness value is obtained by
-summing the specific roughness values.
+In order to obtain a roughness value from a given sound, the model first
+decomposes the incoming signal into excitation patterns, using a critical
+filterbank composed of 47 channels. Each excitation pattern is then band-pass
+filtered, to account for the dependence of roughness on modulation frequency.
+After this, an estimate of the modulation depth present in the signal is
+calculated, using a generalized modulation depth function \Cref{eq:genmod}.
+
+\begin{equation}
+  {m_i}^* = \tilde{h}_{BP,i}(t)/h_{0,i}
+  \label{eq:genmod}
+\end{equation}
+where $\tilde{h}_{BP,i}(t)$ is the \gls{RMS} value of the band-pass filtered
+signal and $h_{0,i}$ is the absolute value of the mean value of the signal.
+Afterwards, a specific roughness value (i.e., a roughness value per filterbank
+channel) is obtained from the extracted modulation depth of each channel.
+Finally, a total overall roughness value is obtained by summing the specific
+roughness values. A more in-depth explanation of the model is found on
+\Cref{cha:model}.
 
 Given the similarity in physical terms that fluctuation strength and roughness
 possess,  model for the sensation of fluctuation strength could be elaborated
 taking as a base \citeauthor{daniel1997psychoacoustical}'s model. In this
 regard, \textcite{Sontacchi1998} has already formulated a model whose structure
-is similar to that of the roughness model. Hovewer, as part of his work a
+is similar to that of the roughness model. However, as part of his work a
 subjective comparison of the model outcome with participants judgments was not
 presented. The present work expands on this point, including a subjective
 evaluation of the model with the experimental data collected.
