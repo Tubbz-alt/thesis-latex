@@ -26,17 +26,9 @@ batch files.
 \label{sec:stimuli}
 
 All the sounds presented during the experiment consisted of diotic stimuli,
-where a monaural stimulus is reproduced for both ears simultaneously. Two
-types of stimuli were considered: \gls{AM} tones, \Cref{eq:am}; and \gls{FM}
-tones, \Cref{eq:fm}. In these equations, a phase shift of $-\frac{\pi}{2}$ was
-introduced to the modulating signal for both tones in order to start the
-corresponding modulation at its lowest point. This phase shift is needed to
-avoid pops and clicks due to an abrupt onset when presenting the sounds to the
-participants. Additionally, a cosine ramp with attack and release times of 25 ms
-was applied to the stimuli to further prevent this phenomenon.
-
-The
-sampling rate was set to 44.1~kHz.
+where a monaural stimulus is reproduced to both ears simultaneously. Two types
+of stimuli were considered: \gls{AM} tones defined in \Cref{eq:am}, and \gls{FM}
+tones defined in \Cref{eq:fm},
 
 \begin{equation}
   x_{am} = [1 - m_i \cdot \cos(2 \pi f_m t)] \cdot A \cdot \sin(2 \pi f_c t),
@@ -51,9 +43,16 @@ where
 \end{equation}
 
 \begin{equation}
-  x_{fm} = A \cdot \sin \{2 \pi [f_c - d_f \cdot \cos(2 \pi f_m t)] t \}
+  x_{fm} = A \cdot \sin \{2 \pi [f_c - d_f \cdot \cos(2 \pi f_m t)] t \}.
   \label{eq:fm}
 \end{equation}
+
+In these equations, a phase shift of $-\frac{\pi}{2}$ was introduced to the
+modulating signal for both tones in order to start the corresponding modulation
+at its lowest point. This phase shift is needed to avoid pops and clicks due to
+an abrupt onset when presenting the sounds to the participants. Additionally, a
+cosine ramp with attack and release times of 25 ms was applied to the stimuli to
+further prevent this phenomenon.
 
 The duration of the stimuli was specified such that it presented at least three
 periods of the modulating signal, within a range of values between 2 and
@@ -64,7 +63,7 @@ duration among stimuli while keeping the whole experiment duration to an
 acceptable value.
 
 Furthermore, the stimuli were generated such that a level of 100 dB SPL value
-corresponds to a 0 dBFS value.
+corresponds to a 0 dBFS value. The sampling rate was set to 44.1~kHz.
 
 \section{Methods}
 \label{sec:methods}
@@ -74,6 +73,24 @@ corresponds to a 0 dBFS value.
 \glsreset{SPL}
 \glsreset{d_f}
 \glsreset{m_d}
+
+Ratio estimation ask individuals to provide the relationship between to stimuli
+in terms of the ratio between them. Ratio production allows individuals to
+modify a given stimulus that must conform to a specific ratio, taking into
+account the provided reference stimulus.
+
+Similar to the ratio estimation procedure, magnitude estimation ask individuals
+to estimate a stimulus level taking as a reference an anchor value, usually
+called modulus or standard. The satandard is assigned to an specific value, and
+the participant must state according to this reference value which would be
+the value for the presented stimulus. For example, in case that a value of 10 is
+assigned to the standard, a value of 60 would indicate that the non-reference
+value is 6 times bigger than the reference value. An
+alternative approach is to not include the modulus, in this case all the stimuli
+are presented and the participant must assigned values to them taking into
+account all of them. Magnitude production applies the same procedure but now the
+participant must modify the non-reference stimulus level to comply with the
+presented magnitude ratio.
 
 A magnitude estimation procedure~\cite[pp.~9]{Fastl2007Psychoacoustics} was used
 to obtain the relative fluctuation strength as a function of a varying parameter
