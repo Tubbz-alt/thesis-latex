@@ -10,12 +10,17 @@ This chapter describes the general methods.
 
 \section{Equipment}
 
-A personal computer with an audio interface M-Audio Transit and a set of
-headphones Sennheiser HD 265 Linear were used to conduct the experiment. The
-headphones provided a diffuse-field equalization to the reproduced sounds. The
-sampling rate was set to 44.1~kHz. The computer was positioned in a
-sound-isolated booth. The experiment itself was programmed using the APEX
-software platform~\cite{Francart2008} and Windows batch files.
+A personal computer with a M-Audio Transit USB audio interface
+\cite{maudio:transitusb} and a set of Sennheiser HD 265 Linear headphones
+\cite{sennheiser:hd265linear} were used to conduct the experiment. The audio
+interface had a specified dynamic range output of 104 dB and a \gls{SNR} of 104
+dB. The interface itself was configured to use a 16-bit Linear \gls{PCM}
+\gls{I/O} audio data format. The headphones had an specified frequency response
+of $-3$ dB over a 10 Hz - 30,000 Hz frequency range. Furthermore, the headphones
+provided a diffuse-field loudness equalization to the reproduced sounds. The
+experiments were conducted inside a sound isolation booth. The experiment itself
+was programmed using the APEX software platform~\cite{Francart2008} and Windows
+batch files.
 
 \section{Stimuli}
 \label{sec:stimuli}
@@ -29,6 +34,9 @@ corresponding modulation at its lowest point. This phase shift is needed to
 avoid pops and clicks due to an abrupt onset when presenting the sounds to the
 participants. Additionally, a cosine ramp with attack and release times of 25 ms
 was applied to the stimuli to further prevent this phenomenon.
+
+The
+sampling rate was set to 44.1~kHz.
 
 \begin{equation}
   x_{am} = [1 - m_i \cdot \cos(2 \pi f_m t)] \cdot A \cdot \sin(2 \pi f_c t),
