@@ -69,6 +69,19 @@ corresponds to a 0 dBFS value. The sampling rate was set to 44.1~kHz.
 \section{Procedure}
 \label{sec:procedure}
 
+The experiment was divided into two phases:
+\begin{enumerate}
+  \item Training phase
+  \item Experimental phase
+\end{enumerate}
+
+The training phase will be discussed subsequently in
+\Cref{cha:pilot,cha:experiment}, as it varied significantly from the pilot
+experiments to the final experiment. The experimental phase will be discussed
+as follows.
+
+\subsection{Experimental Phase}
+
 \glsreset{f_m}
 \glsreset{f_c}
 \glsreset{SPL}
@@ -167,8 +180,38 @@ strength as a function of modulation frequency experiment for \gls{AM} tones.}
 
 \section{Results}
 
-Talk about how data wil be processed and how it will be compared against
-Fastl data.
+From the data obtained from the magnitude estimation procedures, it was possible
+to plot the relative fluctuation strength as a function of each varying
+parameter. An example of these plots is shown in \Cref{fig:fastl2007-fm}. The
+actual plot pertaining the experiments will be shown in
+\Cref{cha:pilot,cha:experiment}.
 
+In order to combine the data points from the two standards, a correction factor
+had to be applied to the data that used the second standard as a reference. The
+correction factor was obtained taking into account the data where the second
+stimulus in the pairs corresponded to the value of first standard. The
+correction factor was calculated such that the median of the values that used
+the second standard was the same as the median of the values that used the first
+standard. An example of this can be appreciated in \Cref{fig:fastl2007-fm} panel
+B, where the value of the first standard corresponds to a modulation frequency
+of 4~Hz.
+
+Finally, another correction factor was applied to all the data points, in order
+to normalize the maximum mean value of the medians of the standards to 100\%.
+The curve of the mean values corresponds to the black line shown in
+\Cref{fig:fastl2007-fm}.
+
+\myfigurepairlabeled%
+  {fastl2007_AM-fm}
+  {fastl2007_FM-fm}
+  {Relative fluctuation strength as a function of modulation frequency (adapted
+    from~\cite[pp.248]{Fastl2007Psychoacoustics}). The two standards had
+    modulation frequencies of 4 and 0.5 Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~A:~data for \gls{AM} tones with a
+    center frequency of 1 kHz, sound pressure level of 70 dB and modulation
+    depth of 40 dB. Panel~B:~data for \gls{FM} tones with a center frequency of
+    1.5 kHz, sound pressure level of 70 dB and frequency deviation of 700 Hz}
+  {fastl2007-fm}
 
 \end{document}
