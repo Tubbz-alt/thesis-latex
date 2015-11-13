@@ -16,11 +16,11 @@ A personal computer with a M-Audio Transit USB audio interface
 interface had a specified dynamic range output of 104 dB and a \gls{SNR} of 104
 dB. The interface itself was configured to use a 16-bit Linear \gls{PCM}
 \gls{I/O} audio data format. The headphones had an specified frequency response
-of $-3$ dB over a 10 Hz - 30,000 Hz frequency range. Furthermore, the headphones
-provided a diffuse-field loudness equalization to the reproduced sounds. The
-experiments were conducted inside a sound isolation booth. The experiment itself
-was programmed using the APEX software platform~\cite{Francart2008} and Windows
-batch files.
+of $-3$ dB over the 10 Hz - 30,000 Hz frequency range. Furthermore, the
+headphones provided a diffuse-field loudness equalization to the reproduced
+sounds. The experiments were conducted inside a sound isolation booth. The
+experiment itself was programmed using the APEX software platform
+\cite{Francart2008} and Windows batch files.
 
 \section{Stimuli}
 \label{sec:stimuli}
@@ -31,7 +31,7 @@ of stimuli were considered: \gls{AM} tones defined in \Cref{eq:am}, and \gls{FM}
 tones defined in \Cref{eq:fm},
 
 \begin{equation}
-  x_{am} = [1 - m_i \cdot \cos(2 \pi f_m t)] \cdot A \cdot \sin(2 \pi f_c t),
+  x_{am} = [1 - m_i \cdot \cos(2 \pi f_m t)] \cdot A_c \cdot \sin(2 \pi f_c t),
   \label{eq:am}
 \end{equation}
 where
@@ -43,16 +43,17 @@ where
 \end{equation}
 
 \begin{equation}
-  x_{fm} = A \cdot \sin \{2 \pi [f_c - d_f \cdot \cos(2 \pi f_m t)] t \}.
+  x_{fm} = A_c \cdot \sin \{2 \pi [f_c - d_f \cdot \cos(2 \pi f_m t)] t \}.
   \label{eq:fm}
 \end{equation}
 
-In these equations, a phase shift of $-\frac{\pi}{2}$ was introduced to the
-modulating signal for both tones in order to start the corresponding modulation
-at its lowest point. This phase shift is needed to avoid pops and clicks due to
-an abrupt onset when presenting the sounds to the participants. Additionally, a
-cosine ramp with attack and release times of 25 ms was applied to the stimuli to
-further prevent this phenomenon.
+In both equations the variable $A_c$ corresponds to the amplitude of the
+carrier signal. Moreover, a phase shift of $-\frac{\pi}{2}$ was introduced to
+the modulating signal for both tones in order to start the corresponding
+modulation at its lowest point. This phase shift is needed to avoid pops and
+clicks due to an abrupt onset when presenting the sounds to the participants.
+Additionally, a cosine ramp with attack and release times of 25 ms was applied
+to the stimuli to further prevent this phenomenon.
 
 The duration of the stimuli was specified such that it presented at least three
 periods of the modulating signal, within a range of values between 2 and
@@ -65,8 +66,8 @@ acceptable value.
 Furthermore, the stimuli were generated such that a level of 100 dB SPL value
 corresponds to a 0 dBFS value. The sampling rate was set to 44.1~kHz.
 
-\section{Methods}
-\label{sec:methods}
+\section{Procedure}
+\label{sec:procedure}
 
 \glsreset{f_m}
 \glsreset{f_c}
@@ -74,45 +75,42 @@ corresponds to a 0 dBFS value. The sampling rate was set to 44.1~kHz.
 \glsreset{d_f}
 \glsreset{m_d}
 
-Ratio estimation ask individuals to provide the relationship between to stimuli
-in terms of the ratio between them. Ratio production allows individuals to
-modify a given stimulus that must conform to a specific ratio, taking into
-account the provided reference stimulus.
-
-Similar to the ratio estimation procedure, magnitude estimation ask individuals
-to estimate a stimulus level taking as a reference an anchor value, usually
-called modulus or standard. The satandard is assigned to an specific value, and
-the participant must state according to this reference value which would be
-the value for the presented stimulus. For example, in case that a value of 10 is
-assigned to the standard, a value of 60 would indicate that the non-reference
-value is 6 times bigger than the reference value. An
-alternative approach is to not include the modulus, in this case all the stimuli
-are presented and the participant must assigned values to them taking into
-account all of them. Magnitude production applies the same procedure but now the
-participant must modify the non-reference stimulus level to comply with the
-presented magnitude ratio.
-
-A magnitude estimation procedure~\cite[pp.~9]{Fastl2007Psychoacoustics} was used
-to obtain the relative fluctuation strength as a function of a varying parameter
-for the two types of tones. Four different parametric variations were used:
+The objective of the experiment was to evaluate the dependence of fluctuation
+strength on the parameters of the \gls{AM} and \gls{FM} tones, namely:
 \begin{itemize}
   \item \Gls{f_m}
   \item \Gls{f_c}
   \item \Gls{SPL}
   \item \Gls{m_d} for \gls{AM} tones; \gls{d_f} for \gls{FM} tones
 \end{itemize}
-These parametric variations were chosen in order to assess all the dependencies
-that the sensation of fluctuation strength presents in regard to the type of
-stimuli used. Each of these parameters defined an experiment section on its own.
 
-For each magnitude estimation procedure pairs of sounds were presented, composed
-of one of two possible standards (\Cref{tab:standards}) and a stimulus from the
-section set. The standard and the stimulus are separated by a 800 ms silence.
-There were four repetitions per pair, and hence eight per stimulus. The
-selection of the standard and the stimulus used is randomized. After each
-pair presentation, the participant must indicate how much does the second
-sound fluctuate with respect to the first one. A screenshot of the final
-experiment design in shown in \Cref{fig:apex}.
+In order to obtain subjective data regarding these dependencies, a magnitude
+estimation procedure was used. In a magnitude estimation procedure
+\cite[pp.~9]{Fastl2007Psychoacoustics}, individuals are asked to estimate a
+value for an attribute of a stimulus, taking as a reference an anchor value.
+The anchor value is usually called the modulus or standard. Hence, the standard
+is assigned to an specific value, and the participant must state according to
+this reference value which would be the value for the presented stimulus. For
+example, in case that a value of 10 is assigned to the standard, an answer value
+of 60 would indicate that the stimulus value is 6 times larger than the
+reference value.
+
+For each of the parameters of the two types of tones, an experimental section
+was defined. Each experimental section was constituted of a magnitude estimation
+procedure, that determined the dependency of fluctuation strength on the
+parameter of the section. For each experimental section a stimuli set was
+defined by the variation of parameter of the section, thus specifying the
+stimuli to use during the magnitude estimation procedure.
+
+Every magnitude estimation procedure presented pairs of sounds, composed of one
+of two possible standards (\Cref{tab:standards}) and a stimulus from the
+stimuli set of the section. The standard and the stimulus were separated by a
+800~ms silence. There were four repetitions per pair, and hence eight per
+stimulus (four per standard). The selection of the standard and the stimulus
+used was randomized. After each pair presentation, the participant had to
+indicate how much did the second sound fluctuate with respect to the first one.
+A screenshot of the computer interface used in the final experiment design is
+shown in \Cref{fig:apex}.
 
 \begin{table}[!ht]
   \centering
@@ -157,12 +155,13 @@ experiment design in shown in \Cref{fig:apex}.
 
 \footnotetext{Each experimental section is designated with the type of stimuli
 followed by the parameter varied. Therefore, AM-fm represents the fluctuation
-strength as a function of modulation frequency experiment for AM tones.}
+strength as a function of modulation frequency experiment for \gls{AM} tones.}
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\textwidth]{apex}
-  \caption{Screenshot of the final experiment interface}
+  \caption{Screenshot of the computer interface used in the final experiment
+    design}
 \label{fig:apex}
 \end{figure}
 
