@@ -1,0 +1,24 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{mystyle}
+
+\newcommand{\slopesfigure}[2]{
+  \begin{figure}
+    \includegraphics[width=\textwidth]{{Slopes_z-#1}.eps}
+    \caption{Excitation patterns calculated using Terhardt's method of a
+      sinusoidal signal with \\ $f_c=$ #1 Bark ($\approx$ #2 kHz), SPL = 70 dB,
+      $f_s = 44.1$ kHz, N = $2^{20} (1048576)$ samples}
+  \end{figure}
+}
+
+\newcommand{\slopesfigures}[1]{
+  \foreach \b/\f in {#1} {
+    \slopesfigure{\b}{\f}
+  }
+}
+
+\begin{document}
+
+\slopesfigures{15/2.69,15.125/2.75,15.25/2.8,15.375/2.85,15.5/2.91}
+% \slopesfigures{15,15.125,15.25,15.375,15.5}
+
+\end{document}
