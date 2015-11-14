@@ -20,10 +20,11 @@ presented, and the limitations of the data fitting will be addressed.
 \citeauthor{daniel1997psychoacoustical}'s roughness model
 \cite{daniel1997psychoacoustical}will be used as a basis for a fluctuation
 strength model adapted to the data obtained in the experimental stage of this
-study. It has been shown already that roughness and fluctuation strength
-sensations are similar from a physical point of view; both attributes arise from
-modulated sounds. As so, the methodology used to model the roughness sensation
-can be adequate to also model the fluctuation strength sensation.
+study. It has already been mentioned in \Cref{cha:theoretical} that roughness
+and fluctuation strength sensations are similar from a physical point of view;
+both attributes arise from modulated sounds. As such, the methodology used to
+model the roughness sensation might be adequate to also model the fluctuation
+strength sensation.
 
 The structure of the roughness model is presented in \Cref{fig:roughness_model}.
 The model can be separated into three stages:
@@ -45,14 +46,14 @@ The model can be separated into three stages:
 
 First, the input signal is divided into frames, which in the original roughness
 model have a 200~ms duration. For the fluctuations strength case this must be
-increased, in order to achieve higher frequency detail resolution and be able
-to process stimuli with frequency components with little separation among them
-(e.g., $f_m = 4$~Hz). This can be achieved manipulating two variables, namely
-the sampling frequency and the number of samples. For this study it has been
-decided to keep the sampling frequency at 44.1~kHz, the most common frequency
-used in audio recordings. The number of samples is chosen such that it contains
-at least three periods of the slowest frequency component, following the
-criteria presented by~\textcite[pp.~97]{Boersma1993}. The slowest stimulus has a
+increased, in order to achieve higher frequency resolution to be able to process
+stimuli with frequency components with little separation among them (e.g.,
+$f_m = 4$~Hz). This can be achieved by manipulating two variables, namely the
+sampling frequency and the number of samples. For this study it has been decided
+to keep the sampling frequency at 44.1~kHz, the most common frequency used in
+audio recordings. The number of samples is chosen such that it contains at least
+three periods of the slowest modulation envelope, following the criteria
+presented by~\textcite[pp.~97]{Boersma1993}. The slowest stimulus has a
 modulation frequency of 0.25~Hz, thus three periods would constitute a 12~s
 frame duration. This results in a number of samples of 1048576 ($2^{20}$) and a
 duration of 23.77~s, using the closest value that is a power of 2.
@@ -96,15 +97,15 @@ Bark.
 This stage's objective is to come up with an approximation of the modulation
 depth present in the incoming frame on a channel basis. For each channel signal
 $e_{i}(t)$ its absolute value is obtained and its mean is then calculated with
-\Cref{eq:h0i}.
+\Cref{eq:h0i},
 
 \begin{equation}
-  h_{0,i} = \overline{|e_{i}(t)|}
+  h_{0,i} = \overline{|e_{i}(t)|}.
   \label{eq:h0i}
 \end{equation}
 
 The mean is then subtracted from each signal and the resulting signal is
-filtered using a bandpass filter $H[f_{mod}]$, shown in \Cref{eq:hBPi}.
+filtered using a bandpass filter $H[f_{mod}]$, shown in \Cref{eq:hBPi},
 
 \begin{equation}
   h_{BP,i}(t) = (e_{i}^{\prime} * H[f_{mod}])(t)
@@ -112,15 +113,14 @@ filtered using a bandpass filter $H[f_{mod}]$, shown in \Cref{eq:hBPi}.
 \end{equation}
 where
 \begin{equation}
-  e_{i}^{\prime} = |e_{i}(t)| - h_{0,i}
+  e_{i}^{\prime} = |e_{i}(t)| - h_{0,i}.
 \end{equation}
 
 Finally, the modulation depth per channel is obtained by the ratio of the
 \gls{RMS} value of the bandpass filtered signal and its mean, shown in
-\Cref{eq:mi*}.
-
+\Cref{eq:mi*},
 \begin{equation}
-  {m_i}^* = \tilde{h}_{BP,i}(t)/h_{0,i}
+  {m_i}^* = \tilde{h}_{BP,i}(t)/h_{0,i}.
   \label{eq:mi*}
 \end{equation}
 
@@ -177,8 +177,8 @@ For each channel, a specific value of roughness is obtained by using the
 
 The parameter $g(z_i)$ corresponds to a weight associated to each channel, and
 it models the dependence of roughness on the center frequency of the stimulus.
-Additionally, cross correlations between the prior and the posterior channel
-are included ($k_{i-2}, k_i$) to account for phase shifts of the channels
+Additionally, cross correlations between the two neighboring channels are
+included ($k_{i-2}, k_i$) to account for phase shifts between the channels
 signals. The total roughness is then obtained by summing all the specific
 values for each channel, shown in \Cref{eq:total_roughness}
 
@@ -203,9 +203,9 @@ contribution of these components can be weighted and adjusted individually.
 
 After the adjustments, the parameter $g(z_i)$ was removed, since the data
 gathered did not show a dependence on the center frequency. Furthermore, to
-avoid imaginary values when using power coefficients lesser than 1, the absolute
-value of the product of the cross correlations coefficients was used. Although
-this negates the subtraction of specific fluctuation due to a negative
+avoid imaginary values when using power coefficients smaller than 1, the
+absolute value of the product of the cross correlations coefficients was used.
+Although this negates the subtraction of specific fluctuation due to a negative
 coefficient, it yields better fitting results. The final form of the specific
 fluctuation strength equation is shown in \Cref{eq:fi_final}.
 
@@ -243,17 +243,17 @@ The parameters were adjusted using the following order:
   \item $H(f_{mod})$
 \end{enumerate}
 
-The order is such that the first parameter has the most spread effect of change
-among all the response curves. Furthermore, the goodness of fit of the model was
-judged both from a quantitative and a qualitative point of view, by comparing
-the model and experiment curves, and by using the sum of the square of the
-difference between these ($\sum r_i^2$).
+The order is such that the first parameter is the one that affects the most the
+model response curves. Furthermore, the goodness of fit of the model was judged
+both from a quantitative and a qualitative point of view, by comparing the model
+and experiment curves, and by using the sum of the square of the difference
+between these ($\sum r_i^2$).
 
 Parameter $p_m$ modifies directly the effect of modulation depth on fluctuation
 strength. Since the model is based on this relation, it affects all the model
-response curves, and as so it was the first parameter to adapt. The power
+response curves, and as such it was the first parameter to adapt. The power
 coefficient had to be drastically reduced from the value of 2, present in the
-original roughness model, to a value of 0.25, to account for the fast increment
+original roughness model, to a value of 0.25, to account for the fast saturation
 of fluctuation values as the modulation depth increased present in the dataset.
 Furthermore, a transformation was needed,
 \Cref{eq:md_transformation_1,eq:md_transformation_2}, to correct for the higher
@@ -263,8 +263,9 @@ modulation depth.
 Parameter $p_k$ has a predominant effect on \gls{FM} tones, specially on the
 dependency of frequency deviation, center frequency and modulation frequency.
 After adjusting this parameter the calibration constant cal was adjusted to
-attain a value of 1 vacil for the reference tone, present in the fluctuation
-strength as a function of \gls{SPL} curve (\Cref{fig:garcia2015_am-spl}).
+attain a value of 1 vacil for the reference condition, present in the
+fluctuation strength as a function of \gls{SPL} curve
+(\Cref{fig:garcia2015_am-spl}).
 
 Finally, the bandpass filter was adjusted, this having a effect mostly on the
 modulation frequency dependency for both types of tones.
