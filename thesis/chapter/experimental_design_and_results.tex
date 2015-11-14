@@ -10,11 +10,6 @@ of the fluctuation strength attribute are presented.
 
 \section{Design}
 
-\subsection{Equipment}
-
-The same equipment used in the pilot experiments was used in the final
-experiments (\Cref{subsec:pilot_equipment}).
-
 \subsection{Subjects}
 
 Twenty-four participants were recruited from the JF Schouten database of the
@@ -22,6 +17,52 @@ Eindhoven University of Technology. Participants were between 19 and 31 years
 old. There were in total six females and eighteen males. All of them reported
 to have normal hearing, however this was not confirmed in any way. Subjects were
 paid for  their participation.
+
+\subsection{Stimuli}
+
+The stimuli used in the final experiment have the same characteristics as the
+ones used in the pilot experiments (\Cref{subsec:pilot_stimuli}).
+\Cref{tab:stimuli} shows the stimuli used in the final experiments.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabu} to \linewidth{p{2cm}Xp{9cm}}
+  \toprule
+  \rowfont\bfseries
+  \multirow{2}{*}{Section} &
+  \multicolumn{2}{c}{Parameters} \\
+  \cmidrule{2-3}
+  \rowfont\bfseries
+  & \multicolumn{1}{c}{Fixed} & \multicolumn{1}{c}{Varied} \\
+  \midrule
+  AM-fm  & $f_c$ = 1 [kHz]\par SPL = 70 [dB]\par $m_d$ = 40 [dB]
+         & $f_m$ = \{0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128\} [Hz] \\
+  \midrule
+  AM-fc  & $f_m$ = 4 [Hz]\par SPL = 70 [dB]\par $m_d$ = 40 [dB]
+         & $f_c$ = \{0.125, 0.25, 0.5, 1, 2, 4, 8\} [kHz] \\
+  \midrule
+  AM-SPL & $f_m$ = 4 [Hz]\par $f_c$ = 1 [kHz]\par $m_d$ = 40 [dB]
+         & SPL = \{50, 60, 70, 80, 90\} [dB] \\
+  \midrule
+  AM-md  & $f_m$ = 4 [Hz]\par $f_c$ = 1 [kHz]\par SPL = 70 [dB]
+         & $m_d$ = \{1, 2, 4, 10, 20, 40\} [dB] \\
+  \midrule
+  FM-fm  & $f_c$ = 1.5 [kHz]\par SPL = 70 [dB]\par $d_f$ = 700 [Hz]
+         & $f_m$ = \{0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128\} [Hz] \\
+  \midrule
+  FM-fc  & $f_m$ = 4 [Hz]\par SPL = 70 [dB]\par $d_f$ = 200 [Hz]
+         & $f_c$ = \{0.5, 1, 1.5, 2, 3, 4, 6, 8\} [kHz] \\
+  \midrule
+  FM-SPL & $f_m$ = 4 [Hz]\par $f_c$ = 1.5 [kHz]\par $d_f$ = 700 [Hz]
+         & SPL = \{40, 50, 60, 70, 80\} [Hz] \\
+  \midrule
+  FM-df  & $f_m$ = 4 [Hz]\par $f_c$ = 1.5 [kHz]\par SPL = 70 [dB]
+         & $d_f$ = \{16, 32, 100, 300, 700\} [Hz] \\
+  \bottomrule
+  \end{tabu}
+  \caption{Description of stimuli used per experiment section}
+\label{tab:stimuli}
+\end{table}
 
 \subsection{Methods}
 
@@ -37,21 +78,21 @@ followed during the experiment can be found in the appendix of this document
 Adding all the improvements postulated in the pilot experiment section, the
 training phase was expanded and became a 3-part phase, described below.
 
-\paragraph{Stimuli Comparison}
+\paragraph{Stimulus Comparison}
 
 As in the pilot experiments, the initial part of the training phase consisted
 of comparison between stimuli. An additional stimulus was added ($f_m = 128$ Hz)
-and a subset of \gls{FM} stimuli was also added to complements the \gls{AM}
+and a subset of \gls{FM} stimuli was also added to complement the \gls{AM}
 tones. The stimuli presented in
 \Cref{tab:am_training_stimuli,tab:fm_training_stimuli} were reproduced
-sequentially according to their assigned id number.
+sequentially according to their assigned ID number.
 
 \begin{table}[!ht]
   \centering
   \begin{tabu} to \linewidth{XXXXX}
     \toprule
     \rowfont\bfseries
-    Id & $\bm{f_m}$ [Hz] & $\bm{f_c}$ [kHz] & SPL [dB] & $\bm{m_d}$ [dB] \\
+    ID & $\bm{f_m}$ [Hz] & $\bm{f_c}$ [kHz] & SPL [dB] & $\bm{m_d}$ [dB] \\
     \midrule
     1 & 0   & 1 & 70 & 40 \\
     2 & 0.5 & 1 & 70 & 40 \\
@@ -69,7 +110,7 @@ sequentially according to their assigned id number.
   \begin{tabu} to \linewidth{XXXXX}
     \toprule
     \rowfont\bfseries
-    Id & $\bm{f_m}$ [Hz] & $\bm{f_c}$ [kHz] & SPL [dB] & $\bm{d_f}$ [Hz] \\
+    ID & $\bm{f_m}$ [Hz] & $\bm{f_c}$ [kHz] & SPL [dB] & $\bm{d_f}$ [Hz] \\
     \midrule
     1 & 0   & 1 & 70 & 700 \\
     2 & 0.5 & 1 & 70 & 700 \\
@@ -93,7 +134,9 @@ in \Cref{tab:am_all_stimulus,tab:fm_all_stimulus}.
   \begin{tabu} to \linewidth{XXXXX}
     \toprule
     \rowfont\bfseries
-    Order & $\bm{f_m}$ [Hz] & $\bm{f_c}$ [kHz] & SPL [dB] & $\bm{m_d}$ [dB] \\
+    Presentation & \multirow{2}{*}{$\bm{f_m}$ [Hz]} & \multirow{2}{*}{$\bm{f_c}$ [kHz]} & \multirow{2}{*}{SPL [dB]} & \multirow{2}{*}{$\bm{m_d}$ [dB]} \\
+    \rowfont\bfseries
+    order \\
     \midrule
     1  & 0.5  & 1 & 70 & 40 \\
     2  & 32   & 1 & 70 & 40 \\
@@ -118,7 +161,9 @@ in \Cref{tab:am_all_stimulus,tab:fm_all_stimulus}.
   \begin{tabu} to \linewidth{XXXXX}
     \toprule
     \rowfont\bfseries
-    Order & $\bm{f_m}$ [Hz] & $\bm{f_c}$ [kHz] & SPL [dB] & $\bm{d_f}$ [Hz] \\
+    Presentation & \multirow{2}{*}{$\bm{f_m}$ [Hz]} & \multirow{2}{*}{$\bm{f_c}$ [kHz]} & \multirow{2}{*}{SPL [dB]} & \multirow{2}{*}{$\bm{d_f}$ [Hz]} \\
+    \rowfont\bfseries
+    order \\
     \midrule
     1  & 0.25 & 1 & 70 & 700 \\
     2  & 64   & 1 & 70 & 700 \\
@@ -184,58 +229,12 @@ By keeping all the sections relatively short (around 6 minutes each) it was
 expected that participants attention and focus would be retained from one
 section to another.
 
-\subsection{Stimuli}
-
-The stimuli used in the final experiment present the same characteristics as the
-ones used in the pilot experiments (\Cref{subsec:pilot_stimuli}).
-\Cref{tab:stimuli} details the stimuli used in the final experiments.
-
-\begin{table}[!ht]
-  \centering
-  \begin{tabu} to \linewidth{p{2cm}Xp{9cm}}
-  \toprule
-  \rowfont\bfseries
-  \multirow{2}{*}{Section} &
-  \multicolumn{2}{c}{Parameters} \\
-  \cmidrule{2-3}
-  \rowfont\bfseries
-  & \multicolumn{1}{c}{Fixed} & \multicolumn{1}{c}{Varied} \\
-  \midrule
-  AM-fm  & $f_c$ = 1 [kHz]\par SPL = 70 [dB]\par $m_d$ = 40 [dB]
-         & $f_m$ = \{0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128\} [Hz] \\
-  \midrule
-  AM-fc  & $f_m$ = 4 [Hz]\par SPL = 70 [dB]\par $m_d$ = 40 [dB]
-         & $f_c$ = \{0.125, 0.25, 0.5, 1, 2, 4, 8\} [kHz] \\
-  \midrule
-  AM-SPL & $f_m$ = 4 [Hz]\par $f_c$ = 1 [kHz]\par $m_d$ = 40 [dB]
-         & SPL = \{50, 60, 70, 80, 90\} [dB] \\
-  \midrule
-  AM-md  & $f_m$ = 4 [Hz]\par $f_c$ = 1 [kHz]\par SPL = 70 [dB]
-         & $m_d$ = \{1, 2, 4, 10, 20, 40\} [dB] \\
-  \midrule
-  FM-fm  & $f_c$ = 1.5 [kHz]\par SPL = 70 [dB]\par $d_f$ = 700 [Hz]
-         & $f_m$ = \{0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128\} [Hz] \\
-  \midrule
-  FM-fc  & $f_m$ = 4 [Hz]\par SPL = 70 [dB]\par $d_f$ = 200 [Hz]
-         & $f_c$ = \{0.5, 1, 1.5, 2, 3, 4, 6, 8\} [kHz] \\
-  \midrule
-  FM-SPL & $f_m$ = 4 [Hz]\par $f_c$ = 1.5 [kHz]\par $d_f$ = 700 [Hz]
-         & SPL = \{40, 50, 60, 70, 80\} [Hz] \\
-  \midrule
-  FM-df  & $f_m$ = 4 [Hz]\par $f_c$ = 1.5 [kHz]\par SPL = 70 [dB]
-         & $d_f$ = \{16, 32, 100, 300, 700\} [Hz] \\
-  \bottomrule
-  \end{tabu}
-  \caption{Description of stimuli used per experiment section}
-\label{tab:stimuli}
-\end{table}
-
 \section{Results}
 
-The following section presents the results of the experiments, compared to
-\citeauthor{Fastl2007Psychoacoustics} data~\cite{Fastl2007Psychoacoustics}.
-Additionally, participants details and remarks obtained from them after the
-execution of the experiment can be found in \Cref{chap:participants_sheet}.
+The following section presents the results of the experiments, compared to the
+data published by  \textcite{Fastl2007Psychoacoustics}. Additionally,
+participants details and remarks obtained from them after the execution of the
+experiment can be found in \Cref{chap:participants_sheet}.
 
 \begin{experimentalresults}
 
@@ -271,25 +270,21 @@ execution of the experiment can be found in \Cref{chap:participants_sheet}.
   {FM-df}
   {frequency deviation --- FM tones}
 
-\myfigurequad%
+\myfigurequadlabeled%
   {AM-fm_all_comparison}
   {AM-fc_all_comparison}
   {AM-SPL_all_comparison}
   {AM-md_all_comparison}
-  {
-    \caption{Comparison between Fastl and experimental data --- AM tones}
-    \label{fig:am_comparison}
-  }
+  {Comparison between Fastl and experimental data --- AM tones}
+  {am_comparison}
 
-\myfigurequad%
+\myfigurequadlabeled%
   {FM-fm_all_comparison}
   {FM-fc_all_comparison}
   {FM-SPL_all_comparison}
   {FM-df_all_comparison}
-  {
-    \caption{Comparison between Fastl and experimental data --- FM tones}
-    \label{fig:fm_comparison}
-  }
+  {Comparison between Fastl and experimental data --- FM tones}
+  {fm_comparison}
 
 \end{experimentalresults}
 
