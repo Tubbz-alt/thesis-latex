@@ -88,9 +88,38 @@ by the following equation:
   \frac{\text{dB}}{\text{Bark}}
 \end{equation}
 
-Finally, the excitation patterns are processed using a critical-band filter with
-47 channels, each on them separated by 0.5 Bark and having a bandwidth of 1
-Bark.
+After generating each of the excitation patterns for all the frequency
+components, the contribution of all of these patterns is analyzed per
+critical-band. The excitation patterns are processed using a critical-band
+filter with 47 channels, each on them separated by 0.5 Bark and having a
+bandwidth of 1 Bark.
+
+For each critical-band, all the frequency components of the input signal are
+used. Three posibles cases are defined for a given frequency component and a
+critical-band. \Cref{fig:schrader} presents an example that illustrates these
+three cases. First, if the frequency component falls within the critical-band,
+then the frequency component is not affected in any way, i.e., is multiplied by
+1. This would be the case of frequency component (2) in \Cref{fig:schrader}. If
+the frequency component is above the critical-band, then the value of the
+excitation pattern that corresponds to $z_i + 0.5$, $z_i$ being the Bark value
+of the center frequency of the current critical-band, is used to multiply the
+frequency component that produces this excitation pattern. This would be the
+case for frequency component labeled (3) in \Cref{fig:schrader}. If the
+frequency component is below the critical-band, then the $z_i - 0.5$ value is
+used; frequency component (1) in \Cref{fig:schrader}.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{schrader}
+  \caption{From excitation patterns to specific excitation levels for channel i,
+    (a) original levels and slopes, (b) modified levels for channel i (taken
+    from~\cite[pp.6]{Schrader2002})}
+\label{fig:schrader}
+\end{figure}
+
+After doing all the calculations for all the frequency components, then the real
+part of an \gls{IFFT} is taken from the resulting array of the modified
+frequency components, yielding this the time-varying excitation per band.
 
 \subsection{Modulation Depth Extraction Stage}
 
