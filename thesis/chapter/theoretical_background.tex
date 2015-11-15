@@ -175,13 +175,16 @@ auditory system. The excitation pattern refers to the pattern that results as
 the outcome of all the precedent stages of the hearing process, being the outer
 ear transmission, middle ear transmission, and the auditory filters themselves.
 
-In the case of fluctuation strength, for a 0.5~kHz tone the frequency would vary
-between 300 and 700~Hz, this corresponding to a 3.5~Bark interval. For a 8~kHz
-these values would be 7.8~kHz and 8.2~kHz, leading to a 0.2~Bark interval. The
-proportion between these two is 17.5, which seems to be also the proportion
-between the relative fluctuation strength for these two frequencies. Thus, this
-leads to the idea that fluctuation strength can be explained in terms of the
-excitation patterns that present themselves across the auditory filters.
+In the case of fluctuation strength, for a \gls{FM} tone with center frequency
+of 0.5~kHz and frequency deviation of 200~Hz, the frequency would vary between
+300 and 700~Hz. This corresponds to a 3.5~Bark interval. For a tone with center
+frequency of 8~kHz and frequency deviation of also 200~Hz these values would be
+7.8~kHz and 8.2~kHz, leading to a 0.2~Bark interval. For both \gls{FM} tones the
+range of frequency is constant of a Hertz scale, i.e. 400~Hz. The proportion
+between these two is 17.5, which seems to be also the proportion between the
+relative fluctuation strength for these two frequencies. Thus, this leads to the
+idea that fluctuation strength can be explained in terms of the excitation
+patterns that present themselves across the auditory filters.
 
 \Cref{fig:flucstrenvsfreqdev} shows the relation between fluctuation strength
 and frequency deviation. It can be seen that, for frequencies above 20~Hz, there
@@ -258,10 +261,11 @@ As so, it can be said that fluctuation strength sums across critical bands.
 
 A basic model for fluctuation strength (proposed by
 \textcite[pp.~254]{Fastl2007Psychoacoustics}) based on the temporal variation of
-the masking pattern of this sound is shown in \Cref{fig:flucstrenmodel}, where
-the temporal variation of the amplitude of the masking pattern, also called
-temporal masking depth, is denoted by the magnitude $\Delta L$. The inverse of
-the time difference between peaks corresponds to the \gls{f_m}.
+the masking pattern of the sound to analyze is shown in
+\Cref{fig:flucstrenmodel}, where the temporal variation of the amplitude of the
+masking pattern, also called temporal masking depth, is denoted by the magnitude
+$\Delta L$. The inverse of the time difference between peaks corresponds to the
+\gls{f_m}.
 
 \begin{figure}[!ht]
   \centering
@@ -339,7 +343,7 @@ signal and $h_{0,i}$ is the absolute value of the mean value of the signal.
 Afterwards, a specific roughness value (i.e., a roughness value per filterbank
 channel) is obtained from the extracted modulation depth of each channel.
 Finally, a total overall roughness value is obtained by summing the specific
-roughness values. A more in-depth explanation of the model is found on
+roughness values. A more in-depth explanation of the model is given on
 \Cref{cha:model}.
 
 Given the similarity in physical terms that fluctuation strength and roughness
