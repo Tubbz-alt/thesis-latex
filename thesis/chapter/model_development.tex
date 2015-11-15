@@ -246,8 +246,8 @@ The parameters were adjusted using the following order:
 The order is such that the first parameter is the one that affects the most the
 model response curves. Furthermore, the goodness of fit of the model was judged
 both from a quantitative and a qualitative point of view, by comparing the model
-and experiment curves, and by using the sum of the square of the difference
-between these ($\sum r_i^2$).
+and experiment curves, and by using the square root of the sum of the square of
+the difference between these ($\sqrt{\sum r_i^2}$).
 
 Parameter $p_m$ modifies directly the effect of modulation depth on fluctuation
 strength. Since the model is based on this relation, it affects all the model
@@ -284,11 +284,12 @@ experimental data.
 \modelresultsfigure{fm-spl}{sound pressure level}{FM}
 \modelresultsfigure{fm-df}{frequency deviation}{FM}
 
-The model adapts better to the AM tones than to the FM tones, reporting lower
-values of $\sum r_i^2$ in the former case than in the latter. However, from a
-qualitative point of view, the responses obtained for FM tones tend to follow
-the ones present in the experimental data, albeit with systematic level
-differences, especially in the case of center frequency and frequency deviation.
+The model adapts better to the \gls{AM} tones than to the \gls{FM} tones,
+reporting lower values of $\sqrt{\sum r_i^2}$ in the former case than in the
+latter. However, from a qualitative point of view, the responses obtained for
+\gls{FM} tones tend to follow the ones present in the experimental data, albeit
+with systematic level differences, especially in the case of center frequency
+and frequency deviation.
 
 \end{modelchapter}
 
