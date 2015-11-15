@@ -16,7 +16,7 @@ Twenty-four participants were recruited from the JF Schouten database of the
 Eindhoven University of Technology. Participants were between 19 and 31 years
 old. There were in total six females and eighteen males. All of them reported
 to have normal hearing, however this was not confirmed in any way. Subjects were
-paid for  their participation.
+paid for their participation.
 
 \subsection{Stimuli}
 
@@ -64,14 +64,42 @@ ones used in the pilot experiments (\Cref{subsec:pilot_stimuli}).
 \label{tab:stimuli}
 \end{table}
 
-\subsection{Methods}
+\subsection{Procedure}
 
 Participants were assigned either to \gls{AM} tones or to \gls{FM} tones, both
-conditions having 12 participants. Furthermore, as in the pilot experiment, the
-experiment consisted of a training and an experimental phase. The whole
-experiment had an approximate duration of 60~minutes. The experiment protocol
-followed during the experiment can be found in the appendix of this document
-(\Cref{cha:experimental_protocol}).
+conditions having 12 participants. Furthermore, the presentation order of the
+experimental sections was varied, using a latin square design. The order of
+the parameters used is presented in \Cref{tab:presentation_order_parameters}.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabu} to \linewidth{XX}
+    \toprule
+    \rowfont\bfseries
+    Order\footnotemark[1] & Parameters \\
+    \midrule
+    1 & \gls{f_m}, \gls{f_c}, \{\gls{m_d} or \gls{d_f}\}, \gls{f_m}, \gls{SPL}\\
+    2 & \gls{f_c}, \{\gls{m_d} or \gls{d_f}\}, \gls{f_m}, \gls{SPL}, \gls{f_m}\\
+    3 & \{\gls{m_d} or \gls{d_f}\}, \gls{f_m}, \gls{SPL}, \gls{f_m}, \gls{f_c}\\
+    4 & \gls{SPL}, \gls{f_m}, \gls{f_c}, \{\gls{m_d} or \gls{d_f}\}, \gls{f_m}\\
+    \bottomrule
+  \end{tabu}
+  \caption{Presentation order of parameters}
+\label{tab:presentation_order_parameters}
+\end{table}
+
+\footnotetext[1]{This variable was assigned to participants using the following
+equation: $\text{Order}=(\text{Participant ID}-1)\%4+1$}
+
+The whole experiment had an approximate duration of 60~minutes. The experimental
+protocol followed during the experiment can be found in the appendix of this
+document (\Cref{cha:experimental_protocol}).
+
+The experimental phase of the experiment remained the same as the one of the
+last pilot experiment. The only sensible change compared to the procedure
+described in \Cref{cha:methods} is the split of the modulation frequency
+sections into two separate sections. The training phase had some changes,
+described below.
 
 \subsubsection{Training Phase}
 
@@ -83,9 +111,19 @@ training phase was expanded and became a 3-part phase, described below.
 As in the pilot experiments, the initial part of the training phase consisted
 of comparison between stimuli. An additional stimulus was added ($f_m = 128$ Hz)
 and a subset of \gls{FM} stimuli was also added to complement the \gls{AM}
-tones. The stimuli presented in
+tones.
+
+The stimuli presented in
 \Cref{tab:am_training_stimuli,tab:fm_training_stimuli} were reproduced
-sequentially according to their assigned ID number.
+in groups, according to their ID values. First, stimuli with ID values of 1 and
+2 were reproduced. This pair presented the difference between a pure tone and
+a modulated tone. Then, stimuli with ID values of 2 and 3 followed. This pair
+presented the difference between modulated tones with low and high values of
+fluctuation strength. Finally, stimuli with ID values of 3, 4 and 5 were
+reproduced. This last group presented the difference between fluctuating and
+rough tones. After each group presentation, participants were asked whether the
+specific difference of sensation of the group was acknowledged. In case of a
+negative answer, the stimuli of the group were once again reproduced.
 
 \begin{table}[!ht]
   \centering
@@ -125,9 +163,10 @@ sequentially according to their assigned ID number.
 
 \paragraph{Long Interval}
 
-Two long intervals were used in this section of the training phase, composed
-of \gls{AM} and \gls{FM} tones, respectively. These two intervals are described
-in \Cref{tab:am_all_stimulus,tab:fm_all_stimulus}.
+This part of the training phase presented participants with long intervals,
+which consisted of stimuli separated by 800~ms of silence. Two long intervals
+were reproduced, composed of \gls{AM} and \gls{FM} tones, respectively. These
+two intervals are described in \Cref{tab:am_all_stimulus,tab:fm_all_stimulus}.
 
 \begin{table}[!ht]
   \centering
@@ -216,66 +255,153 @@ in randomized order.
     \bottomrule
   \end{tabu}
   \caption{Pairs used in training phase test section}
-  \label{tab:pairs_test_section}
+\label{tab:pairs_test_section}
 \end{table}
-
-\subsubsection{Experimental Phase}
-
-In comparison to the pilot experiment, the experimental phase remained almost
-without changes. The only effective change was the splitting of the modulation
-frequency sections (AM-fm and FM-fm) into two separate sections. This was done
-due to the longer duration of these sections when compared to the others ones.
-By keeping all the sections relatively short (around 6 minutes each) it was
-expected that participants attention and focus would be retained from one
-section to another.
 
 \section{Results}
 
 The following section presents the results of the experiments, compared to the
-data published by  \textcite{Fastl2007Psychoacoustics}. Additionally,
-participants details and remarks obtained from them after the execution of the
-experiment can be found in \Cref{cha:participants_sheet}.
+data published by \textcite{Fastl2007Psychoacoustics}. Overall the obtained data
+is qualitatively to \citeauthor{Fastl2007Psychoacoustics} data, although some
+difference do exist. Most notably, in the modulation depth response curve for
+\gls{AM} tones and in the center frequency and frequency deviations curves for
+\gls{FM} tones. In the following paragraphs the obtain curves will be described,
+focusing on similarities and discrepancies with the literature data. Possible
+causes of this discrepancies will be discussed in \Cref{cha:discussion}.
+
+\Cref{fig:main-fastlexpstds_AM-fm,fig:main-fastlexpstds_FM-fm} show the
+dependency of fluctuation strength on modulation frequency for \gls{AM} and
+\gls{FM} tones. In both cases, the characteristic band-pass response was
+obtained. The maximum values for both curves occurs at around 4~Hz, as expected.
+However, for values of modulation frequency below 4~Hz on average higher values
+of fluctuation were obtained. This leads to the fact that the response from the
+obtained data has a wider bandwidth than the data from the literature. Also,
+more variability seems to exist with the use of the first standard, evidenced by
+the difference of length between the larger \gls{IQR}s of the first standard
+and the smaller \gls{IQR}s of the second standard.
+
+\Cref{fig:main-fastlexpstds_AM-fc} shows the dependency of fluctuation strength
+on center frequency from \gls{AM} tones. In this case both responses present a
+similar flat response with large \gls{IQR}s. \Cref{fig:main-fastlexpstds_AM-fc}
+shows the dependency of fluctuation strength on center frequency from \gls{FM}
+tones. Here the difference is more dramatic, the data from the literature
+decreases monotonically with the increase of center frequency, whereas the data
+from this study remains mostly flat.
+
+\Cref{fig:main-fastlexpstds_AM-SPL,fig:main-fastlexpstds_FM-SPL} show the
+dependency of fluctuation strength on sound pressure level for \gls{AM} and
+\gls{FM} tones. Although the curves from the obtained data are not as linear as
+the data from the literature, in both cases fluctuation strength increases with
+sound pressure level.
+
+\Cref{fig:main-fastlexpstds_AM-md} shows the dependency of fluctuation strength
+on modulation depth from \gls{AM} tones. Here a difference exists between the
+obtained data and the literature data. Both response curves show an increase
+of fluctuation strength with the increase of modulation depth. However, the
+obtained data increases more quickly with modulation depth than the data from
+the literature.
+
+\Cref{fig:main-fastlexpstds_FM-df} shows the dependency of fluctuation strength
+on frequency deviation from \gls{FM} tones. In this case a clear difference
+exists between the obtained data and the literature data. For the obtained data,
+for small values of frequency deviation a significant fluctuation strength
+(around 50\%) do exist. This causes that the curve presents a less steep slope
+when compared to the literature data. Both curves present an increase in
+fluctuation strength with an increase in frequency deviation.
+
+Finally, to summarize \Cref{fig:am_comparison,fig:fm_comparison} compared the
+mean of the values of the two standard for each experimental condition. The
+discrepancies between obtained data and literature data can be further observed
+in these figures.
 
 \begin{experimentalresults}
 
 \myfigurefastlexpstds%
   {AM-fm}
-  {modulation frequency --- AM tones}
+  {Relative fluctuation strength as a function of modulation frequency for
+    \gls{AM} tones with center frequency of 1~kHz, sound pressure level of
+    70~dB and modulation depth of 40~dB.  The two standards had modulation
+    frequencies of 4 and 0.5~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.248]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {AM-fc}
-  {center frequency --- AM tones}
+  {Relative fluctuation strength as a function of center frequency for
+    \gls{AM} tones with modulation frequency of 4~Hz, sound pressure level of
+    70~dB and modulation depth of 40~dB.  The two standards had center
+    frequencies of 1 and 0.25~kHz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.250]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {AM-SPL}
-  {sound pressure level --- AM tones}
+  {Relative fluctuation strength as a function of sound pressure level for
+    \gls{AM} tones with modulation frequency of 4~Hz, center frequency of 1~kHz
+    and modulation depth of 40~dB.  The two standards had sound pressure levels
+    of 70 and 50~dB. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.249]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {AM-md}
-  {modulation depth --- AM tones}
+  {Relative fluctuation strength as a function of modulation depth for
+    \gls{AM} tones with modulation frequency of 4~Hz, center frequency of 1~kHz
+    and sound pressure level of 70~dB.  The two standards had modulation depths
+    of 40 and 4~dB. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.249]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {FM-fm}
-  {modulation frequency --- FM tones}
+  {Relative fluctuation strength as a function of modulation frequency for
+    \gls{FM} tones with center frequency of 1.5~kHz, sound pressure level of
+    70~dB and frequency deviation of 700 Hz.  The two standards had modulation
+    frequencies of 4 and 0.5~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.248]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {FM-fc}
-  {center frequency --- FM tones}
+  {Relative fluctuation strength as a function of center frequency for
+    \gls{FM} tones with modulation frequency of 4~Hz, sound pressure level of
+    70~dB and frequency deviation of 200~Hz.  The two standards had center
+    frequencies of 6 and 0.5~kHz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.250]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {FM-SPL}
-  {sound pressure level --- FM tones}
+  {Relative fluctuation strength as a function of sound pressure level for
+    \gls{FM} tones with modulation frequency of 4~Hz, center frequency of
+    1.5~kHz and frequency deviation of 700~Hz.  The two standards had sound
+    pressure levels of 60 and 40~dB. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.249]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurefastlexpstds%
   {FM-df}
-  {frequency deviation --- FM tones}
+  {Relative fluctuation strength as a function of modulation depth for
+    \gls{FM} tones with modulation frequency of 4~Hz, center frequency of
+    1.5~kHz and sound pressure level of 70~dB.  The two standards had frequency
+    deviations of 700 and 32~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.251]{Fastl2007Psychoacoustics}. Panel~(b): own results}
   {main}
 
 \myfigurequadlabeled%
@@ -283,7 +409,12 @@ experiment can be found in \Cref{cha:participants_sheet}.
   {AM-fc_all_comparison}
   {AM-SPL_all_comparison}
   {AM-md_all_comparison}
-  {Comparison between Fastl and experimental data --- AM tones}
+  {Relative fluctuation strength for AM tones as a function of: (a) modulation
+    frequency, (b) center frequency, (c) sound pressure level, (d) modulation
+    depth. The black solid line corresponds to the data from
+    \textcite{Fastl2007Psychoacoustics}. The blue dashed line corresponds to the
+    data from this study. Both curves represents the mean value of the two used
+    standards}
   {am_comparison}
 
 \myfigurequadlabeled%
@@ -291,7 +422,12 @@ experiment can be found in \Cref{cha:participants_sheet}.
   {FM-fc_all_comparison}
   {FM-SPL_all_comparison}
   {FM-df_all_comparison}
-  {Comparison between Fastl and experimental data --- FM tones}
+  {Relative fluctuation strength for FM tones as a function of: (a) modulation
+    frequency, (b) center frequency, (c) sound pressure level, (d) frequency
+    deviation. The black solid line corresponds to the data from
+    \textcite{Fastl2007Psychoacoustics}. The blue dashed line corresponds to the
+    data from this study. Both curves represents the mean value of the two used
+    standards}
   {fm_comparison}
 
 \end{experimentalresults}
