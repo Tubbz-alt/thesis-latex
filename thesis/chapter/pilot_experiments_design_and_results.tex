@@ -87,9 +87,10 @@ questions regarding the stimuli.
 
 First, a subset of \gls{AM} tones (\Cref{tab:initial_am_training_stimuli}) was
 presented to the participants sequentially according to their ID in pairs (i.e.,
-first stimuli 1 and 2, then 2 and 3, etc.). After each presentation,
+first stimuli 1 and 2, then 2 and 3, etc.). After each pair presentation,
 participants were asked whether a difference in the fluctuation strength among
-stimuli was detected. In case of a negative answer the pair was repeated.
+stimuli was detected. In case of a negative answer the pair was repeated until
+a positive answer was obtained.
 
 \begin{table}[!ht]
   \centering
@@ -108,10 +109,11 @@ stimuli was detected. In case of a negative answer the pair was repeated.
 \label{tab:initial_am_training_stimuli}
 \end{table}
 
-Afterwards a long interval was presented to the participants, which was composed
-several stimuli (\Cref{tab:initial_am_training_stimuli}) separated by 800~ms of
-silence. This to expose them to a wider range of stimuli and thus familiarize
-them more to these kind of sounds.
+Afterwards, a long interval was presented to the participants. The long interval
+was composed several stimuli (\Cref{tab:initial_am_training_stimuli}) separated
+by 800~ms of silence. This was done with the objective of exposing the subjects
+to a wider range of stimuli and thus familiarize them more to these kind of
+sounds.
 
 \begin{table}[!ht]
   \centering
@@ -141,8 +143,8 @@ them more to these kind of sounds.
 
 Not all participants were subjected to the same experimental conditions, and
 not all of them used the same version of the experiments.
-\Cref{tab:partexpconver} presents the conditions in which the participants
-participated.
+\Cref{tab:partexpconver} presents the conditions and in which one of them the
+subjects participated.
 
 \begin{table}[!ht]
   \centering
@@ -168,9 +170,9 @@ participated.
 
 The experimental procedure was varied during the pilot experiment to accommodate
 perceived errors during the realization of them. The first version of the
-experiment yielded unsatisfactory results with regards to the relation between
+experiment yielded unsatisfactory results with regard to the relation between
 fluctuation strength and modulation frequency (participants 2, 3 and 4). The
-procedure was then modified, adding two more AM tones with modulation
+procedure was then modified, adding two more \gls{AM} tones with modulation
 frequencies of 64 and 128~Hz. The idea behind the addition of these two tones
 was that, if participant have stimuli that give a distinguishing roughness
 sensation, it would be easier for them to distinguish between a fluctuating and
@@ -181,14 +183,15 @@ constitutes the second version of the experiment.
 Participant 5 was the only participant that was subjected to version 2 of the
 experiment. The results did not show any significant improvements with regard
 to the confusion between fluctuation strength and roughness. However, by talking
-to the participants it was discovered that the instructions during the training
-phase were not clear enough, and this may have affected the results of the
-experiment. Several participants associated the rate of change of the stimuli
-(modulation frequency in this case) with a bigger fluctuation in the presented
-sounds. As so, they tended to deem as highly fluctuating sounds that had a high
-modulation frequency. Participants 4 and 5 explicitly stated that they were
-counting the number of cycles in the stimuli, due to confusion on what to
-answer.
+to the participants it was discovered that the training phase was not able to
+make the concept of fluctuation strength clear. Participants were only asked to
+tell whether there was a difference of fluctuation among the presented stimuli,
+without explaning what fluctuation strength actually was. As such, several
+participants associated the rate of change of the stimuli (modulation frequency
+in this case) with a bigger fluctuation in the presented sounds. Hence, they
+tended to deem as highly fluctuating the sounds that had a high modulation
+frequency. Participants 4 and 5 explicitly stated that they were counting the
+number of cycles in the stimuli, due to confusion on what to answer.
 
 Taking all these comments as feedback, version 3 of the experiment was
 elaborated. In this version, explicit instructions regarding the rough tones
@@ -198,12 +201,14 @@ based on the arising sensation and not rationalizing any judgment about it
 (for instance by counting cycles). Using this approach participants were able to
 understand better the fluctuation strength concept, some of them even coming
 with analogies to the sensation itself (the sound of an ambulance alarm, the
-sound of a washing machine).
+sound of a washing machine). The actual instructions used in the final
+experiment can be found in the prompts of the experimental protocol
+(\Cref{cha:experimental_protocol}).
 
 The final version, number 4, of the experiment added a small test experiment
-before starting the actual experiment sections. This was added as a suggestion
-of participant 8, who indicated that although the training phase was effective
-in making clear the fluctuation strength concept, it did not show the
+before starting the actual experimental sections. This was added as a suggestion
+from participant 8, who indicated that although the training phase was effective
+in making the fluctuation strength concept clear, it did not show the
 participant how to do the expected judgments using the magnitude estimation
 procedure. Moreover, a latin square randomization approach was used, rotating
 the order of the experimental sections for each participant. The purpose of this
@@ -212,32 +217,104 @@ experimental conditions.
 
 \section{Results}
 
-The following are the results of all the participants grouped together by
-experiment. In the appendix the individual results can be found. In
-\Cref{fig:pilot_AM_all_comparison,fig:pilot_FM_all_comparison} the error bars
-indicate the interquartile range and the marker indicates the median value.
+The following figures show the results of the pilot experiments, together with
+the results reported by \textcite{Fastl2007Psychoacoustics}. In
+\Cref{cha:pilot_individual_results} the individual results can be found.
+Comparing the two plots per experimental condition, it can be concluded that
+both graphs are similar from a qualitative point of view. Therefore, the pilot
+experiment was deemed as successful in obtaining the relevant subjective data
+from participants. A more detailed description of the particularities of each
+experimental condition curve will be given in \Cref{cha:experiment}.
 
 \begin{pilotresults}
 
-\myfigurequadlabeled%
-  {AM-fm_all_standards}
-  {AM-fc_all_standards}
-  {AM-SPL_all_standards}
-  {AM-md_all_standards}
-  {Pilot results --- Relative fluctuation strength for AM tones as a function
-    of (a) modulation frequency, (b) center frequency, (c) sound pressure level,
-    (d) modulation depth}
-  {pilot_AM_all_comparison}
+\myfigurefastlexpstds%
+  {AM-fm}
+  {Relative fluctuation strength as a function of modulation frequency for
+    \gls{AM} tones with center frequency of 1~kHz, sound pressure level of
+    70~dB and modulation depth of 40~dB.  The two standards had modulation
+    frequencies of 4 and 0.5~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.248]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
 
-\myfigurequadlabeled%
-  {FM-fm_all_standards}
-  {FM-fc_all_standards}
-  {FM-SPL_all_standards}
-  {FM-df_all_standards}
-  {Pilot results --- Relative fluctuation strength for FM tones as a function of
-    (a) modulation frequency, (b) center frequency, (c) sound pressure level,
-    (d) frequency deviation}
-  {pilot_FM_all_comparison}
+\myfigurefastlexpstds%
+  {AM-fc}
+  {Relative fluctuation strength as a function of center frequency for
+    \gls{AM} tones with modulation frequency of 4~Hz, sound pressure level of
+    70~dB and modulation depth of 40~dB.  The two standards had center
+    frequencies of 1 and 0.25~kHz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.250]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
+
+\myfigurefastlexpstds%
+  {AM-SPL}
+  {Relative fluctuation strength as a function of sound pressure level for
+    \gls{AM} tones with modulation frequency of 4~Hz, center frequency of 1~kHz
+    and modulation depth of 40~dB.  The two standards had sound pressure levels
+    of 70 and 50~dB. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.249]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
+
+\myfigurefastlexpstds%
+  {AM-md}
+  {Relative fluctuation strength as a function of modulation depth for
+    \gls{AM} tones with modulation frequency of 4~Hz, center frequency of 1~kHz
+    and sound pressure level of 70~dB.  The two standards had modulation depths
+    of 40 and 4~dB. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.249]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
+
+\myfigurefastlexpstds%
+  {FM-fm}
+  {Relative fluctuation strength as a function of modulation frequency for
+    \gls{FM} tones with center frequency of 1.5~kHz, sound pressure level of
+    70~dB and frequency deviation of 700 Hz.  The two standards had modulation
+    frequencies of 4 and 0.5~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.248]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
+
+\myfigurefastlexpstds%
+  {FM-fc}
+  {Relative fluctuation strength as a function of center frequency for
+    \gls{FM} tones with modulation frequency of 4~Hz, sound pressure level of
+    70~dB and frequency deviation of 200~Hz.  The two standards had center
+    frequencies of 6 and 0.5~kHz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.250]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
+
+\myfigurefastlexpstds%
+  {FM-SPL}
+  {Relative fluctuation strength as a function of sound pressure level for
+    \gls{FM} tones with modulation frequency of 4~Hz, center frequency of
+    1.5~kHz and frequency deviation of 700~Hz.  The two standards had sound
+    pressure levels of 60 and 40~dB. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.249]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
+
+\myfigurefastlexpstds%
+  {FM-df}
+  {Relative fluctuation strength as a function of modulation depth for
+    \gls{FM} tones with modulation frequency of 4~Hz, center frequency of
+    1.5~kHz and sound pressure level of 70~dB.  The two standards had frequency
+    deviations of 700 and 32~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Panel~(a): data adapted from
+    \cite[pp.251]{Fastl2007Psychoacoustics}. Panel~(b): own results}
+  {pilot}
 
 \end{pilotresults}
 
