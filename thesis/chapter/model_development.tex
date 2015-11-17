@@ -110,7 +110,8 @@ used; frequency component (1) in \Cref{fig:schrader}.
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=8cm]{schrader}
+  \input{excitation_patterns_a.tex}
+  \input{excitation_patterns_b.tex}
   \caption{From excitation patterns to specific excitation levels for channel i,
     (a) original levels and slopes, (b) modified levels for channel i (taken
     from~\cite[pp.6]{Schrader2002})}
@@ -178,7 +179,7 @@ done using a Butterworth \gls{IIR} filter. Its parameters are detailed in
     Stopband Frequency 2 & 32 [Hz] \\
     Stopband Attenuation 1 & 100 [dB] \\
     Passband Ripple & 3 [dB] \\
-    topband Attenuation 2 & 100 [dB] \\
+    Stopband Attenuation 2 & 100 [dB] \\
     \bottomrule
   \end{tabu}
   \caption{Bandpass filter characteristics}
