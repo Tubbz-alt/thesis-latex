@@ -94,20 +94,23 @@ critical-band. The excitation patterns are processed using a critical-band
 filter with 47 channels, each on them separated by 0.5 Bark and having a
 bandwidth of 1 Bark.
 
-For each critical-band, all the frequency components of the input signal are
-used. Three posibles cases are defined for a given frequency component and a
-critical-band. \Cref{fig:schrader} presents an example that illustrates these
-three cases for a critical-band centered at 12 Bark. First, if the frequency
-component falls within the critical-band, then the frequency component is not
-affected in any way, i.e., is multiplied by 1. This would be the case of
-frequency component (2) in \Cref{fig:schrader}. If the frequency component is
-above the critical-band, then the value of the excitation pattern that
-corresponds to $z_i + 0.5$, $z_i$ being the Bark value of the center frequency
-of the current critical-band (12 in the example), is used to multiply the
-frequency component that produces this excitation pattern. This would be the
-case for frequency component labeled (3) in \Cref{fig:schrader}. If the
-frequency component is below the critical-band, then the $z_i - 0.5$ value is
-used; frequency component (1) in \Cref{fig:schrader}.
+For each critical-band, the excitation levels of the frequency components inside
+the critical-band are considered. Then, the amplitude values of those frequency
+components are adjusted according to their level within the critical-band. An
+example of this process is shown in \Cref{fig:schrader}, for a critical-band
+centered at 12 Bark. If the frequency component causing the excitation levels
+falls within the given critical-band, then its level is left unchanged. This is
+the case of component (2) in \Cref{fig:schrader}. If, on the contrary, the
+frequency component lies outside the critical-band, its amplitude level is
+adjusted to the excitation level found on the frequency limits of the
+critical-band. This is the case for components (1) and (3) in
+\Cref{fig:schrader}. For component (1), the excitation level at 11.5 Bark
+was taken to adjust the amplitude level of the frequency component. For
+component (3), the excitation level value at 12.5 Bark was taken instead. The
+result of adjusting the relevant frequency components using their excitation
+levels is shown in \Cref{fig:schrader}, panel (b). It is important to note that
+only the amplitude levels of the frequency components are affected by this
+procedure, their phase values are left untouched.
 
 \begin{figure}[!ht]
   \centering
