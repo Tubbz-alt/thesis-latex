@@ -21,7 +21,7 @@ strength are presented.
 Perceptual attributes are discernible dimensions in which an auditory event can
 be decomposed. They are derived from the physical characteristics of sounds. By
 using them the effects of incoming audio events can be understood from a
-perceptual point of view. A small overview of the perceptual processes and their
+perceptual point of view. A short overview of the perceptual processes and their
 associated perceptual quantities is presented in \Cref{tab:stimsens}, which
 summarizes all the perceptual measures, along with their dominant physical
 stimuli. Most of the research on perceptual dimensions, except for density,
@@ -86,10 +86,10 @@ Fluctuation strength can have a significant effect on the pleasantness of sound,
 and a particularly clear example of this are alarms, which must have a sharp and
 distinctive sound.
 
-The effect of fluctuation strength can be seen as a temporary masking pattern on
-the original signal, in which the modulation depth is of utmost importance. This
-is also the case for roughness, which resembles fluctuation strength in this
-regard.
+The effect of fluctuation strength can be seen as a temporary masking pattern
+created by the original signal, in which the modulation depth is of utmost
+importance. This is also the case for roughness, which resembles fluctuation
+strength in this regard.
 
 \subsection{Dependencies of Fluctuation Strength}
 
@@ -117,8 +117,7 @@ maximum value of fluctuation strength occurs (4~Hz).
 \Cref{fig:flucstrenvsndpreslvl} shows the relation between \gls{SPL} and
 fluctuation strength for two different stimuli, tones and \gls{BBN}, and two
 modulation techniques, amplitude modulation and frequency modulation. An
-increase in \gls{SPL} entails an increase of fluctuation strength, this being
-stronger for the \gls{AM} tones.
+increase in \gls{SPL} entails an increase of fluctuation strength.
 
 \begin{figure}[!ht]
   \centering
@@ -131,7 +130,30 @@ stronger for the \gls{AM} tones.
 \end{figure}
 
 Next the effect of modulation depth on fluctuation strength is analyzed, shown
-in \Cref{fig:flucstrenvsmoddep}. It can be observed that, between 3~dB and 30~dB
+in \Cref{fig:flucstrenvsmoddep}. For \gls{AM} tones the modulation depth is
+determined by the modulation index $h$. The modulation index is defined as the
+ratio between the modulating signal amplitude $M$ and the carrier signal
+amplitude $A$,
+\begin{equation}
+  x_{am} = [1+h \cdot \sin(2\pi f_m t)]\cdot A \cdot \sin(2\pi f_c t),
+\end{equation}
+\begin{equation}
+  h=\frac{M}{A}.
+\end{equation}
+
+Modulation depth can also be expressed by using the modulation factor $m$,
+which corresponds to the modulation index expressed as a percentage.
+Furthermore, the modulation index can be expressed in dB units using the
+following equations:
+
+\begin{equation}
+  h = \frac{m_d^{\prime}-1}{m_d^{\prime}+1},
+\end{equation}
+\begin{equation}
+  m_d^{\prime} = 10^{\frac{m_d}{20}}.
+\end{equation}
+
+It can be observed that, between 3~dB and 30~dB
 the relation between fluctuation strength and modulation depth is somewhat
 linear. After reaching a maximum value at around 30~dB, which corresponds to a
 modulation factor of 94\%, fluctuation strength remains constant with further
@@ -143,7 +165,8 @@ increments of modulation depth.
   \caption{Fluctuation strength as a function of modulation depth for (a)
     amplitude-modulated broad-band noises of 60~dB SPL and (b)
     amplitude-modulated tones of 70~dB SPL and 1~kHz frequency; both with a
-    modulation frequency of 4~Hz~\cite[pp.~249]{Fastl2007Psychoacoustics}}
+    modulation frequency of 4~Hz. Replotted
+    from~\cite[pp.~249]{Fastl2007Psychoacoustics}}
 \label{fig:flucstrenvsmoddep}
 \end{figure}
 
@@ -163,7 +186,7 @@ it fades away at around 8~kHz.
     amplitude-modulated tone of 70~dB SPL, 4~Hz modulation frequency and 40~dB
     modulation depth (a), and a frequency-modulated tone with 70~dB SPL, 4~Hz
     modulation frequency and $\pm200$ Hz frequency
-    deviation~\cite[pp. 250]{Fastl2007Psychoacoustics}}
+    deviation. Replotted from~\cite[pp. 250]{Fastl2007Psychoacoustics}}
 \label{fig:flucstrenvscfreq}
 \end{figure}
 
@@ -175,64 +198,52 @@ auditory system. The excitation pattern refers to the pattern that results as
 the outcome of all the precedent stages of the hearing process, being the outer
 ear transmission, middle ear transmission, and the auditory filters themselves.
 
-In the case of fluctuation strength, for a \gls{FM} tone with center frequency
+In the case of fluctuation strength, for an \gls{FM} tone with center frequency
 of 0.5~kHz and frequency deviation of 200~Hz, the frequency would vary between
 300 and 700~Hz. This corresponds to a 3.5~Bark interval. For a tone with center
 frequency of 8~kHz and frequency deviation of also 200~Hz these values would be
 7.8~kHz and 8.2~kHz, leading to a 0.2~Bark interval. For both \gls{FM} tones the
-range of frequency is constant of a Hertz scale, i.e. 400~Hz. The proportion
-between these two is 17.5, which seems to be also the proportion between the
-relative fluctuation strength for these two frequencies. Thus, this leads to the
-idea that fluctuation strength can be explained in terms of the excitation
-patterns that present themselves across the auditory filters.
+range of frequency is constant on a Hertz scale, i.e. 400~Hz. The proportion
+between these two Bark intervals (i.e., 3.5 and 0.2~Bark) is 17.5, which seems
+to be also the proportion between the relative fluctuation strength for these
+two frequencies. Thus, this leads to the idea that fluctuation strength can be
+explained in terms of the excitation patterns that present themselves across the
+auditory filters.
 
 \Cref{fig:flucstrenvsfreqdev} shows the relation between fluctuation strength
-and frequency deviation. It can be seen that, for frequencies above 20~Hz, there
-is a linear increase of fluctuation strength with frequency deviation.
+and frequency deviation ($\Delta f$). For \gls{FM} tones, frequency deviation is
+defined as the amplitude of the modulating signal. This is shown in
+\Cref{eq:theo_fm}, where $A$ corresponds to the carrier signal amplitude.
+
+\begin{equation}
+  x_{fm} = A \cdot \sin[2\pi f_c t + \Delta f \cdot \sin(2 \pi f_m t)].
+  \label{eq:theo_fm}
+\end{equation}
+
+It can be seen that, for frequencies above 20~Hz, there is a linear increase of
+fluctuation strength with frequency deviation.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[height=8cm]{FluctuationStrengthVsFrequencyDeviation}
     \caption{Fluctuation strength as a function of frequency deviation for a
       tone with 70~dB SPL, 1.5~kHz center frequency and a modulation frequency
-      of 4~Hz~\cite[pp. 251]{Fastl2007Psychoacoustics}}
+      of 4~Hz. Replotted from~\cite[pp. 251]{Fastl2007Psychoacoustics}}
 \label{fig:flucstrenvsfreqdev}
 \end{figure}
-
-Another variable that affects fluctuation strength is the modulation index $h$
-(also called modulation factor $m$). It is defined differently according to the
-type of modulation used:
-\begin{itemize}
-  \item For \gls{AM} signals is the ratio between the modulating signal
-    amplitude $M$ and the carrier signal amplitude $A$,
-      \begin{equation}
-        x_{am} = [1+h \cdot \sin(2\pi f_m t)]\cdot A \cdot \sin(2\pi f_c t)
-      \end{equation}
-      \begin{equation}
-        h=\frac{M}{A}
-      \end{equation}
-  \item For \gls{FM} signals is the ratio between the maximum frequency
-    deviation in the carrier signal ($\Delta f$) and the maximum frequency
-    component of the modulating signal ($f_m$),
-      \begin{equation}
-        x_{fm} = A \cdot \sin[2\pi f_c t + h \cdot \sin(2 \pi f_m t)]
-      \end{equation}
-      \begin{equation}
-        h=\frac{\Delta f}{f_m}
-      \end{equation}
-\end{itemize}
 
 \Cref{fig:flucstrensnds} compares the fluctuation strength of several sounds,
 whose physical characteristics are described in \Cref{tab:flucstrensnds}. The
 sounds that present the largest values of fluctuation strength (sounds 1 and 2)
 excite a large range of frequencies and therefore more than one auditory filter.
-As so, it can be said that fluctuation strength sums across critical bands.
+As so, it can be said that fluctuation strength combines across critical bands.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[height=8cm]{FluctuationStrengthSounds}
   \caption{Fluctuation strength of sounds 1--5 as described in
-    \Cref{tab:flucstrensnds}~\cite[pp. 252]{Fastl2007Psychoacoustics}}
+    \Cref{tab:flucstrensnds}. Replotted from
+    \cite[pp. 252]{Fastl2007Psychoacoustics}}
 \label{fig:flucstrensnds}
 \end{figure}
 
@@ -252,8 +263,8 @@ As so, it can be said that fluctuation strength sums across critical bands.
     Bandwidth [Hz] & --- & 16000 & --- & --- & 10 \\
     \bottomrule
   \end{tabu}
-  \caption{Physical data of sounds
-    1--5~\cite[pp. 253]{Fastl2007Psychoacoustics}}
+  \caption{Physical data of sounds 1--5.Replotted from
+  \cite[pp. 253]{Fastl2007Psychoacoustics}}
 \label{tab:flucstrensnds}
 \end{table}
 
@@ -270,8 +281,8 @@ $\Delta L$. The inverse of the time difference between peaks corresponds to the
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\textwidth]{FluctuationStrengthModel}
-  \caption{Model of fluctuation
-    strength~\cite[pp. 254]{Fastl2007Psychoacoustics}}
+  \caption{Model of fluctuation strength. Replotted from
+  \cite[pp. 254]{Fastl2007Psychoacoustics}}
 \label{fig:flucstrenmodel}
 \end{figure}
 
@@ -285,15 +296,12 @@ $f_{m}$, where the importance of the 4 Hz frequency is emphasized.
 \end{equation}
 
 It should be noted that there is a dependency between the temporal masking depth
-$\Delta L$ and the modulation frequency depending on the type of stimuli. In the
-case of \gls{BBN} stimuli, the temporal masking depth is largely independent of
-modulation frequency~\cite[pp.~254]{Fastl2007Psychoacoustics}, whereas for
-amplitude and frequency modulated tones these two variables are dependent on
-each other, due to the nonlinearity of the upper slope in the masking pattern.
-This effect being the strongest for \gls{FM} stimuli. In order to address this,
-when modeling the fluctuation strength for these tones not a single
-$\Delta L$ value is taken, but instead it is integrated across the critical-band
-rate scale.
+$\Delta L$ and the frequency. In the case of amplitude and frequency modulated
+tones, these two variables are dependent on each other, due to the nonlinearity
+of the upper slope in the masking pattern. This effect being the strongest for
+\gls{FM} stimuli. In order to address this, when modeling the fluctuation
+strength for these tones not a single $\Delta L$ value is taken, but instead it
+is integrated across the critical-band rate scale.
 
 The resulting temporal masking pattern for several values of modulation
 frequency is shown in \Cref{fig:flucstrenmasking}. It can be seen that, as the
@@ -308,7 +316,7 @@ proportionally with modulation frequency, as shown on
   \centering
   \includegraphics[width=\textwidth]{FluctuationStrengthTemporalMasking}
   \caption{Temporal masking pattern for an amplitude-modulated broad-band
-    noise~\cite[pp. 255]{Fastl2007Psychoacoustics}}
+    noise. Replotted from~\cite[pp. 255]{Fastl2007Psychoacoustics}}
 \label{fig:flucstrenmasking}
 \end{figure}
 
@@ -344,17 +352,17 @@ signal and $h_{0,i}$ is the absolute value of the mean value of the signal.
 Afterwards, a specific roughness value (i.e., a roughness value per filterbank
 channel) is obtained from the extracted modulation depth of each channel.
 Finally, a total overall roughness value is obtained by summing the specific
-roughness values. A more in-depth explanation of the model is given on
+roughness values. A more in-depth explanation of the model is given in
 \Cref{cha:model}.
 
 Given the similarity in physical terms that fluctuation strength and roughness
-possess,  model for the sensation of fluctuation strength could be elaborated
+possess, a model for the sensation of fluctuation strength could be elaborated
 taking as a base \citeauthor{daniel1997psychoacoustical}'s model. In this
 regard, \textcite{Sontacchi1998} has already formulated a model whose structure
-is similar to that of the roughness model. However, as part of his work a
-subjective comparison of the model outcome with participants judgments was not
-presented. The present work expands on this point, including a subjective
-evaluation of the model with the experimental data collected.
+is similar to that of the roughness model. However, no subjective comparison of
+the model outcome with participants judgments was presented as part of his work.
+The present work expands on this point, including a subjective evaluation of the
+model with the experimental data collected.
 
 \subsection{Related Studies}
 
@@ -389,14 +397,14 @@ since they do not show the characteristic band-pass response as a function of
 modulation rate. The second experiment tried to assess the contribution of the
 two factors used in the past experiment (modulation frequency and modulation
 depth) separately, by varying one while leaving the other constant. It was found
-that the variation of the modulation depth is similar to
-\citeauthor{Fastl2007Psychoacoustics} data, while the variation of the
-modulation frequency was not.
+that the variation of the modulation depth is similar to the data by
+\citeauthor{Fastl2007Psychoacoustics}, while the variation of the modulation
+frequency was not.
 
-In the last experiment they tried to assess whether perceived fluctuation can be
-represented by an additive combination of modulation frequency and modulation
-depth. To test this they used the Thomsen condition~\cite{Falmagne1976}, which
-for their study was stated as follows:
+In the last experiment they tried to assess whether the perceived fluctuation
+can be represented by an additive combination of modulation frequency and
+modulation depth. To test this they used the Thomsen
+condition~\cite{Falmagne1976}, which for their study was stated as follows:
 
 \begin{mdframed}
 
@@ -415,26 +423,26 @@ calculate the matches ($\sim$) stated in \Cref{eq:thomsen}. Their results show
 that only for one participant out of seven the Thomsen condition proved to be
 true, suggesting this  that listeners do not integrate modulation frequency and
 modulation depth as an unidimensional percept when it comes to the sensation of
-fluctuation strength. \citeauthor{Wickelmaier2004Scaling} conclusions are that
-\citeauthor{Fastl2007Psychoacoustics} data do not conform properly to their
-data, and that the status of fluctuation strength as a basic auditory perceptual
-attribute could be debated. The discrepancy between the two data sets could also
-be attributed to the lack of understanding of participants, as
-\citeauthor{Accolti2009Fluctuation} stated.
+fluctuation strength. \citeauthor{Wickelmaier2004Scaling}'s conclusions are that
+the data by \citeauthor{Fastl2007Psychoacoustics} do not conform properly to
+their data, and that the status of fluctuation strength as a basic auditory
+perceptual attribute could be debated. The discrepancy between the two data sets
+could also be attributed to the lack of understanding of participants, as
+\citeauthor{Accolti2009Fluctuation} had stated.
 
 Expanding upon possible applications of the sensation of fluctuation strength,
-\textcite{Schlittmeier2012} investigated on using fluctuation strength as a
-predictor for \gls{ISE}. \gls{ISE} refers to the phenomena that occurs when
-background sounds with distinctive temporal-spectral variations significantly
-reduce short-term memory. This affects negatively individuals cognitive
-performance. The changing-state features required from sounds to cause this
-mental interference are the following:
+\textcite{Schlittmeier2012} investigated fluctuation strength as a predictor for
+\gls{ISE}. \gls{ISE} refers to the phenomenon that occurs when background sounds
+with distinctive temporal-spectral variations significantly reduce short-term
+memory. This negatively affects individuals cognitive performance. The
+changing-state features required from sounds to cause this mental interference
+are the following:
 \begin{enumerate}
   \item Segmentability from a temporal-spectral perspective
   \item Different successive auditory-perceptive tokens
 \end{enumerate}
 
-The first feature resembles the phenomena that occurs when the sensation of
+The first feature resembles the phenomenon that occurs when the sensation of
 fluctuation strength arises, and as so the authors devised an algorithm that
 predicts \gls{ISE} using fluctuation strength values. Using the algorithm, they
 were able to predict accurately performance changes in individuals from 63 out

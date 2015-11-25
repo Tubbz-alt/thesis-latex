@@ -18,7 +18,7 @@ presented, and the limitations of the data fitting will be addressed.
 \section{Roughness Model}
 
 \citeauthor{daniel1997psychoacoustical}'s roughness model
-\cite{daniel1997psychoacoustical}will be used as a basis for a fluctuation
+\cite{daniel1997psychoacoustical} will be used as a basis for a fluctuation
 strength model adapted to the data obtained in the experimental stage of this
 study. It has already been mentioned in \Cref{cha:theoretical} that roughness
 and fluctuation strength sensations are similar from a physical point of view;
@@ -80,8 +80,8 @@ are defined by:
   \label{eq:lower_slopes}
 \end{equation}
 
-The upper slopes depend on the center frequency of the stimulus, and are defined
-by the following equation:
+The upper slopes depend on the center frequency and the level of the stimulus,
+and are defined by the following equation:
 \begin{equation}
   S_2 = [-24-\frac{0.23 \text{ kHz}}{f}+\frac{0.2 \text{ L}}{\text{dB}}]
   \quad
@@ -95,19 +95,17 @@ filter with 47 channels, each on them separated by 0.5 Bark and having a
 bandwidth of 1 Bark.
 
 For each critical-band, the excitation levels of the frequency components inside
-the critical-band are considered. Then, the amplitude values of those frequency
-components are adjusted according to their level within the critical-band. An
-example of this process is shown in \Cref{fig:schrader}, for a critical-band
-centered at 12 Bark. If the frequency component causing the excitation levels
-falls within the given critical-band, then its level is left unchanged. This is
-the case of component (2) in \Cref{fig:schrader}. If, on the contrary, the
-frequency component lies outside the critical-band, its amplitude level is
-adjusted to the excitation level found on the frequency limits of the
-critical-band. This is the case for components (1) and (3) in
-\Cref{fig:schrader}. For component (1), the excitation level at 11.5 Bark
-was taken to adjust the amplitude level of the frequency component. For
-component (3), the excitation level value at 12.5 Bark was taken instead. The
-result of adjusting the relevant frequency components using their excitation
+the critical-band are considered. An example of this process is shown in
+\Cref{fig:schrader}, for a critical-band centered at 12 Bark. If the frequency
+component causing the excitation levels falls within the given critical-band,
+then its level is left unchanged. This is the case of component (2) in
+\Cref{fig:schrader}. If, on the contrary, the frequency component lies outside
+the critical-band, its amplitude level is adjusted to the excitation level found
+on the frequency limits of the critical-band. This is the case for components
+(1) and (3) in \Cref{fig:schrader}. For component (1), the excitation level at
+11.5 Bark was taken to adjust the amplitude level of the frequency component.
+For component (3), the excitation level value at 12.5 Bark was taken instead.
+The result of adjusting the relevant frequency components using their excitation
 levels is shown in \Cref{fig:schrader}, panel (b). It is important to note that
 only the amplitude levels of the frequency components are affected by this
 procedure, their phase values are left untouched.
@@ -130,7 +128,8 @@ procedure, their phase values are left untouched.
 
 After doing all the calculations for all the frequency components, then the real
 part of an \gls{IFFT} is taken from the resulting array of the modified
-frequency components, yielding this the time-varying excitation per band.
+frequency components, yielding this the time-varying excitation per critical
+band.
 
 \subsection{Modulation Depth Extraction Stage}
 
@@ -283,11 +282,11 @@ The parameters were adjusted using the following order:
   \item $H(f_{mod})$
 \end{enumerate}
 
-The order is such that the first parameter is the one that affects the most the
-model response curves. Furthermore, the goodness of fit of the model was judged
-both from a quantitative and a qualitative point of view, by comparing the model
-and experiment curves, and by using the square root of the sum of the square of
-the difference between these ($\sqrt{\sum r_i^2}$).
+The order is such that the first parameter is the one that affects the model
+response curves most strongly. Furthermore, the goodness of fit of the model was
+judged both from a quantitative and a qualitative point of view, by comparing
+the model and experiment curves, and by using the square root of the sum of the
+square of the difference between these ($\sqrt{\sum r_i^2}$).
 
 Parameter $p_m$ modifies directly the effect of modulation depth on fluctuation
 strength. Since the model is based on this relation, it affects all the model
@@ -307,7 +306,7 @@ attain a value of 1 vacil for the reference condition, present in the
 fluctuation strength as a function of \gls{SPL} curve
 (\Cref{fig:garcia2015_am-spl}).
 
-Finally, the bandpass filter was adjusted, this having a effect mostly on the
+Finally, the bandpass filter was adjusted, this having an effect mostly on the
 modulation frequency dependency for both types of tones.
 
 \section{Results}
