@@ -31,20 +31,68 @@
 \usepackage{silence}
 \usepackage{csquotes}
 \usepackage[backend=biber]{biblatex}
-\bibliography{/Users/rodrigo/Library/texmf/tex/latex/References.bib}
+\bibliography{/Users/rodrigo/Library/texmf/tex/latex/reference.bib}
 \WarningFilter{biblatex}{Patching footnotes failed}
 \DeclareFieldFormat*{citetitle}{#1}
 \DeclareFieldFormat*{title}{#1}
 
 \graphicspath{ {img/} }
 
-\title{Modeling the sensation of fluctuation strength}
+% ******************************************************************************
+% Tikz
+% ******************************************************************************
+
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
+    decorations.pathreplacing,decorations.pathmorphing,shapes,%
+    matrix,shapes.symbols}
+
+\tikzset{
+  blockbig/.style={
+    rectangle,
+    draw=black, very thick,
+    text width=30em,
+    minimum height=3em,
+    text centered,
+    on chain},
+  blockmedium/.style={
+    rectangle,
+    draw=black, very thick,
+    text width=25em,
+    minimum height=3em,
+    text centered,
+    on chain},
+  blockmediumsmall/.style={
+    rectangle,
+    draw=black, very thick,
+    text width=15em,
+    minimum height=3em,
+    text centered,
+    on chain},
+  blocksmall/.style={
+    rectangle,
+    draw=black, very thick,
+    text width=10em,
+    minimum height=3em,
+    text centered},
+  blocktiny/.style={
+    rectangle,
+    draw=black, very thick,
+    text width=5em,
+    minimum height=3em,
+    text centered},
+  every join/.style={thick},
+}
+
+\tikzstyle{line}=[draw,thick]
+\tikzstyle{arrow}=[draw,thick,>=latex,->]
+
+\title{Modeling the Sensation of Fluctuation Strength}
 \author{Rodrigo García León
   \texorpdfstring{\\ M.Sc Student Human-Technology Interaction
   \\ \texttt{r.garcia.leon@student.tue.nl}}{}}
 \institute{Department of Industrial Engineering \& Innovation Sciences
   \texorpdfstring{\\Eindhoven University of Technology}{}}
-\date{\today}
+\date{December 8, 2015}
 
 \newcommand{\playbutton}{\raisebox{-1ex}{\hbox%
   {\includegraphics[height=18pt]{play}}}}
@@ -56,6 +104,14 @@
   \citeauthor{#1}
   (\citeyear{#1}),
   \citetitle{#1}
+}
+\newcommand{\addroughnessmodel}{%
+  \resizebox{!}{7.5cm}{\input{/Users/rodrigo/Documents/TUe/thesis/latex/thesis/chapter/fig/roughness.tex}}
+}
+\newcommand{\addroughnessnode}{%
+  \node[anchor=south west,inner sep=0] at (5.5mm,1mm) {
+    \addroughnessmodel{}
+  };
 }
 
 \AtBeginSection[] {
@@ -406,7 +462,8 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \includegraphics[width=\textwidth]{model}
+      \centering
+      \addroughnessmodel{}
     \end{column}
   \end{columns}
 \end{frame}
@@ -425,11 +482,9 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] at (0,0) {
-          \includegraphics[width=\textwidth]{model}
-        };
+        \addroughnessnode
         \filldraw[fill=white,draw=white,opacity=0.6] (1mm,1mm) rectangle (53mm,45mm);
-        \draw[blue,ultra thick,rounded corners] (1mm,45mm) rectangle (53mm,77mm);
+        \draw[blue,thick,rounded corners] (1mm,44.5mm) rectangle (53mm,77mm);
       \end{tikzpicture}
     \end{column}
   \end{columns}
@@ -456,12 +511,10 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] at (0,0) {
-          \includegraphics[width=\textwidth]{model}
-        };
-        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,1mm) rectangle (53mm,26mm);
+        \addroughnessnode
+        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,1mm) rectangle (53mm,24.5mm);
         \filldraw[fill=white,draw=white,opacity=0.6] (1mm,45mm) rectangle (53mm,77mm);
-        \draw[blue,ultra thick,rounded corners] (1mm,26mm) rectangle (53mm,45mm);
+        \draw[blue,thick,rounded corners] (1mm,24.5mm) rectangle (53mm,45mm);
       \end{tikzpicture}
     \end{column}
   \end{columns}
@@ -497,11 +550,9 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] at (0,0) {
-          \includegraphics[width=\textwidth]{model}
-        };
-        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,26mm) rectangle (53mm,77mm);
-        \draw[blue,ultra thick,rounded corners] (1mm,1mm) rectangle (53mm,26mm);
+        \addroughnessnode
+        \filldraw[fill=white,draw=white,opacity=0.6] (1mm,25.5mm) rectangle (53mm,77mm);
+        \draw[blue,thick,rounded corners] (1mm,0mm) rectangle (53mm,25.5mm);
       \end{tikzpicture}
     \end{column}
   \end{columns}
