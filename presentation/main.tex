@@ -36,7 +36,13 @@
 \DeclareFieldFormat*{citetitle}{#1}
 \DeclareFieldFormat*{title}{#1}
 
-\graphicspath{ {img/} }
+\graphicspath{
+  {img/}
+  {/Users/rodrigo/Documents/TUe/thesis/latex/reference/book/Fastl2007Psychoacoustics/img/}
+  {/Users/rodrigo/Documents/TUe/thesis/latex/thesis/chapter/img/}
+  {/Users/rodrigo/Documents/TUe/thesis/latex/topic/fluctuation_strength/experiment/img/}
+  {/Users/rodrigo/Documents/TUe/thesis/latex/topic/fluctuation_strength/model/data_fitting/img/}
+}
 
 % ******************************************************************************
 % Tikz
@@ -259,7 +265,7 @@
 \begin{frame}
   \frametitle{Band-pass Characteristic}
   \begin{figure}
-    \includegraphics[width=\textwidth]{fs_vs_md}
+    \includegraphics[width=\textwidth]{FluctuationStrengthVsModulationFrequency}
     \caption{Fluctuation strength as a function of modulation frequency for: (a)
       amplitude-modulated broad-band noise, (b) amplitude-modulated tones and
       (c) frequency-modulated tones; as presented by
@@ -412,11 +418,11 @@
   \begin{figure}
     \centering
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{Fastl2007_AM-fm}
+      \includegraphics[width=\textwidth]{fastl2007_am-fm}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{Garcia2015_AM-fm}
+      \includegraphics[width=\textwidth]{AM-fm_all_standards}
     \end{minipage}
     \caption{Relative fluctuation strength as a function of modulation
     frequency for AM tones --- \citeauthor{Fastl2007Psychoacoustics} (left),
@@ -429,11 +435,11 @@
   \begin{figure}
     \centering
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{Fastl2007_FM-fm}
+      \includegraphics[width=\textwidth]{fastl2007_fm-fm}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{Garcia2015_FM-fm}
+      \includegraphics[width=\textwidth]{FM-fm_all_standards}
     \end{minipage}
     \caption{Relative fluctuation strength as a function of modulation
     frequency for FM tones --- \citeauthor{Fastl2007Psychoacoustics} (left),
@@ -564,11 +570,11 @@
   \begin{figure}
     \centering
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{model_am}
+      \includegraphics[width=\textwidth]{garcia2015_am-fm}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{model_fm}
+      \includegraphics[width=\textwidth]{garcia2015_fm-fm}
     \end{minipage}
     \caption{Relative fluctuation strength as a function of modulation
       frequency --- comparison between experimental data and model output}
