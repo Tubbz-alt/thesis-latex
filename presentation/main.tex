@@ -154,9 +154,9 @@
 \begin{frame}
   \frametitle{Perceptual Attributes}
   \begin{itemize}
-    \item Discernible dimensions in which an auditory event can be decomposed
+    \item Discernible dimensions into which an auditory event can be decomposed
     \pause{}
-    \item Derived from physical characteristics of sounds (frequency, sound
+    \item Derived from the physical characteristics of sounds (frequency, sound
       pressure level, etc.)
     \pause{}
     \item Examples of them are: loudness, sharpness, roughness, fluctuations
@@ -347,7 +347,7 @@
 \end{frame}
 
 \subsection{Training Phase}
-\begin{frame}
+\begin{frame}[t]
   \frametitle{Training Phase}
   \begin{enumerate}
     \item Comparison between stimuli: five types of stimuli were presented to
@@ -363,8 +363,8 @@
       \end{itemize}
       }
     \pause{}
-    \item Sequential stimuli: two stimuli (AM and FM), composed of stimuli
-      having all the values of modulation frequency used in the experiment, were
+    \item Long intervals: two long intervals (AM and FM), composed of stimuli
+      with all the values of modulation frequency used in the experiment, were
       presented to the participants
     \pause{}
     \item Test section: composed of 4 trials, designed to familiarize
@@ -424,26 +424,34 @@
     \begin{minipage}{0.45\textwidth}
       \includegraphics[width=\textwidth]{AM-fm_all_standards}
     \end{minipage}
-    \caption{Relative fluctuation strength as a function of modulation
-    frequency for AM tones --- \citeauthor{Fastl2007Psychoacoustics} (left),
-    current research (right)}
+    \caption{Relative fluctuation strength as a function of modulation frequency
+    for AM tones with center frequency of 1~kHz, sound pressure level of
+    70~dB and modulation depth of 40~dB.  The two standards had modulation
+    frequencies of 4 and 0.5~Hz. The data points show the median and
+    interquartile ranges per standard. The black line represents the mean values
+    of the medians of each standard. Left: data adapted from
+    \citeauthor[pp.248]{Fastl2007Psychoacoustics}. Right: own results}
   \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Results --- FM tones, $f_m$}
+  \frametitle{Results --- FM tones, $f_c$}
   \begin{figure}
     \centering
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fastl2007_fm-fm}
+      \includegraphics[width=\textwidth]{fastl2007_fm-fc}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{FM-fm_all_standards}
+      \includegraphics[width=\textwidth]{FM-fc_all_standards}
     \end{minipage}
-    \caption{Relative fluctuation strength as a function of modulation
-    frequency for FM tones --- \citeauthor{Fastl2007Psychoacoustics} (left),
-    current research (right)}
+    \caption{Relative fluctuation strength as a function of modulation frequency
+      for FM tones with center frequency of 1.5~kHz, sound pressure level of
+      70~dB and frequency deviation of 700 Hz.  The two standards had modulation
+      frequencies of 4 and 0.5~Hz. The data points show the median and
+      interquartile ranges per standard. The black line represents the mean values
+      of the medians of each standard. Left: data adapted from
+      \citeauthor[pp.248]{Fastl2007Psychoacoustics}. Right: own results}
   \end{figure}
 \end{frame}
 
@@ -540,21 +548,33 @@
 \begin{frame}
   \frametitle{Specific Fluctuation Strength Stage}
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}[T]{0.5\textwidth}
       Fluctuation strength model adaptations
       \begin{itemize}
-        \item<1-> Specific fluctuation strength \\
+        \item<only@1-4> Specific fluctuation strength \\
           $f_i = [g(z_i) \cdot {m_i}^* \cdot k_{i-2} \cdot k_i]^2$
-        \item<2-> Channel weighting using $g(z_i)$ parameter
+        \item<only@2-4> Channel weighting using $g(z_i)$ parameter
         \begin{itemize}
-          \item<3-> Models the dependence on center frequency
+          \item<only@3-4> Models the dependence on center frequency
         \end{itemize}
-        \item<4-> Cross correlations among channels $k_i$
-        \item<5-> Total fluctuation strength \\
+        \item<only@4> Cross correlations among channels $k_i$
+        \item<only@5-> Specific fluctuation strength \\
+          $f_i = ({m_i}^{*\prime})^{0.25} \cdot |k_{i-2} \cdot k_i|^{0.375}$
+          \only<6>{
+          where
+          \begin{align}
+            {m_i}^{*\prime} &= H({m_i}^{*\prime\prime}) \cdot {m_i}^{*\prime\prime}
+            \label{eq:md_transformation_1} \\
+            {m_i}^{*\prime\prime} &= {m_i}^* - 0.1
+            \label{eq:md_transformation_2}
+          \end{align}
+          being $H$ the Heaviside step function.
+          }
+        \item<only@7> Total fluctuation strength \\
           $F = \displaystyle\sum_{i=1}^{47} f_i$
       \end{itemize}
     \end{column}
-    \begin{column}{0.5\textwidth}
+    \begin{column}[T]{0.5\textwidth}
       \begin{tikzpicture}
         \addroughnessnode
         \filldraw[fill=white,draw=white,opacity=0.6] (1mm,25.5mm) rectangle (53mm,77mm);
@@ -564,9 +584,9 @@
   \end{columns}
 \end{frame}
 
-\subsection{Preliminary Results}
+\subsection{Results}
 \begin{frame}
-  \frametitle{Preliminary Results}
+  \frametitle{Results --- $f_m$}
   \begin{figure}
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -576,8 +596,31 @@
     \begin{minipage}{0.45\textwidth}
       \includegraphics[width=\textwidth]{garcia2015_fm-fm}
     \end{minipage}
-    \caption{Relative fluctuation strength as a function of modulation
-      frequency --- comparison between experimental data and model output}
+    \caption{Fluctuation strength as a function of modulation frequency for
+      AM tones (left) and FM tones (right). The blue dashed line corresponds to
+      the mean of the two standards of the experimental data. The black solid
+      line corresponds to the output of the model. In the top left corner the
+      square root of the sum of the square of the difference between these two
+      curves ($\sqrt{\sum r_i^2}$) is shown}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \frametitle{Results --- $f_c$}
+  \begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{garcia2015_am-fc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{garcia2015_fm-fc}
+    \end{minipage}
+    \caption{Fluctuation strength as a function of center frequency for
+      AM tones (left) and FM tones (right). The blue dashed line corresponds to
+      the mean of the two standards of the experimental data. The black solid
+      line corresponds to the output of the model. In the top left corner the
+      square root of the sum of the square of the difference between these two
+      curves ($\sqrt{\sum r_i^2}$) is shown}
   \end{figure}
 \end{frame}
 
